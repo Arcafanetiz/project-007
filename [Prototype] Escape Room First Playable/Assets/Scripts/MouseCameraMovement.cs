@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MouseCameraMovement : MonoBehaviour
 {
-    public Vector3 originPos;
     private Vector3 mousePos;
+
+    public Vector3 originPos;
 
     public float xMultiplier;
     public float yMultiplier;
