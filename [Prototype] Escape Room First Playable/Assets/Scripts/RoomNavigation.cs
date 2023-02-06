@@ -51,26 +51,18 @@ public class RoomNavigation : MonoBehaviour
     {
         if (Input.GetKeyDown(nextKey))
         {
-            NextView();
+            ChangeView(1);
         }
         if (Input.GetKeyDown(prevKey))
         {
-            PrevView();
+            ChangeView(-1);
         }
     }
 
-    public void NextView()
+    public void ChangeView(int dir)
     {
         previousView = currentView;
-        p_currentView += 1;
-        views[previousView].SetActive(false);
-        views[currentView].SetActive(true);
-    }
-
-    public void PrevView()
-    {
-        previousView = currentView;
-        p_currentView -= 1;
+        p_currentView += dir;
         views[previousView].SetActive(false);
         views[currentView].SetActive(true);
     }

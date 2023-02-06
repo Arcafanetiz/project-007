@@ -504,9 +504,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6833b810b5ed17147804627a245cb8c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
+  mousePos: {x: 0, y: 0, z: 0}
   originPos: {x: 0, y: 0, z: -10}
-  xMultiplier: 0.6
-  yMultiplier: 0.3
+  multiplier: {x: 0.6, y: 0.3}
+  zoomKey: 304
+  zoomMultiplier: 2
+  defaultFOV: 0
+  zoomDuration: 0.1
+  dragOriginPos: {x: 0, y: 0, z: 0}
 --- !u!1 &540618106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1760,7 @@ MonoBehaviour:
   interactableLM:
     serializedVersion: 2
     m_Bits: 64
-  cursorLock: 1
+  cursorLock: 0
 --- !u!1 &1563897916
 GameObject:
   m_ObjectHideFlags: 0

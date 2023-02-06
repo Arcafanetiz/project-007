@@ -25,11 +25,11 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(inventoryKey) && !isOpen)
         {
-            OpenPanel();
+            ToggleInventoryPanel();
         }
         else if (Input.GetKeyUp(inventoryKey) && isOpen)
         {
-            ClosePanel();
+            ToggleInventoryPanel();
         }
     }
 
@@ -37,29 +37,18 @@ public class InventoryUI : MonoBehaviour
     {
         if (!isOpen)
         {
-            LeanTween.cancel(inventoryPanel);
-            LeanTween.move(inventoryPanel, new Vector3(screenWidth - panelWidth, 0, 0), tweenDuration).setEase(LeanTweenType.easeOutExpo);
-            isOpen = true;
+            PanelTweenAnimation(screenWidth - panelWidth);
         }
         else
         {
-            LeanTween.cancel(inventoryPanel);
-            LeanTween.move(inventoryPanel, new Vector3(screenWidth, 0, 0), tweenDuration).setEase(LeanTweenType.easeOutExpo);
-            isOpen = false;
+            PanelTweenAnimation(screenWidth);
         }
     }
 
-    public void OpenPanel()
+    private void PanelTweenAnimation(float target_pos)
     {
         LeanTween.cancel(inventoryPanel);
-        LeanTween.move(inventoryPanel, new Vector3(screenWidth - panelWidth, 0, 0), tweenDuration).setEase(LeanTweenType.easeOutExpo);
-        isOpen = true;
-    }
-
-    public void ClosePanel()
-    {
-        LeanTween.cancel(inventoryPanel);
-        LeanTween.move(inventoryPanel, new Vector3(screenWidth, 0, 0), tweenDuration).setEase(LeanTweenType.easeOutExpo);
-        isOpen = false;
+        LeanTween.move(inventoryPanel, new Vector3(target_pos, 0, 0), tweenDuration).setEase(LeanTweenType.easeOutExpo);
+        isOpen = !isOpen;
     }
 }

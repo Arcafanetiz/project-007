@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
-    public LayerMask interactableLM;
     [SerializeField] private bool cursorLock = true;
+
+    public LayerMask interactableLM;
 
     // Start is called before the first frame update
     void Start()
