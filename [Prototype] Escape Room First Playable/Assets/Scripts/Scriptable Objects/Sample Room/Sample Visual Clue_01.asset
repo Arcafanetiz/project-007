@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cd6f705fe9e894d81ae4d2884ef96b, type: 3}
+  m_Name: Sample Visual Clue_01
+  m_EditorClassIdentifier: 
+  name: Sample Visual Clue_01
+  sprite: {fileID: 21300000, guid: 764b7bc62dde2194a8cbf99b4ca0d2b6, type: 3}
