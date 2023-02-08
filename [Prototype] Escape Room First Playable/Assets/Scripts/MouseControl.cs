@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
+    private CanvasDisplay canvasDisplay;
     [SerializeField] private bool cursorLock = true;
 
     public LayerMask interactableLM;
@@ -15,6 +16,7 @@ public class MouseControl : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
         }
+        canvasDisplay = GetComponent<CanvasDisplay>();
     }
 
     // Update is called once per frame
@@ -23,11 +25,16 @@ public class MouseControl : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            bool isOverUI = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
 
-            if (hit.collider != null)
+            if (hit.collider != null && !isOverUI)
             {
-                Debug.Log("Target: " + hit.collider.gameObject.name);
+                //Debug.Log("Target: " + hit.collider.gameObject.name);
+                if (hit.collider.gameObject.tag == "Visual Clue")
+                {
+                    canvasDisplay.DisplaySprite(hit.collider.gameObject.name);
+                }
             }
         }
     }
