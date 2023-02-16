@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cd6f705fe9e894d81ae4d2884ef96b, type: 3}
   m_Name: Sample Visual Clue_00
   m_EditorClassIdentifier: 
-  name: Sample Visual Clue_00
+  clueName: Sample Visual Clue_00
   sprite: {fileID: 21300000, guid: 483012119c3c0e84c903b66a9c8d6307, type: 3}

@@ -30,7 +30,7 @@ public class MouseControl : MonoBehaviour
 
             if (hit.collider != null && !isOverUI)
             {
-                //Debug.Log("Target: " + hit.collider.gameObject.name);
+                Debug.Log("Target: " + hit.collider.gameObject.name);
                 if (hit.collider.gameObject.tag == "Visual Clue")
                 {
                     canvasDisplay.DisplaySprite(hit.collider.gameObject.name);
