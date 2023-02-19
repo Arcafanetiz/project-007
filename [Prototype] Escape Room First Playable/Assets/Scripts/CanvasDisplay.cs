@@ -31,13 +31,5 @@ public class CanvasDisplay : MonoBehaviour
             // Update the image on the canvas
             outputImage.sprite = targetObject.sprite;
         }
-
-        //for (int i = 0; i < visualClues.Length; i++)
-        //{
-        //    if (visualClues[i].name == name)
-        //    {
-        //        outputImage.sprite = visualClues[i].sprite;
-        //    }
-        //}
     }
 }

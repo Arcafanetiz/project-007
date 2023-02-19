@@ -7,4 +7,6 @@ public class VisualClue : Interactables
 {
     public string clueName;
     public Sprite sprite;
+    [TextArea]
+    public string textClue;
 }
