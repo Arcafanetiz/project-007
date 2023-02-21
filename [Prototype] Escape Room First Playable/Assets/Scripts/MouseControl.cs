@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
-    private CanvasDisplay canvasDisplay;
     private SceneInteractables interactable;
     [SerializeField] private bool cursorLock = true;
 
@@ -17,7 +16,6 @@ public class MouseControl : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
         }
-        canvasDisplay = GetComponent<CanvasDisplay>();
     }
 
     // Update is called once per frame
@@ -37,10 +35,6 @@ public class MouseControl : MonoBehaviour
                 {
                     interactable.OnClickEvent.Invoke();
                 }
-                //if (hit.collider.gameObject.tag == "Visual Clue")
-                //{
-                //    canvasDisplay.DisplaySprite(hit.collider.gameObject.name);
-                //}
             }
         }
     }

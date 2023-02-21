@@ -1,30 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class PasscodeChecker : MonoBehaviour
 {
-    [SerializeField] private TMP_Text Ans;
+    public TMPro.TextMeshProUGUI displayText;
 
-    public string Answer = "1234";
+    public string passcode = "1234";
 
     // Start is called before the first frame update
     private void Start()
     {
-        Ans.text = "";
+        displayText.text = "";
     }
     public void Number(int num)
     {
-        Ans.text += num.ToString();
+        displayText.text += num.ToString();
     }
 
     public void Execute()
     {
-        if(Ans.text == Answer)
+        if(displayText.text == passcode)
         {
-            Ans.text = "Correct!!!";
+            displayText.text = "Correct!!!";
         }
         else
         {
@@ -34,10 +33,8 @@ public class PasscodeChecker : MonoBehaviour
 
     private IEnumerator Incorrect()
     {
-        Ans.text = "INCORRECT!!";
+        displayText.text = "INCORRECT!!";
         yield return new WaitForSeconds(2.0f);
-        Ans.text = "";
+        displayText.text = "";
     }
-
-    
 }
