@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PasscodeChecker : MonoBehaviour
+public class Keypad : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI displayText;
 
-    public string passcode = "1234";
+    public string passcode;
 
     // Start is called before the first frame update
     private void Start()
