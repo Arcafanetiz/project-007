@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class RoomNavigation : MonoBehaviour
 {
+    public enum ViewState { PAST, PRESENT };
+
     [SerializeField] private int currentView;
     [SerializeField] private int previousView;
     [SerializeField] private int maxView;
 
+    public ViewState currentState = ViewState.PRESENT;
     public KeyCode nextKey = KeyCode.E;
     public KeyCode prevKey = KeyCode.Q;
 
-    public GameObject[] views;
+    public GameObject[] presentViews;
+    public GameObject[] pastViews;
     public int p_currentView
     {
         get { return currentView; }
@@ -35,14 +39,16 @@ public class RoomNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxView = views.Length;
+        maxView = presentViews.Length;
         currentView = 0;
         previousView = maxView;
 
-        views[0].SetActive(true);
+        presentViews[0].SetActive(true);
+        pastViews[0].SetActive(false);
         for (int i = 1; i < maxView; i++)
         {
-            views[i].SetActive(false);
+            presentViews[i].SetActive(false);
+            pastViews[i].SetActive(false);
         }
     }
 
@@ -63,7 +69,34 @@ public class RoomNavigation : MonoBehaviour
     {
         previousView = currentView;
         p_currentView += dir;
-        views[previousView].SetActive(false);
-        views[currentView].SetActive(true);
+        switch(currentState)
+        {
+            case ViewState.PRESENT:
+                presentViews[previousView].SetActive(false);
+                presentViews[currentView].SetActive(true);
+                break;
+            case ViewState.PAST:
+                pastViews[previousView].SetActive(false);
+                pastViews[currentView].SetActive(true);
+                break;
+        }
+        
+    }
+
+    public void ToggleState()
+    {
+        switch (currentState)
+        {
+            case ViewState.PRESENT:
+                presentViews[currentView].SetActive(false);
+                pastViews[currentView].SetActive(true);
+                currentState = ViewState.PAST;
+                break;
+            case ViewState.PAST:
+                pastViews[currentView].SetActive(false);
+                presentViews[currentView].SetActive(true);
+                currentState = ViewState.PRESENT;
+                break;
+        }
     }
 }
