@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class Keypad : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI displayText;
-
-    public GameObject incorrectPass;
-
-    public string passcode;
-
     public enum LockState { LOCKED, UNLOCKED };
     public LockState currentState = LockState.LOCKED;
 
+    public TMPro.TextMeshProUGUI displayText;
+    public GameObject incorrectPass;
+
+    public string passcode;
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,22 +31,18 @@ public class Keypad : MonoBehaviour
 
     public void Execute()
     {
-        if(displayText.text == passcode)
+        if (currentState == LockState.LOCKED)
         {
-            displayText.text = "Correct!!!";
-            currentState = LockState.UNLOCKED;
-        }
-        else
-        {
-            incorrectPass.SetActive(true);
-            displayText.text = "";
-            //StartCoroutine(Incorrect());
+            if (displayText.text == passcode)
+            {
+                displayText.text = "Correct!!!";
+                currentState = LockState.UNLOCKED;
+            }
+            else
+            {
+                incorrectPass.SetActive(true);
+                displayText.text = "";
+            }
         }
     }
-    // private IEnumerator Incorrect()
-    // {
-    //     displayText.text = "INCORRECT!!";
-    //     yield return new WaitForSeconds(2.0f);
-    //     displayText.text = "";
-    // }
 }
