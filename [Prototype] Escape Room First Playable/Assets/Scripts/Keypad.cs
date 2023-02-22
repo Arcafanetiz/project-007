@@ -7,16 +7,27 @@ public class Keypad : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI displayText;
 
+    public GameObject incorrectPass;
+
     public string passcode;
+
+    public enum LockState { LOCKED, UNLOCKED };
+    public LockState currentState = LockState.LOCKED;
 
     // Start is called before the first frame update
     private void Start()
     {
         displayText.text = "";
+        incorrectPass.SetActive(false);
     }
     public void Number(int num)
     {
-        displayText.text += num.ToString();
+        if(currentState == LockState.LOCKED)
+        {
+            incorrectPass.SetActive(false);
+            displayText.text += num.ToString();
+        }
+      
     }
 
     public void Execute()
@@ -24,17 +35,19 @@ public class Keypad : MonoBehaviour
         if(displayText.text == passcode)
         {
             displayText.text = "Correct!!!";
+            currentState = LockState.UNLOCKED;
         }
         else
         {
-            StartCoroutine(Incorrect());
+            incorrectPass.SetActive(true);
+            displayText.text = "";
+            //StartCoroutine(Incorrect());
         }
     }
-
-    private IEnumerator Incorrect()
-    {
-        displayText.text = "INCORRECT!!";
-        yield return new WaitForSeconds(2.0f);
-        displayText.text = "";
-    }
+    // private IEnumerator Incorrect()
+    // {
+    //     displayText.text = "INCORRECT!!";
+    //     yield return new WaitForSeconds(2.0f);
+    //     displayText.text = "";
+    // }
 }
