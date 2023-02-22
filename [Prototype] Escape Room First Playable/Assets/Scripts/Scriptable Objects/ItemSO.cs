@@ -12,7 +12,6 @@ public class ItemSO : ScriptableObject
     public string ItemName { get; set; }
     [field: SerializeField]
     public Sprite Sprite { get; set; }
-    public Color spriteColor;
     [field: SerializeField] [field: TextArea]
     public string Desciption { get; set; }
     public ItemType itemType;

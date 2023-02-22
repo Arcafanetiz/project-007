@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b226abeab2788f14eb532bc4e6ef09b7, type: 3}
-  m_Name: Bronze Key
+  m_Name: Best Museum Trophy
   m_EditorClassIdentifier: 
-  itemName: Bronze Key
-  desciption: 'An ordinary bronze-colored key.
-
-    Well, not that ordinary but it
-    felt ordinary for you, at least.'
-  sprite: {fileID: 21300000, guid: b7b20f641eacb0b4bbae8fbf2c4c8e1b, type: 3}
-  spriteColor: {r: 1, g: 0.68235296, b: 0.33333334, a: 1}
+  <ItemName>k__BackingField: Best Museum Trophy
+  <Sprite>k__BackingField: {fileID: 836752559, guid: 3d03b5d23a7c9ce4e8cde45d0e80186c, type: 3}
+  <Desciption>k__BackingField: Best Museum Trophy Award Winner 2077. Not sure why
+    this museum got it tho.
+  itemType: 0
+  combinable: 0
+  combineTarget: {fileID: 0}
+  combineResult: {fileID: 0}

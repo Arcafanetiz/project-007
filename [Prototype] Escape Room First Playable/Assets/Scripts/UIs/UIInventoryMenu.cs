@@ -54,7 +54,7 @@ public class UIInventoryMenu : MonoBehaviour
         ResetSelection();
     }
 
-    private void ResetSelection()
+    public void ResetSelection()
     {
         itemInspector.ResetInspector();
         DeselectAllItems();
@@ -71,5 +71,12 @@ public class UIInventoryMenu : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+    internal void UpdateDescription(int itemIndex, Sprite sprite, string name, string desc)
+    {
+        itemInspector.SetInspector(sprite, name, desc);
+        DeselectAllItems();
+        listOfUIItems[itemIndex].Select();
     }
 }
