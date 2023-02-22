@@ -33,7 +33,7 @@ public class MouseCameraMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isZoomIn)
         {
-            CameraZoom(new Vector3(mousePos.x * zoomMultiplier, mousePos.y * zoomMultiplier, originPos.z / zoomMultiplier));
+            CameraZoom(new Vector3(Mathf.Clamp(mousePos.x * zoomMultiplier, -5.0f, 5.0f), Mathf.Clamp(mousePos.y * zoomMultiplier, -2.5f, 2.5f), originPos.z / zoomMultiplier));
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) && isZoomIn)
         {
