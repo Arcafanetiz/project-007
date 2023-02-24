@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseControl : MonoBehaviour
 {
     private SceneInteractables interactable;
+    private SceneItemPickUp item;
     [SerializeField] private bool cursorLock = true;
 
     public LayerMask interactableLM;
@@ -34,6 +35,11 @@ public class MouseControl : MonoBehaviour
                 if (interactable != null)
                 {
                     interactable.OnClickEvent.Invoke();
+                }
+                item = hit.collider.GetComponent<SceneItemPickUp>();
+                if (item != null)
+                {
+                    item.OnClickEvent.Invoke();
                 }
             }
         }

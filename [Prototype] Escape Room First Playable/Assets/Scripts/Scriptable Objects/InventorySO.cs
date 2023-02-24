@@ -32,6 +32,7 @@ public class InventorySO : ScriptableObject
                 {
                     item = item
                 };
+                return;
             }
         }
     }

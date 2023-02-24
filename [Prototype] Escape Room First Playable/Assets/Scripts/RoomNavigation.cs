@@ -16,6 +16,8 @@ public class RoomNavigation : MonoBehaviour
 
     public GameObject[] presentViews;
     public GameObject[] pastViews;
+
+    public GameObject screenEffect;
     public int p_currentView
     {
         get { return currentView; }
@@ -85,6 +87,15 @@ public class RoomNavigation : MonoBehaviour
 
     public void ToggleState()
     {
+        StartCoroutine(ChangeState());
+    }
+
+    IEnumerator ChangeState()
+    {
+        LeanTween.cancel(screenEffect);
+        LeanTween.scale(screenEffect, new Vector3(900.0f, 900.0f, 1.0f), 1.0f).setOnComplete(() 
+            => { screenEffect.transform.localScale = Vector3.one; });
+        yield return new WaitForSecondsRealtime(0.2f);
         switch (currentState)
         {
             case ViewState.PRESENT:
