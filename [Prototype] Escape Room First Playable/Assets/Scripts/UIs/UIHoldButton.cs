@@ -53,7 +53,8 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
                 }
                 Reset();
             }
-            filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
+            //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
+            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftControl))
@@ -66,7 +67,8 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         pointerDown = false;
         pointerDownTimer = 0;
-        filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
+        //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
+        filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
     }
 
     IEnumerator StartCoolDown()

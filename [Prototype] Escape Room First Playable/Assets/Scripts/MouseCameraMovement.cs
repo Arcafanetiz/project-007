@@ -7,15 +7,17 @@ public class MouseCameraMovement : MonoBehaviour
     [SerializeField] private Camera mainCam;
     [SerializeField] private Vector3 mousePos;
     [SerializeField] private Vector3 originPos;
-    private bool isZoomIn = false;
+    [SerializeField] private bool isZoomIn = false;
 
     [Header("Camera Sway")]
     public Vector3 anchorPos;
-    public Vector2 multiplier;
+    public Vector2 swayMultiplier;
 
     [Header("Camera Zoom")]
+    public KeyCode zoomKey = KeyCode.LeftShift;
     public float zoomMultiplier = 5.0f;
     public float zoomDuration = 0.2f;
+    public Vector2 distanceClamp = new Vector2(5.0f, 2.5f);
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +33,11 @@ public class MouseCameraMovement : MonoBehaviour
         mousePos = mainCam.ScreenToViewportPoint(Input.mousePosition) + new Vector3(-0.5f, -0.5f, 0f);
         CameraSway();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isZoomIn)
+        if (Input.GetKeyDown(zoomKey) && !isZoomIn)
         {
-            CameraZoom(new Vector3(Mathf.Clamp(mousePos.x * zoomMultiplier, -5.0f, 5.0f), Mathf.Clamp(mousePos.y * zoomMultiplier, -2.5f, 2.5f), originPos.z / zoomMultiplier));
+            CameraZoom(new Vector3(Mathf.Clamp(mousePos.x * zoomMultiplier, -distanceClamp.x, distanceClamp.x), Mathf.Clamp(mousePos.y * zoomMultiplier, -distanceClamp.y, distanceClamp.y), originPos.z / zoomMultiplier));
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift) && isZoomIn)
+        else if (Input.GetKeyUp(zoomKey) && isZoomIn)
         {
             CameraZoom(originPos);
         }
@@ -43,7 +45,7 @@ public class MouseCameraMovement : MonoBehaviour
 
     void CameraSway()
     {
-        mainCam.transform.position = new Vector3(anchorPos.x + (mousePos.x * multiplier.x), anchorPos.y + (mousePos.y * multiplier.y), anchorPos.z);
+        mainCam.transform.position = new Vector3(anchorPos.x + (mousePos.x * swayMultiplier.x), anchorPos.y + (mousePos.y * swayMultiplier.y), anchorPos.z);
     }
 
     void CameraZoom(Vector3 target_pos)
