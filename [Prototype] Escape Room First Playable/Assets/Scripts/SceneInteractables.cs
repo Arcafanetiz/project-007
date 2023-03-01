@@ -8,6 +8,8 @@ public class SceneInteractables : MonoBehaviour
 {
     public UnityEvent OnClickEvent;
 
+    public AudioSource audioSource;
+
     private void Awake()
     {
         if (OnClickEvent == null)
@@ -23,5 +25,13 @@ public class SceneInteractables : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void PlayAudio()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
     }
 }

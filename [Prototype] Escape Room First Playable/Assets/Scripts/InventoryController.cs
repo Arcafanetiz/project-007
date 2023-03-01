@@ -10,6 +10,8 @@ public class InventoryController : MonoBehaviour
 
     public KeyCode inventoryKey = KeyCode.I;
 
+    [SerializeField] ItemSO onHandItem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +65,7 @@ public class InventoryController : MonoBehaviour
     {
         inventoryUI.InitializeInventoryUI(inventoryData.Size);
         this.inventoryUI.OnDescriptionRequested += HandleDescriptionRequest;
+        this.inventoryUI.OnItemUseRequested += HandleItemUseRequest;
     }
 
     private void HandleDescriptionRequest(int itemIndex)
@@ -75,5 +78,12 @@ public class InventoryController : MonoBehaviour
         }
         ItemSO item = inventoryItem.item;
         inventoryUI.UpdateDescription(itemIndex, item.Sprite, item.ItemName, item.Desciption);
+    }
+
+    private void HandleItemUseRequest(int itemIndex)
+    {
+        InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+        ItemSO item = inventoryItem.item;
+        onHandItem = item;
     }
 }

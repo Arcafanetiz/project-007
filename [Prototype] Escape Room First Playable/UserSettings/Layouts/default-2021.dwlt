@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43
+  controlID: 92
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 101
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 102
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 344.8
     height: 483.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e6940000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8e3bffff883dffffea44ffff185bffff9e66ffff4efaffff58faffff62faffffbcfafffffcfaffff606f0000f66f0000ecc9000024ca000064ca0000acca0000ecca0000
+      m_ExpandedIDs: fcfaffff9a6e0000346f00007e6f0000f66f00002a700000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -705,9 +705,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 614.63574, y: 735.6461, z: -6.258047}
+    m_Target: {x: -0.9570763, y: 0.048322387, z: 37.273308}
     speed: 2
-    m_Value: {x: 614.63574, y: 735.6461, z: -6.258047}
+    m_Value: {x: -0.9570763, y: 0.048322387, z: 37.273308}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -758,9 +758,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 917.554
+    m_Target: 9.4840975
     speed: 2
-    m_Value: 917.554
+    m_Value: 9.4840975
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -826,22 +826,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Scriptable Objects/Data
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Scriptable Objects/Data
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\GitHub\project-007\[Prototype] Escape Room First Playable
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 76720000
-    m_LastClickedID: 29302
-    m_ExpandedIDs: 000000007472000076720000787200007a7200007c7200007e720000807200008272000000ca9a3b
+    m_SelectedIDs: dc720000
+    m_LastClickedID: 29404
+    m_ExpandedIDs: 00000000bc720000be720000c0720000c2720000c4720000c6720000c8720000ca72000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -869,7 +869,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007472000076720000787200007a7200007c7200007e7200008072000082720000
+    m_ExpandedIDs: 00000000bc720000be720000c0720000c2720000c4720000c6720000c8720000ca720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -897,7 +897,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000aca6000056700000dc700000be7300003c980000
+    m_ExpandedInstanceIDs: c623000000000000aca6000056700000dc700000be7300003c980000b4a10000807400007c74000078740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -14,6 +14,8 @@ public class UIInventoryMenu : MonoBehaviour
 
     public event Action<int> OnDescriptionRequested;
 
+    public event Action<int> OnItemUseRequested;
+
     private void Awake()
     {
         Hide();

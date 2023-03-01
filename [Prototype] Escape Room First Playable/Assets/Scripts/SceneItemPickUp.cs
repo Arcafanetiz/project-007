@@ -15,7 +15,7 @@ public class SceneItemPickUp : MonoBehaviour
 
     public void ItemPickUp(ItemSO item)
     {
-        //Debug.Log("Picked up");
+        Debug.Log(item.ItemName + " picked up.");
         inventoryData.AddItem(item);
         DestroyItem();
     }
@@ -28,7 +28,10 @@ public class SceneItemPickUp : MonoBehaviour
 
     private IEnumerator PickUpAnimation()
     {
-        //audioSource.Play();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
         Vector3 startScale = transform.localScale;
         Vector3 endScale = Vector3.zero;
         LeanTween.scale(this.gameObject, endScale, duration).setEase(LeanTweenType.easeInOutElastic);
