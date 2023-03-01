@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class InventoryController : MonoBehaviour
     public KeyCode inventoryKey = KeyCode.I;
 
     [SerializeField] ItemSO onHandItem;
+
+    public Button inventoryButton;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +68,6 @@ public class InventoryController : MonoBehaviour
     {
         inventoryUI.InitializeInventoryUI(inventoryData.Size);
         this.inventoryUI.OnDescriptionRequested += HandleDescriptionRequest;
-        this.inventoryUI.OnItemUseRequested += HandleItemUseRequest;
     }
 
     private void HandleDescriptionRequest(int itemIndex)
@@ -85,5 +87,13 @@ public class InventoryController : MonoBehaviour
         InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
         ItemSO item = inventoryItem.item;
         onHandItem = item;
+    }
+
+    public void UseItem()
+    {
+        InventoryItem inventoryItem = inventoryData.GetItemAt(inventoryUI.selectedIndex);
+        ItemSO item = inventoryItem.item;
+        onHandItem = item;
+        inventoryButton.GetComponent<Image>().sprite = item.Sprite;
     }
 }

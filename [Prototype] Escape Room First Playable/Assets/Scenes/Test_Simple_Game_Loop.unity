@@ -2559,6 +2559,7 @@ GameObject:
   - component: {fileID: 674138583}
   - component: {fileID: 674138585}
   - component: {fileID: 674138584}
+  - component: {fileID: 674138586}
   m_Layer: 6
   m_Name: Main Door (Close)
   m_TagString: Untagged
@@ -2662,6 +2663,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &674138586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674138582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe90976d7fda58446ae762ea577b0e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  audioSource: {fileID: 0}
 --- !u!1 &685198634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,6 +6335,7 @@ MonoBehaviour:
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   inventoryKey: 105
   onHandItem: {fileID: 0}
+  inventoryButton: {fileID: 1327896098}
 --- !u!1001 &1569094931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9651,6 +9669,34 @@ PrefabInstance:
     - target: {fileID: 1332317749440875044, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1563213913}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UseItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332317749440875045, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1332317749482657074, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: m_AnchorMax.y
