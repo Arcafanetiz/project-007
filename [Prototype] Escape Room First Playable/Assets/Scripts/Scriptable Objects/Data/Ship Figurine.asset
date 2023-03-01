@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ship Figurine
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Ship Figurine
-  <Sprite>k__BackingField: {fileID: 346700487, guid: b99d1af0111c4c94f8050fc88292c51e, type: 3}
+  <Sprite>k__BackingField: {fileID: -594457831, guid: a82b6efc2bc4b1d4aa81088576ad7df1, type: 3}
   <Desciption>k__BackingField: A figurine model of a ship with Sir knight standing
     valiantly on it. Sir knight raise his sword skyward as if he is ready to embark
     on a journey.

@@ -21,6 +21,9 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     [SerializeField] private Image filledImage;
 
+    public AudioSource audioSourceLoad;
+    public AudioSource audioSourceExecute;
+
     public void Awake()
     {
         Reset();
@@ -30,11 +33,13 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public void OnPointerDown(PointerEventData eventData)
     {
         pointerDown = true;
+        audioSourceLoad.Play();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         Reset();
+        //audioSourceLoad.Stop();
     }
 
     // Update is called once per frame
@@ -57,9 +62,15 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
             filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
+        {
+            audioSourceLoad.Play();
+        }
+
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             Reset();
+            audioSourceLoad.Stop();
         }
     }
 
@@ -69,10 +80,12 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         pointerDownTimer = 0;
         //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
         filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
+        audioSourceLoad.Stop();
     }
 
     IEnumerator StartCoolDown()
     {
+        audioSourceExecute.Play();
         yield return new WaitForSeconds(cDTime);
         onCD = false;
     }
