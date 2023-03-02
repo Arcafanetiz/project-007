@@ -10,7 +10,7 @@ public class UIInventoryItem : MonoBehaviour
     [SerializeField] private Image itemImage;
     [SerializeField] private Image selectedImage;
 
-    private bool empty = true;
+    public bool empty = true;
 
     public event Action<UIInventoryItem> OnItemClicked;
 

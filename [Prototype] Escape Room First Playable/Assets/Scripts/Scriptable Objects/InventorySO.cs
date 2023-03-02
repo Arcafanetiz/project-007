@@ -32,6 +32,7 @@ public class InventorySO : ScriptableObject
                 {
                     item = item
                 };
+                return;
             }
         }
     }
@@ -45,6 +46,11 @@ public class InventorySO : ScriptableObject
             returnValue[i] = inventoryItems[i];
         }
         return returnValue;
+    }
+
+    public InventoryItem GetItemAt(int itemIndex)
+    {
+        return inventoryItems[itemIndex];
     }
 }
 

@@ -57,3 +57,6 @@ TagManager:
   - name: UI
     uniqueID: 1084155855
     locked: 0
+  - name: Screen Effect
+    uniqueID: 2405840591
+    locked: 0

@@ -12,6 +12,8 @@ public class UIInventoryMenu : MonoBehaviour
 
     List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
 
+    public int selectedIndex = -1;
+
     public event Action<int> OnDescriptionRequested;
 
     private void Awake()
@@ -43,8 +45,20 @@ public class UIInventoryMenu : MonoBehaviour
     {
         //Debug.Log(obj.name);
         int index = listOfUIItems.IndexOf(obj);
-        if (index == -1) { return; }
+        if (index == -1) 
+        {
+            selectedIndex = -1;
+            return; 
+        }
         OnDescriptionRequested?.Invoke(index);
+        if(obj.empty)
+        {
+            selectedIndex = -1;
+        }
+        else
+        {
+            selectedIndex = index;
+        }
     }
 
     public void Show()
@@ -54,8 +68,9 @@ public class UIInventoryMenu : MonoBehaviour
         ResetSelection();
     }
 
-    private void ResetSelection()
+    public void ResetSelection()
     {
+        selectedIndex = -1;
         itemInspector.ResetInspector();
         DeselectAllItems();
     }
@@ -71,5 +86,12 @@ public class UIInventoryMenu : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+    internal void UpdateDescription(int itemIndex, Sprite sprite, string name, string desc)
+    {
+        itemInspector.SetInspector(sprite, name, desc);
+        DeselectAllItems();
+        listOfUIItems[itemIndex].Select();
     }
 }
