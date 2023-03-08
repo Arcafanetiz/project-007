@@ -48,7 +48,7 @@ public class MouseControl : MonoBehaviour
                     Helditem = null;
                 }
                 
-                if (Helditem != null)
+                if (interactable != null && Helditem != null)
                 {
                     Debug.Log("Item Inteaction: " + hit.collider.gameObject.name);
                     interactable.ItemRequestHandler(Helditem);

@@ -3918,7 +3918,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2091852963}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -5858,9 +5858,6 @@ MonoBehaviour:
   inventoryUI: {fileID: 1729248060}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   inventoryKey: 105
-  onHandItem: {fileID: 0}
-  inventoryButton: {fileID: 1089145466}
-  defaultBagIcon: {fileID: 1471882042, guid: 3d03b5d23a7c9ce4e8cde45d0e80186c, type: 3}
 --- !u!1001 &1569094931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7063,6 +7060,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1332317750799729522, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
+      propertyPath: inventoryButton
+      value: 
+      objectReference: {fileID: 1089145466}
     - target: {fileID: 1332317750799729526, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: m_Name
       value: Inventory
@@ -7081,7 +7082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1332317750799729527, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1332317750799729527, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9175,8 +9176,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1089145465}
   - {fileID: 1729248059}
+  - {fileID: 1089145465}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

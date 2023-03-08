@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class UIInventoryMenu : MonoBehaviour
 {
+    [SerializeField] private Button inventoryButton;
     [SerializeField] private UIInventoryItem itemPrefab;
     [SerializeField] private RectTransform contentPanel;
     [SerializeField] private UIInventoryInspector itemInspector;
+    private Sprite defaultBagIcon;
 
     List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
 
@@ -18,6 +20,7 @@ public class UIInventoryMenu : MonoBehaviour
 
     private void Awake()
     {
+        defaultBagIcon = inventoryButton.GetComponent<Image>().sprite;
         Hide();
         itemInspector.ResetInspector();
     }
@@ -43,7 +46,6 @@ public class UIInventoryMenu : MonoBehaviour
 
     private void HandleItemSelection(UIInventoryItem obj)
     {
-        //Debug.Log(obj.name);
         int index = listOfUIItems.IndexOf(obj);
         if (index == -1) 
         {
@@ -93,5 +95,15 @@ public class UIInventoryMenu : MonoBehaviour
         itemInspector.SetInspector(sprite, name, desc);
         DeselectAllItems();
         listOfUIItems[itemIndex].Select();
+    }
+
+    public void SetBagIcon(Sprite sprite)
+    {
+        inventoryButton.GetComponent<Image>().sprite = sprite;
+    }
+
+    public void ResetBagIcon()
+    {
+        inventoryButton.GetComponent<Image>().sprite = defaultBagIcon;
     }
 }

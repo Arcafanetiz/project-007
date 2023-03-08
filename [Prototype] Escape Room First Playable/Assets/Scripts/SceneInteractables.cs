@@ -9,8 +9,6 @@ public class SceneInteractables : MonoBehaviour
     public UnityEvent OnClickEvent;
     public UnityEvent OnItemUseEvent;
 
-    public event Action<ItemSO> OnItemRequest;
-
     [SerializeField] private ItemSO requiredItem;
 
     [SerializeField] private InventorySO inventoryData;
@@ -28,7 +26,7 @@ public class SceneInteractables : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        OnItemRequest += ItemRequestHandler;
+
     }
 
     // Update is called once per frame
@@ -41,10 +39,12 @@ public class SceneInteractables : MonoBehaviour
     {
         if(item == requiredItem)
         {
+            Debug.Log("Correct Item");
             OnItemUseEvent?.Invoke();
         }
         else
         {
+            Debug.Log("Incorrect Item");
             OnClickEvent?.Invoke();
         }
     }
