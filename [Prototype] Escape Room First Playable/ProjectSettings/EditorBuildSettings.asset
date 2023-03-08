@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Test_Simple_Game_Loop.unity
+    guid: 8f01d70cb215ff0438bd3ce29cf4b976
   m_configObjects: {}
