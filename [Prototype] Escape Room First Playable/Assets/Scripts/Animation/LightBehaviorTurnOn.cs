@@ -10,7 +10,6 @@ public class LightBehaviorTurnOn : MonoBehaviour
     [Range(0.0f, 5.0f)] public float startIntensity;
     [Range(0.0f, 5.0f)] public float endIntensity;
     public float duration;
-
     public LeanTweenType easeType;
 
     private void Awake()
@@ -22,14 +21,11 @@ public class LightBehaviorTurnOn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
-
     }
 
     void UpdateIntensity(float val)
     {
-        //Debug.Log("tweened value:" + val + " set this to whatever variable you are tweening...");
         lightSource.intensity = val;
     }
 }

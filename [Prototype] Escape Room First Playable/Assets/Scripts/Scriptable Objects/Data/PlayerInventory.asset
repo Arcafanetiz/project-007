@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   inventoryItems:
-  - item: {fileID: 11400000, guid: 3a6375679a32d9d4a85464f385da3e76, type: 2}
-  - item: {fileID: 11400000, guid: 7e202a040dbc4044c9b2eb14d1b96670, type: 2}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}
   <Size>k__BackingField: 5
-  onHandItemIndex: 1
+  onHandItemIndex: -1
   combineItemAIndex: 0
   combineItemBIndex: 0
-  resetOnStart: 0
+  resetOnStart: 1

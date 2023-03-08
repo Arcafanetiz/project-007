@@ -95,4 +95,10 @@ public class InventoryController : MonoBehaviour
             inventoryUI.ResetBagIcon();
         }
     }
+
+    public void ResetOnHandItem()
+    {
+        inventoryData.onHandItemIndex = -1;
+        inventoryUI.ResetBagIcon();
+    }
 }
