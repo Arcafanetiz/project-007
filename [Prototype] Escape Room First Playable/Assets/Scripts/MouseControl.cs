@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InventoryController))]
 public class MouseControl : MonoBehaviour
 {
     private SceneInteractables interactable;
     private SceneItemPickUp item;
+    private InventoryController inventoryController;
+    [SerializeField] InventorySO inventoryData;
+
     [SerializeField] private bool cursorLock = true;
 
     public LayerMask interactableLM;
@@ -17,6 +21,7 @@ public class MouseControl : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
         }
+        inventoryController = gameObject.GetComponent<InventoryController>();
     }
 
     // Update is called once per frame
@@ -32,14 +37,26 @@ public class MouseControl : MonoBehaviour
             {
                 Debug.Log("Target: " + hit.collider.gameObject.name);
                 interactable = hit.collider.GetComponent<SceneInteractables>();
-                if (interactable != null)
+
+                ItemSO Helditem;
+                if (inventoryData.onHandItemIndex != -1)
                 {
-                    interactable.OnClickEvent.Invoke();
+                    Helditem = inventoryData.GetItemAt(inventoryData.onHandItemIndex).item;
                 }
-                item = hit.collider.GetComponent<SceneItemPickUp>();
-                if (item != null)
+                else
                 {
-                    item.OnClickEvent.Invoke();
+                    Helditem = null;
+                }
+                
+                if (Helditem != null)
+                {
+                    Debug.Log("Item Inteaction: " + hit.collider.gameObject.name);
+                    interactable.ItemRequestHandler(Helditem);
+                }
+                else if (interactable != null)
+                {
+                    Debug.Log("Non Item Inteaction: " + hit.collider.gameObject.name);
+                    interactable.OnClickEvent?.Invoke();
                 }
             }
         }
