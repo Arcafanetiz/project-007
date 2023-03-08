@@ -79,7 +79,7 @@ public class InventoryController : MonoBehaviour
         inventoryUI.UpdateDescription(itemIndex, item.Sprite, item.ItemName, item.Desciption);
     }
 
-    public void UseItem()
+    public void HandleUseItem()
     {
         inventoryData.onHandItemIndex = inventoryUI.selectedIndex;
         if(inventoryUI.selectedIndex != -1)

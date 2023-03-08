@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class UIInventoryMenu : MonoBehaviour
 {
+    [SerializeField] private InventoryController inventoryController;
     [SerializeField] private Button inventoryButton;
+    [SerializeField] private Button useItemButton;
     [SerializeField] private UIInventoryItem itemPrefab;
     [SerializeField] private RectTransform contentPanel;
     [SerializeField] private UIInventoryInspector itemInspector;
@@ -21,6 +23,8 @@ public class UIInventoryMenu : MonoBehaviour
     private void Awake()
     {
         defaultBagIcon = inventoryButton.GetComponent<Image>().sprite;
+        inventoryButton.onClick.AddListener(delegate { inventoryController.ToggleInventory(); });
+        useItemButton.onClick.AddListener(delegate { inventoryController.HandleUseItem(); });
         Hide();
         itemInspector.ResetInspector();
     }
