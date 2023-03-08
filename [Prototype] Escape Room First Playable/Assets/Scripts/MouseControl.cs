@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(InventoryController))]
 public class MouseControl : MonoBehaviour
 {
     private SceneInteractables interactable;
-    private SceneItemPickUp item;
-    private InventoryController inventoryController;
-    [SerializeField] InventorySO inventoryData;
-
+    [SerializeField] private InventorySO inventoryData;
     [SerializeField] private bool cursorLock = true;
 
     public LayerMask interactableLM;
@@ -21,7 +17,6 @@ public class MouseControl : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
         }
-        inventoryController = gameObject.GetComponent<InventoryController>();
     }
 
     // Update is called once per frame
@@ -31,21 +26,17 @@ public class MouseControl : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             bool isOverUI = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, interactableLM);
 
             if (hit.collider != null && !isOverUI)
             {
                 Debug.Log("Target: " + hit.collider.gameObject.name);
                 interactable = hit.collider.GetComponent<SceneInteractables>();
 
-                ItemSO Helditem;
+                ItemSO Helditem = null;
                 if (inventoryData.onHandItemIndex != -1)
                 {
                     Helditem = inventoryData.GetItemAt(inventoryData.onHandItemIndex).item;
-                }
-                else
-                {
-                    Helditem = null;
                 }
                 
                 if (interactable != null && Helditem != null)
