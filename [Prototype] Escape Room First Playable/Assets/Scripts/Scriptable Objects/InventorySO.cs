@@ -12,12 +12,21 @@ public class InventorySO : ScriptableObject
     [field: SerializeField]
     public int Size { get; private set; } = 10;
 
+    public int onHandItemIndex;
+    public int combineItemAIndex;
+    public int combineItemBIndex;
+
+    public bool resetOnStart;
+
     public void Initialize()
     {
-        inventoryItems = new List<InventoryItem>();
-        for (int i = 0; i < Size; i++)
+        if(resetOnStart)
         {
-            inventoryItems.Add(InventoryItem.GetEmptyItem());
+            inventoryItems = new List<InventoryItem>();
+            for (int i = 0; i < Size; i++)
+            {
+                inventoryItems.Add(InventoryItem.GetEmptyItem());
+            }
         }
     }
 
@@ -37,6 +46,16 @@ public class InventorySO : ScriptableObject
         }
     }
 
+    public void RemoveItem(int index)
+    {
+        //+Remove Item
+    }
+
+    public InventoryItem GetItemAt(int itemIndex)
+    {
+        return inventoryItems[itemIndex];
+    }
+
     public Dictionary<int, InventoryItem> GetCurrentInventoryState()
     {
         Dictionary<int, InventoryItem> returnValue = new Dictionary<int, InventoryItem>();
@@ -46,11 +65,6 @@ public class InventorySO : ScriptableObject
             returnValue[i] = inventoryItems[i];
         }
         return returnValue;
-    }
-
-    public InventoryItem GetItemAt(int itemIndex)
-    {
-        return inventoryItems[itemIndex];
     }
 }
 

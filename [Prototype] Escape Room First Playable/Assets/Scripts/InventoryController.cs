@@ -11,15 +11,12 @@ public class InventoryController : MonoBehaviour
 
     public KeyCode inventoryKey = KeyCode.I;
 
-    [SerializeField] ItemSO onHandItem;
-
-    public Button inventoryButton;
-
     // Start is called before the first frame update
     void Start()
     {
         PrepareUI();
-        //inventoryData.Initialize();
+        inventoryData.Initialize();
+        inventoryData.onHandItemIndex = -1;
     }
 
     // Update is called once per frame
@@ -82,18 +79,20 @@ public class InventoryController : MonoBehaviour
         inventoryUI.UpdateDescription(itemIndex, item.Sprite, item.ItemName, item.Desciption);
     }
 
-    private void HandleItemUseRequest(int itemIndex)
+    public void HandleUseItem()
     {
-        InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
-        ItemSO item = inventoryItem.item;
-        onHandItem = item;
-    }
-
-    public void UseItem()
-    {
-        InventoryItem inventoryItem = inventoryData.GetItemAt(inventoryUI.selectedIndex);
-        ItemSO item = inventoryItem.item;
-        onHandItem = item;
-        inventoryButton.GetComponent<Image>().sprite = item.Sprite;
+        inventoryData.onHandItemIndex = inventoryUI.selectedIndex;
+        if(inventoryUI.selectedIndex != -1)
+        {
+            InventoryItem inventoryItem = inventoryData.GetItemAt(inventoryUI.selectedIndex);
+            ItemSO item = inventoryItem.item;
+            inventoryUI.SetBagIcon(item.Sprite);
+            CloseInventory();
+        }
+        else
+        {
+            inventoryData.onHandItemIndex = -1;
+            inventoryUI.ResetBagIcon();
+        }
     }
 }
