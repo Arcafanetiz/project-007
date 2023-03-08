@@ -105,34 +105,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Room1_LighthouseNoGlass_0
+      name: Room1_LightHouseNoGlass_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 868
-        height: 761
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1078
+        y: 82
+        width: 728
+        height: 587
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe98f039ecb66f649b0816f99e3b8302
-      internalID: 1637523993
+      spriteID: a5802c9238c99a54889987c0fd9b1904
+      internalID: -1904531570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room1_LighthouseNoGlass_1
+      name: Room1_LightHouseNoGlass_4
       rect:
         serializedVersion: 2
-        x: 866
-        y: 0
-        width: 995
-        height: 761
+        x: 42
+        y: 71
+        width: 719
+        height: 550
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bae437f03d8f99478d1d22fb5e43f74
-      internalID: -1594216571
+      spriteID: 0789c8141e3ea8b40b70b4e922420a55
+      internalID: -33356309
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Room1_LighthouseNoGlass_1: -1594216571
-      Room1_LighthouseNoGlass_0: 1637523993
+      Room1_LightHouseNoGlass_4: -33356309
+      Room1_LightHouseNoGlass_2: 165717881
+      Room1_LightHouseNoGlass_3: -1983193414
+      Room1_LightHouseNoGlass_0: -1904531570
+      Room1_LightHouseNoGlass_6: -1057252532
+      Room1_LightHouseNoGlass_1: 1589964376
+      Room1_LightHouseNoGlass_7: -2001618496
+      Room1_LightHouseNoGlass_5: -199579019
+      Room1_LightHouseNoGlass_8: -158877892
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
