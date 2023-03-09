@@ -113,7 +113,7 @@ TextureImporter:
         width: 418
         height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,10 +131,10 @@ TextureImporter:
         serializedVersion: 2
         x: 938
         y: 650
-        width: 417
+        width: 418
         height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,11 +151,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1613
-        y: 649
-        width: 417
-        height: 162
+        y: 648
+        width: 418
+        height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +176,7 @@ TextureImporter:
         width: 418
         height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,11 +193,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 259
-        y: 228
+        y: 227
         width: 418
-        height: 162
+        height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: Room1_PopUp_AnimArtDescription_5
       rect:
         serializedVersion: 2
-        x: 919
-        y: 228
-        width: 417
-        height: 162
+        x: 918
+        y: 227
+        width: 418
+        height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: Room1_PopUp_AnimArtDescription_6
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 228
-        width: 416
-        height: 162
+        x: 1614
+        y: 227
+        width: 418
+        height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: Room1_PopUp_AnimArtDescription_7
       rect:
         serializedVersion: 2
-        x: 2327
+        x: 2326
         y: 231
-        width: 417
+        width: 418
         height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,6 +291,7 @@ TextureImporter:
       Room1_PopUp_AnimArtDescription_6: 1287772935
       Room1_PopUp_AnimArtDescription_0: 166695588
       Room1_PopUp_AnimArtDescription_1: 424320948
+      Room1_PopUp_AnimArtDescription_8: -516683000
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

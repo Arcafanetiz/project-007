@@ -19,6 +19,8 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public UnityEvent OnHoldClick;
 
+    public bool isRewinded = false;
+
     [SerializeField] private Image filledImage;
 
     public AudioSource audioSourceLoad;
@@ -53,13 +55,15 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
                 if (OnHoldClick != null)
                 {
                     OnHoldClick.Invoke();
+                    isRewinded = !isRewinded;
+                    filledImage.fillClockwise = !filledImage.fillClockwise;
                     onCD = true;
                     StartCoroutine(StartCoolDown());
                 }
                 Reset();
             }
             //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
-            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
+            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime * 0.325);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)

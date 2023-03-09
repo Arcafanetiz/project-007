@@ -5127,6 +5127,7 @@ GameObject:
   - component: {fileID: 944764092}
   - component: {fileID: 944764091}
   - component: {fileID: 944764090}
+  - component: {fileID: 944764095}
   m_Layer: 5
   m_Name: Clock Face
   m_TagString: Untagged
@@ -5375,6 +5376,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isRewinded: 0
   filledImage: {fileID: 1870305533}
   audioSourceLoad: {fileID: 944764091}
   audioSourceExecute: {fileID: 944764090}
@@ -5416,6 +5418,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944764088}
   m_CullTransparentMesh: 1
+--- !u!114 &944764095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944764088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e748908b83ded64e84972866d9cfa81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clockAnim: {fileID: 1324030052}
 --- !u!1 &1006231897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8628002927608678778, guid: ddd4e16282968ad49a5c64a6f59bbf3a, type: 3}
@@ -6517,7 +6532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1324030051
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9503,14 +9518,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870305531}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.23344536, w: 0.97236997}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1324030051}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -9541,8 +9556,8 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 0
+  m_FillAmount: 0.325
+  m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1

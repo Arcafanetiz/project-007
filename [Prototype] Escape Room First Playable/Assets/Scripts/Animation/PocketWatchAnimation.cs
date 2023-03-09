@@ -10,22 +10,28 @@ public class PocketWatchAnimation : MonoBehaviour, IPointerDownHandler, IPointer
 {
     public Animator clockAnim;
 
-    private bool isRewinded = false;
+    //private bool isRewinded = false;
+
+    private UIHoldButton button;
+
+    void Start(){
+        button = GetComponent<UIHoldButton>();
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(!isRewinded)
+        if(!button.isRewinded)
         {
              clockAnim.SetBool("isRewind",true);
-             isRewinded = true;
-             Debug.Log(isRewinded);
+             //isRewinded = true;
+            
         }
-         if(isRewinded)
+         if(button.isRewinded)
         {
              clockAnim.SetBool("isUpwind",true);
              //clockAnim.speed = -1.0f;
-             isRewinded = false;
+             //isRewinded = false;
         }
-       Debug.Log(isRewinded);
+       
     }
 
     public void OnPointerUp(PointerEventData eventData)
