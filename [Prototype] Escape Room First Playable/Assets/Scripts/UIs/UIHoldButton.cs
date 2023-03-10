@@ -19,6 +19,7 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public UnityEvent OnHoldClick;
 
+    public float maxGauge = 1.0f;
     [SerializeField] private Image filledImage;
 
     public AudioSource audioSourceLoad;
@@ -58,8 +59,7 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
                 }
                 Reset();
             }
-            //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
-            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
+            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime * maxGauge);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
@@ -78,8 +78,7 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         pointerDown = false;
         pointerDownTimer = 0;
-        //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
-        filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
+        filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime * maxGauge);
         audioSourceLoad.Stop();
     }
 
