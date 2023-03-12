@@ -35,6 +35,7 @@ public class UIInventoryMenu : MonoBehaviour
         {
             UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
             uiItem.transform.SetParent(contentPanel);
+            uiItem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             listOfUIItems.Add(uiItem);
             uiItem.OnItemClicked += HandleItemSelection;
         }
