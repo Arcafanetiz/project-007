@@ -97,6 +97,14 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     IEnumerator StartCoolDown()
     {
+        if (!isRewinded)
+        {
+            audioSourceExecute.pitch = 1.2f;
+        }
+        else
+        {
+            audioSourceExecute.pitch = 0.8f;
+        }
         audioSourceExecute.Play();
         yield return new WaitForSeconds(cDTime);
         onCD = false;
