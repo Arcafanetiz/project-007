@@ -7,48 +7,54 @@ public class MouseCameraMovement : MonoBehaviour
     [SerializeField] private Camera mainCam;
     [SerializeField] private Vector3 mousePos;
     [SerializeField] private Vector3 originPos;
+    [SerializeField] private Vector3 anchorPos;
     [SerializeField] private bool isZoomIn = false;
 
     [Header("Camera Sway")]
-    public Vector3 anchorPos;
     public Vector2 swayMultiplier;
+    public Vector2 swayDistanceClamp = new Vector2(0.4f, 0.2f);
 
     [Header("Camera Zoom")]
     public KeyCode zoomKey = KeyCode.LeftShift;
     public float zoomMultiplier = 5.0f;
     public float zoomDuration = 0.2f;
-    public Vector2 distanceClamp = new Vector2(5.0f, 2.5f);
+    public Vector2 zoomDistanceClamp = new Vector2(5.0f, 2.5f);
 
     // Start is called before the first frame update
     void Start()
     {
         originPos = transform.position;
         mainCam = GetComponentInChildren<Camera>();
+        anchorPos = mainCam.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        anchorPos = transform.position;
         mousePos = mainCam.ScreenToViewportPoint(Input.mousePosition) + new Vector3(-0.5f, -0.5f, 0f);
-        CameraSway();
 
         if (Input.GetKeyDown(zoomKey) && !isZoomIn)
         {
-            CameraZoom(new Vector3(Mathf.Clamp(mousePos.x * zoomMultiplier, -distanceClamp.x, distanceClamp.x), Mathf.Clamp(mousePos.y * zoomMultiplier, -distanceClamp.y, distanceClamp.y), originPos.z / zoomMultiplier));
+            float posX = mousePos.x * zoomMultiplier;
+            float posY = mousePos.y * zoomMultiplier;
+            CameraZoom(new Vector3(Mathf.Clamp(posX, -zoomDistanceClamp.x, zoomDistanceClamp.x), Mathf.Clamp(posY, -zoomDistanceClamp.y, zoomDistanceClamp.y), originPos.z / zoomMultiplier));
         }
         else if (Input.GetKeyUp(zoomKey) && isZoomIn)
         {
             CameraZoom(originPos);
         }
+
+        CameraSway();
     }
 
-    void CameraSway()
+    private void CameraSway()
     {
-        mainCam.transform.position = new Vector3(anchorPos.x + (mousePos.x * swayMultiplier.x), anchorPos.y + (mousePos.y * swayMultiplier.y), anchorPos.z);
+        float posX = anchorPos.x + (mousePos.x * swayMultiplier.x);
+        float posY = anchorPos.y + (mousePos.y * swayMultiplier.y);
+        mainCam.transform.localPosition = new Vector3(Mathf.Clamp(posX, -swayDistanceClamp.x, swayDistanceClamp.x), Mathf.Clamp(posY, -swayDistanceClamp.y, swayDistanceClamp.y), anchorPos.z);
     }
 
-    void CameraZoom(Vector3 target_pos)
+    private void CameraZoom(Vector3 target_pos)
     {
         LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, target_pos, zoomDuration);
