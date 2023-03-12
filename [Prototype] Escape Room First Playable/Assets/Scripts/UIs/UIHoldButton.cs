@@ -18,9 +18,13 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public float cDTime;
 
     public UnityEvent OnHoldClick;
-
     public bool isRewinded = false;
 
+    public bool flip = true;
+    public float fillSize;
+    private float startGauge;
+    private float endGauge = 1.0f;
+    private int dir = -1;
     [SerializeField] private Image filledImage;
 
     public AudioSource audioSourceLoad;
@@ -28,8 +32,9 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void Awake()
     {
-        Reset();
         cDTimer = cDTime;
+        startGauge = 1.0f - fillSize;
+        Reset();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -41,7 +46,6 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public void OnPointerUp(PointerEventData eventData)
     {
         Reset();
-        //audioSourceLoad.Stop();
     }
 
     // Update is called once per frame
@@ -55,15 +59,20 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
                 if (OnHoldClick != null)
                 {
                     OnHoldClick.Invoke();
-                    isRewinded = !isRewinded;
-                    filledImage.fillClockwise = !filledImage.fillClockwise;
                     onCD = true;
+                    isRewinded = !isRewinded;
+                    if (flip)
+                    {
+                        startGauge += (dir * (1.0f - fillSize));
+                        endGauge += (dir * (1.0f - fillSize));
+                        filledImage.fillClockwise = !filledImage.fillClockwise;
+                        dir *= -1;
+                    }
                     StartCoroutine(StartCoolDown());
                 }
                 Reset();
             }
-            //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
-            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime * 0.325);
+            filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
@@ -82,8 +91,7 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         pointerDown = false;
         pointerDownTimer = 0;
-        //filledImage.fillAmount = (float)(0.75 + (pointerDownTimer / requiredHoldTime * 0.25));
-        filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime);
+        filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
         audioSourceLoad.Stop();
     }
 
