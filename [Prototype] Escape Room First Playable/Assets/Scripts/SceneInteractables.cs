@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class SceneInteractables : MonoBehaviour
 {
+    private Vector3 originalPos;
     public UnityEvent OnClickEvent;
     public UnityEvent OnItemUseEvent;
 
@@ -22,6 +23,7 @@ public class SceneInteractables : MonoBehaviour
             OnClickEvent = new UnityEvent();
         if (OnItemUseEvent == null)
             OnItemUseEvent = new UnityEvent();
+        originalPos = this.transform.position;
     }
     // Start is called before the first frame update
     void Start()
@@ -79,5 +81,17 @@ public class SceneInteractables : MonoBehaviour
         {
             audioSource.Play();
         }
+    }
+
+    public void Shake()
+    {
+        Debug.Log("Shake.");
+        LeanTween.cancel(this.gameObject);
+        LeanTween.move(this.gameObject, this.transform.position + new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), UnityEngine.Random.Range(-0.1f, 0.1f), 0.0f), duration).setEase(LeanTweenType.easeShake).setOnComplete(() => { ResetPosition(); });
+    }
+
+    public void ResetPosition()
+    {
+        this.transform.position = originalPos;
     }
 }
