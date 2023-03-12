@@ -19,7 +19,11 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public UnityEvent OnHoldClick;
 
-    public float maxGauge = 1.0f;
+    public bool flip = true;
+    public float fillSize;
+    private float startGauge;
+    private float endGauge = 1.0f;
+    private int dir = -1;
     [SerializeField] private Image filledImage;
 
     public AudioSource audioSourceLoad;
@@ -27,8 +31,9 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void Awake()
     {
-        Reset();
         cDTimer = cDTime;
+        startGauge = 1.0f - fillSize;
+        Reset();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -55,11 +60,18 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
                 {
                     OnHoldClick.Invoke();
                     onCD = true;
+                    if(flip)
+                    {
+                        startGauge += (dir * (1.0f - fillSize));
+                        endGauge += (dir * (1.0f - fillSize));
+                        filledImage.fillClockwise = !filledImage.fillClockwise;
+                        dir *= -1;
+                    }
                     StartCoroutine(StartCoolDown());
                 }
                 Reset();
             }
-            filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime * maxGauge);
+            filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
@@ -78,7 +90,7 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         pointerDown = false;
         pointerDownTimer = 0;
-        filledImage.fillAmount = (float)(pointerDownTimer / requiredHoldTime * maxGauge);
+        filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
         audioSourceLoad.Stop();
     }
 

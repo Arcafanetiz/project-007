@@ -401,10 +401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -424,12 +424,12 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -477,34 +477,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9914449
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.13052616
-      objectReference: {fileID: 0}
-    - target: {fileID: 5049379183595808257, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -516,6 +488,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5049379183595808259, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
+      propertyPath: m_SortMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049379183595808259, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 980a1273343dbf743aa28acbb481ecb9, type: 2}
     - target: {fileID: 5049379183595808268, guid: 3b3d96509a277654a91350eed9109a01, type: 3}
       propertyPath: m_Name
       value: Dust Particle System
@@ -638,6 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ad067e5147b04459668649972655ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryData: {fileID: 0}
   cursorLock: 1
   interactableLM:
     serializedVersion: 2
@@ -662,6 +643,7 @@ MonoBehaviour:
   prevKey: 113
   presentViews: []
   pastViews: []
+  screenEffect: {fileID: 0}
 --- !u!1 &1592983752
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1592983753
 Transform:
   m_ObjectHideFlags: 0
@@ -760,6 +742,10 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0, z: 0}
   originPos: {x: 0, y: 0, z: 0}
   anchorPos: {x: 0, y: 0, z: 0}
-  multiplier: {x: 0.6, y: 0.3}
+  isZoomIn: 0
+  swayMultiplier: {x: 0, y: 0}
+  swayDistanceClamp: {x: 0.4, y: 0.2}
+  zoomKey: 304
   zoomMultiplier: 5
   zoomDuration: 0.2
+  zoomDistanceClamp: {x: 5, y: 2.5}
