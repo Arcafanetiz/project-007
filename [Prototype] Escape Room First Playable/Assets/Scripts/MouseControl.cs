@@ -6,7 +6,6 @@ using UnityEngine;
 public class MouseControl : MonoBehaviour
 {
     private SceneInteractables interactable;
-    private SceneItemPickUp item;
     private InventoryController inventoryController;
     [SerializeField] InventorySO inventoryData;
 
