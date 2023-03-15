@@ -10,9 +10,10 @@ public class RoomNavigation : MonoBehaviour
     [SerializeField] private int previousView;
     [SerializeField] private int maxView;
 
-    public ViewState currentState = ViewState.PRESENT;
+    [Header("Views")]
     public KeyCode nextKey = KeyCode.E;
     public KeyCode prevKey = KeyCode.Q;
+    public ViewState currentState = ViewState.PRESENT;
 
     public GameObject[] presentViews;
     public GameObject[] pastViews;
@@ -93,6 +94,7 @@ public class RoomNavigation : MonoBehaviour
     IEnumerator ChangeState()
     {
         LeanTween.cancel(screenEffect);
+        screenEffect.transform.localScale = Vector3.one;
         LeanTween.scale(screenEffect, new Vector3(900.0f, 900.0f, 1.0f), 1.0f).setOnComplete(() 
             => { screenEffect.transform.localScale = Vector3.one; });
         yield return new WaitForSecondsRealtime(0.2f);

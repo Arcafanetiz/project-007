@@ -14,8 +14,8 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: ProjectInwZa008
   productName: Chrono Escape
-  defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  defaultCursor: {fileID: 2800000, guid: bb255eac20af0a248b50779005d3f92f, type: 3}
+  cursorHotspot: {x: 3, y: 3}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: FP 0.6
+  bundleVersion: FP 0.8
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

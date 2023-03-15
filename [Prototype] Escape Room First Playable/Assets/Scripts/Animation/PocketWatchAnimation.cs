@@ -19,13 +19,13 @@ public class PocketWatchAnimation : MonoBehaviour, IPointerDownHandler, IPointer
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(!button.isRewinded)
+        if(!button.isRewinded && !button.onCD)
         {
              clockAnim.SetBool("isRewind",true);
              //isRewinded = true;
             
         }
-         if(button.isRewinded)
+         if(button.isRewinded && !button.onCD)
         {
              clockAnim.SetBool("isUpwind",true);
              //clockAnim.speed = -1.0f;
