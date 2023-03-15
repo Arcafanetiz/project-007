@@ -13,6 +13,9 @@ public class MouseControl : MonoBehaviour
 
     public LayerMask interactableLM;
 
+    [SerializeField] Texture2D defaultCursor;
+    [SerializeField] Texture2D activeCursor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +29,11 @@ public class MouseControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool isOverUI = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            bool isOverUI = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
 
             if (hit.collider != null && !isOverUI)
@@ -58,6 +62,15 @@ public class MouseControl : MonoBehaviour
                     interactable.OnClickEvent?.Invoke();
                 }
             }
+        }
+
+        if(SceneInteractables.mouseEnter && !isOverUI)
+        {
+            Cursor.SetCursor(activeCursor, new Vector2 (10, 10), CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(defaultCursor, new Vector2 (94, 2), CursorMode.Auto);
         }
     }
 }

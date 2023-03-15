@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 84dcdce0f12d9d94aa10f10f7a07def6
+guid: 932d56cffd3a5674395cd1a7b4f68d05
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,7 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MetalPlate_BG_0
+      name: Room1_Item_CompassKey_0
       rect:
         serializedVersion: 2
-        x: 642
-        y: 506
-        width: 1730
-        height: 676
+        x: 1025
+        y: 605
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 50, y: 60, z: 60, w: 50}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ce5b91ec2b16d842a6a935ad90eac88
-      internalID: 1118203301
+      spriteID: 3b48b06eb1c4bf3448570b253ad9e9b0
+      internalID: -1463708901
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MetalPlate_BG_0: 1118203301
+      Room1_Item_CompassKey_0: -1463708901
+      Room1_Item_CompassKey_1: 1954562615
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

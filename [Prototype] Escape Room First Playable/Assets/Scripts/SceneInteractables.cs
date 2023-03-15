@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class SceneInteractables : MonoBehaviour
 {
     private Vector3 originalPos;
+    static public bool mouseEnter;
     public UnityEvent OnClickEvent;
     public UnityEvent OnItemUseEvent;
 
@@ -93,5 +94,15 @@ public class SceneInteractables : MonoBehaviour
     public void ResetPosition()
     {
         this.transform.position = originalPos;
+    }
+
+    private void OnMouseEnter()
+    {
+        mouseEnter = true;
+    }
+
+    private void OnMouseExit()
+    {
+        mouseEnter = false;
     }
 }
