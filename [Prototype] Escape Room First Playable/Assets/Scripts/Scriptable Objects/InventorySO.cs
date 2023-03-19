@@ -18,6 +18,8 @@ public class InventorySO : ScriptableObject
 
     public bool resetOnStart;
 
+    public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
+
     public void Initialize()
     {
         if(resetOnStart)
@@ -49,6 +51,10 @@ public class InventorySO : ScriptableObject
     public void RemoveItem(int index)
     {
         //+Remove Item
+        inventoryItems[index] = InventoryItem.GetEmptyItem();
+        //inventoryItems.Remove(inventoryItems[index]);
+        //inventoryItems.Add(InventoryItem.GetEmptyItem());
+        InformAboutChange();
     }
 
     public InventoryItem GetItemAt(int itemIndex)
@@ -65,6 +71,11 @@ public class InventorySO : ScriptableObject
             returnValue[i] = inventoryItems[i];
         }
         return returnValue;
+    }
+
+    private void InformAboutChange()
+    {
+        OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
     }
 }
 

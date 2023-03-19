@@ -98,6 +98,8 @@ public class InventoryController : MonoBehaviour
 
     public void ResetOnHandItem()
     {
+        inventoryData.RemoveItem(inventoryData.onHandItemIndex);
+        inventoryUI.RemoveUIItem(inventoryData.onHandItemIndex);
         inventoryData.onHandItemIndex = -1;
         inventoryUI.ResetBagIcon();
     }

@@ -111,4 +111,9 @@ public class UIInventoryMenu : MonoBehaviour
     {
         inventoryButton.GetComponent<Image>().sprite = defaultBagIcon;
     }
+
+    public void RemoveUIItem(int index)
+    {
+        listOfUIItems[index].ResetData();
+    }
 }
