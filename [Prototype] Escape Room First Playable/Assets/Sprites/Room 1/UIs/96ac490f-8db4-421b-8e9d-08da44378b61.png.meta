@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d304d32f26d325846b984c787ed8dece
+guid: b76117a575cbe7f4dbf3c4b4af27a81c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 460f1fe6-8a82-40a4-b796-5d74fab1f4f5_0
+      name: 96ac490f-8db4-421b-8e9d-08da44378b61_0
       rect:
         serializedVersion: 2
-        x: 484
-        y: 319
-        width: 788
-        height: 1115
+        x: 174
+        y: 118
+        width: 277
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3749afa6791c28e4b9dced9e75b0b952
-      internalID: -1450854072
+      spriteID: 718ccdd57a84ecc4db56195e2ef7a3bc
+      internalID: -909631281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 460f1fe6-8a82-40a4-b796-5d74fab1f4f5_1
+      name: 96ac490f-8db4-421b-8e9d-08da44378b61_1
       rect:
         serializedVersion: 2
-        x: 1763
-        y: 317
-        width: 788
-        height: 1117
+        x: 599
+        y: 118
+        width: 277
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cc06d2c36b884d4f8830280a016208e
-      internalID: 770935134
+      spriteID: 1405cddb937851248a21ed9d5806258b
+      internalID: -830454823
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      460f1fe6-8a82-40a4-b796-5d74fab1f4f5_1: 770935134
-      460f1fe6-8a82-40a4-b796-5d74fab1f4f5_0: -1450854072
+      96ac490f-8db4-421b-8e9d-08da44378b61_0: -909631281
+      96ac490f-8db4-421b-8e9d-08da44378b61_1: -830454823
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
