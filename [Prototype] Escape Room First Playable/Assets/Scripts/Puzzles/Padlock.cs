@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Padlock : MonoBehaviour
 {
     public enum LockState { LOCKED, UNLOCKED };
     public LockState currentState = LockState.LOCKED;
+    
 
     public TMPro.TextMeshProUGUI[] displayText;
 
@@ -15,6 +17,14 @@ public class Padlock : MonoBehaviour
     public int[] _lockCharacterIndex;
     private string _currentPasscode;
 
+    [Header("Events")]
+    public UnityEvent UnlockEvent;
+
+    void Awake()
+    {
+        if (UnlockEvent == null)
+            UnlockEvent = new UnityEvent();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +76,7 @@ public class Padlock : MonoBehaviour
     public void Unlock()
     {
         currentState = LockState.UNLOCKED;
+        UnlockEvent.Invoke();
     }
 
     public void UpdateUI()
