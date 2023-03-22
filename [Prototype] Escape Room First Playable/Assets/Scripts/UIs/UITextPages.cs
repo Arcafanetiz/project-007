@@ -97,6 +97,26 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     //------------------------------------------------------------------------
     void Update() {
+
+        if (currentPage == 0)
+        {
+            prevButton.SetActive(false);
+        }
+        else
+        {
+            prevButton.SetActive(true);
+        }
+
+
+        if (currentPage == pageCount - 1)
+        {
+            nextButton.SetActive(false);
+        }
+        else
+        {
+            nextButton.SetActive(true);
+        }
+
         // if moving to target position
         if (_lerp) {
             // prevent overshooting with values greater than 1
