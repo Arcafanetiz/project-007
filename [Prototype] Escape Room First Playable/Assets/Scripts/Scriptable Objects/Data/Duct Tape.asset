@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Duct Tape
   <Sprite>k__BackingField: {fileID: -1131606921, guid: 944719a7c0a40c8438cb277de03abbb4, type: 3}
-  <Desciption>k__BackingField: Extra sticky, very convenient when abducting somebody.
+  <Desciption>k__BackingField: Extra sticky, very convenient for fixing pipe.
   itemType: 0
   combinable: 0
   combineTarget: {fileID: 0}

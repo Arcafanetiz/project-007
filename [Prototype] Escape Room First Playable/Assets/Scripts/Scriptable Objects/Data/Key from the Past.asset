@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Key from the Past
   <Sprite>k__BackingField: {fileID: -1463708901, guid: dfe64de263a5d454c9867b3423092558, type: 3}
-  <Desciption>k__BackingField: A key aquired from to the past. Perhaps the reason
-    this key was missing is that you took it in first place?
+  <Desciption>k__BackingField: A key acquired from the past. Perhaps the reason this
+    key was missing is that you took it in the first place?
   itemType: 0
   combinable: 0
   combineTarget: {fileID: 0}
