@@ -7,15 +7,18 @@ using UnityEngine.Events;
 public class SceneInteractables : MonoBehaviour
 {
     private Vector3 originalPos;
+
+    [Header("Events")]
     public UnityEvent OnClickEvent;
     public UnityEvent OnItemUseEvent;
 
+    [Header("Item")]
+    [SerializeField] private InventorySO inventoryData;
     [SerializeField] private ItemSO requiredItem;
 
-    [SerializeField] private InventorySO inventoryData;
-
+    [Header("Animation")]
+    [SerializeField] private float animationDuration = 1.0f;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private float duration = 1.0f;
 
     private void Awake()
     {
@@ -25,73 +28,33 @@ public class SceneInteractables : MonoBehaviour
             OnItemUseEvent = new UnityEvent();
         originalPos = this.transform.position;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void ItemRequestHandler(ItemSO item)
     {
         if(item == requiredItem)
-        {
-            Debug.Log("Correct Item");
             OnItemUseEvent?.Invoke();
-        }
         else
-        {
-            Debug.Log("Incorrect Item");
             OnClickEvent?.Invoke();
-        }
     }
 
     public void ItemPickUp(ItemSO item)
     {
-        Debug.Log(item.ItemName + " picked up.");
+        PlayAudio();
         inventoryData.AddItem(item);
-        DestroyItem();
-    }
-
-    public void DestroyItem()
-    {
         GetComponent<Collider2D>().enabled = false;
-        StartCoroutine(PickUpAnimation());
+        Vector3 endScale = Vector3.zero;
+        LeanTween.scale(this.gameObject, endScale, animationDuration).setEase(LeanTweenType.easeInElastic).setOnComplete(() => { this.gameObject.SetActive(false); }); ;
     }
 
-    private IEnumerator PickUpAnimation()
+    public void Shake()
     {
-        if (audioSource != null)
-        {
-            audioSource.Play();
-        }
-        Vector3 endScale = Vector3.zero;
-        LeanTween.scale(this.gameObject, endScale, duration).setEase(LeanTweenType.easeInOutElastic);
-        yield return null;
+        LeanTween.cancel(this.gameObject);
+        LeanTween.move(this.gameObject, this.transform.position + new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), UnityEngine.Random.Range(-0.1f, 0.1f), 0.0f), animationDuration).setEase(LeanTweenType.easeShake).setOnComplete(() => { this.transform.position = originalPos; });
     }
 
     public void PlayAudio()
     {
         if (audioSource != null)
-        {
             audioSource.Play();
-        }
-    }
-
-    public void Shake()
-    {
-        Debug.Log("Shake.");
-        LeanTween.cancel(this.gameObject);
-        LeanTween.move(this.gameObject, this.transform.position + new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), UnityEngine.Random.Range(-0.1f, 0.1f), 0.0f), duration).setEase(LeanTweenType.easeShake).setOnComplete(() => { ResetPosition(); });
-    }
-
-    public void ResetPosition()
-    {
-        this.transform.position = originalPos;
     }
 }

@@ -11,7 +11,7 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     private bool pointerDown;
     private float pointerDownTimer;
 
-    private bool onCD = false;
+    public bool onCD = false;
     private float cDTimer;
 
     public float requiredHoldTime;
@@ -39,8 +39,11 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        pointerDown = true;
-        audioSourceLoad.Play();
+        if(!onCD)
+        {
+            pointerDown = true;
+            audioSourceLoad.Play();
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -97,6 +100,14 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     IEnumerator StartCoolDown()
     {
+        if (!isRewinded)
+        {
+            audioSourceExecute.pitch = 1.2f;
+        }
+        else
+        {
+            audioSourceExecute.pitch = 0.8f;
+        }
         audioSourceExecute.Play();
         yield return new WaitForSeconds(cDTime);
         onCD = false;

@@ -1,15 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 
 [RequireComponent(typeof(Image))]
 [RequireComponent(typeof(Mask))]
 [RequireComponent(typeof(ScrollRect))]
-public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
-
+public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+{
     [Tooltip("Set starting page index - starting from 0")]
     public int startingPage = 0;
     [Tooltip("Threshold time for fast swipe in seconds")]
@@ -25,14 +24,14 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     public TMPro.TMP_Text pageNo;
 
-    /* --Sprite for unselected page
-    public Sprite unselectedPage;
-    --Sprite for selected page
-    public Sprite selectedPage;
-    --Container with page images (gameobject)
-    public Transform pageSelectionIcons;*/
+    //[Tooltip("Sprite for unselected page")]
+    //public Sprite unselectedPage;
+    //[Tooltip("Sprite for selected page")]
+    //public Sprite selectedPage;
+    //[Tooltip("Container with page images (gameobject)")]
+    //public Transform pageSelectionIcons;
 
-    // fast swipes should be fast and short. If too long, then it is not fast swipe
+    // Fast swipes should be fast and short. If too long, then it is not fast swipe
     private int _fastSwipeThresholdMaxLimit;
 
     private ScrollRect _scrollRectComponent;
@@ -87,7 +86,7 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         SetPage(startingPage);
         //InitPageSelection();
         //SetPageSelection(startingPage);
-
+        pageNo.text = (currentPage + 1) + "/" + pageCount;
         // prev and next buttons
         if (nextButton)
             nextButton.GetComponent<Button>().onClick.AddListener(() => { NextScreen(); });
@@ -98,6 +97,26 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     //------------------------------------------------------------------------
     void Update() {
+
+        if (currentPage == 0)
+        {
+            prevButton.SetActive(false);
+        }
+        else
+        {
+            prevButton.SetActive(true);
+        }
+
+
+        if (currentPage == pageCount - 1)
+        {
+            nextButton.SetActive(false);
+        }
+        else
+        {
+            nextButton.SetActive(true);
+        }
+
         // if moving to target position
         if (_lerp) {
             // prevent overshooting with values greater than 1
@@ -238,11 +257,13 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     //------------------------------------------------------------------------
     private void NextScreen() {
         LerpToPage(currentPage + 1);
+        pageNo.text = (currentPage + 1) + "/" + pageCount;
     }
 
     //------------------------------------------------------------------------
     private void PreviousScreen() {
         LerpToPage(currentPage - 1);
+        pageNo.text = (currentPage + 1) + "/" + pageCount;
     }
 
     //------------------------------------------------------------------------
