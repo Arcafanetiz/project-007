@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class Padlock : MonoBehaviour
+public class Padlock : MonoBehaviour, IPointerClickHandler
 {
+
+
     public enum LockState { LOCKED, UNLOCKED };
     public LockState currentState = LockState.LOCKED;
     
@@ -85,6 +88,14 @@ public class Padlock : MonoBehaviour
         for(int i = 0; i < length; i++)
         {
             displayText[i].text = LockCharacters[i][_lockCharacterIndex[i]].ToString();
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(eventData.button == PointerEventData.InputButton.Left)
+        {
+            
         }
     }
 }
