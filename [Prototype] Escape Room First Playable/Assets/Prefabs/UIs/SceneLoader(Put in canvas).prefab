@@ -92,7 +92,7 @@ MonoBehaviour:
   playOnAwake: 1
   firstColor: {r: 0, g: 0, b: 0, a: 1}
   lastColor: {r: 0, g: 0, b: 0, a: 0}
-  timeEffect: 1.75
+  timeEffect: 0.5
   initialDelay: 1
   firstToLast: 1
   pingPong: 0
@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4669736124266088455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   playOnAwake: 1
   firstColor: {r: 0, g: 0, b: 0, a: 0}
   lastColor: {r: 0, g: 0, b: 0, a: 1}
-  timeEffect: 1
+  timeEffect: 0.5
   initialDelay: 1
   firstToLast: 1
   pingPong: 0
