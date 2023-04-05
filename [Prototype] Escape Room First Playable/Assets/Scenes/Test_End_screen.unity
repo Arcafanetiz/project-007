@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader(Put in canvas)
       objectReference: {fileID: 0}
+    - target: {fileID: 2409100842277637534, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637535, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -629,6 +633,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637535, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669736124266088454, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
