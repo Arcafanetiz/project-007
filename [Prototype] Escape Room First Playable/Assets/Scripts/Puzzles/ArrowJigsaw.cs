@@ -109,30 +109,29 @@ void SwapButtons(int index1, int index2)
 
 public void CheckUnlock()
 {
-    bool allButtonsOnLeftAreOnRight = true;
-    bool allButtonsOnRightAreOnLeft = true;
+    int unlockPos = 0;
 
     for (int i = 0; i < buttons.Length; i++)
     {
+        int currentIndex = i;
         ArrowInitialData initialData = buttons[i].GetComponent<ArrowInitialData>();
         int initialIndex = initialData.initialIndex;
-        int currentIndex = i;
 
         // Check if a button on the left is on the right
-        if (initialIndex < 3 && currentIndex >= 3)
+        if (currentIndex > 3 && initialIndex + 4 == currentIndex )
         {
-            allButtonsOnLeftAreOnRight = false;
+            unlockPos++;
         }
 
         // Check if a button on the right is on the left
-        if (initialIndex >= 3 && currentIndex < 3)
+        if (currentIndex < 3 && initialIndex - 4 == currentIndex)
         {
-            allButtonsOnRightAreOnLeft = false;
+            unlockPos++;
         }
     }
 
     // If all buttons on the left are on the right and all buttons on the right are on the left, unlock the game
-    if (allButtonsOnLeftAreOnRight && allButtonsOnRightAreOnLeft)
+    if (unlockPos == 6)
     {
         Unlock();
     }
