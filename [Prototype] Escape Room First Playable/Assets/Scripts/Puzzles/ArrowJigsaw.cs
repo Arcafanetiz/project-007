@@ -2,26 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class ArrowJigsaw : MonoBehaviour
 {
+
+    public enum LockState { LOCKED, UNLOCKED };
+    public LockState currentState = LockState.LOCKED;
+
+
     public Button[] buttons;
     public int emptyIndex = 3;
-    private Vector3[] initialPositions;
-    private int[] initialIndices;
-    
+
+
+    [Header("Events")]
+    public UnityEvent UnlockEvent;
+
+    void Awake()
+    {
+        if (UnlockEvent == null)
+            UnlockEvent = new UnityEvent();
+    }
     // Start is called before the first frame update
     void Start()
     {
-         // Store the initial positions of the buttons and the initial value of emptyIndex
-        initialPositions = new Vector3[buttons.Length];
-        initialIndices = new int[buttons.Length];
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            initialPositions[i] = buttons[i].transform.position;
-            initialIndices[i] = i;
-        }
-        
+      //Restart();
     }
 
     // Update is called once per frame
@@ -76,7 +82,7 @@ public void CheckMoveLeft(Button button)
 }
 
 
-    // Swap the positions of two buttons in the array
+// Swap the positions of two buttons in the array
 void SwapButtons(int index1, int index2)
 {
         Vector3 tempPos = buttons[index1].transform.position;
@@ -97,54 +103,70 @@ void SwapButtons(int index1, int index2)
         {
             emptyIndex = index1;
         }
-}
-public bool CheckButtonPositions()
-{
-    int leftmostLeftButtonIndex = int.MaxValue;
-    int rightmostRightButtonIndex = int.MinValue;
 
-    // Find the leftmost index of buttons that moved left and the rightmost index of buttons that moved right
+        CheckUnlock();
+}
+
+public void CheckUnlock()
+{
+    bool allButtonsOnLeftAreOnRight = true;
+    bool allButtonsOnRightAreOnLeft = true;
+
     for (int i = 0; i < buttons.Length; i++)
     {
-        if (initialIndices[i] > emptyIndex) // button moved left
+        ArrowInitialData initialData = buttons[i].GetComponent<ArrowInitialData>();
+        int initialIndex = initialData.initialIndex;
+        int currentIndex = i;
+
+        // Check if a button on the left is on the right
+        if (initialIndex < 3 && currentIndex >= 3)
         {
-            if (initialIndices[i] < leftmostLeftButtonIndex)
-            {
-                leftmostLeftButtonIndex = initialIndices[i];
-            }
+            allButtonsOnLeftAreOnRight = false;
         }
-        else if (initialIndices[i] < emptyIndex) // button moved right
+
+        // Check if a button on the right is on the left
+        if (initialIndex >= 3 && currentIndex < 3)
         {
-            if (initialIndices[i] > rightmostRightButtonIndex)
-            {
-                rightmostRightButtonIndex = initialIndices[i];
-            }
+            allButtonsOnRightAreOnLeft = false;
         }
     }
 
-    // Check if all buttons that moved left are to the left of all buttons that moved right
-    return leftmostLeftButtonIndex < rightmostRightButtonIndex;
+    // If all buttons on the left are on the right and all buttons on the right are on the left, unlock the game
+    if (allButtonsOnLeftAreOnRight && allButtonsOnRightAreOnLeft)
+    {
+        Unlock();
+    }
 }
+
+
+public void Unlock()
+{
+    currentState = LockState.UNLOCKED;
+    UnlockEvent.Invoke();
+}
+
 public void Restart()
 {
-    
-     // Set the positions of the buttons back to their initial positions
+    // Reset each button to its initial position and index
     for (int i = 0; i < buttons.Length; i++)
     {
-        buttons[i].transform.position = initialPositions[i];
+        ArrowInitialData initialData = buttons[i].GetComponent<ArrowInitialData>();
+        int initialIndex = initialData.initialIndex;
+        //Vector3 initialPosition = initialData.initialPosition;
+
+        // If the button is not in its initial index, swap it with the button at the initial index
+        if (i != initialIndex)
+        {
+            SwapButtons(i, initialIndex);
+        }
+
+        // Reset the button's position to its initial position
+        //buttons[i].transform.position = initialData.initialPosition;
     }
-    
-    // Set the indices of the buttons back to their initial indices
-    for (int i = 0; i < buttons.Length; i++)
-    {
-        Button button = buttons[i];
-        int index = initialIndices[i];
-        buttons[index] = button;
-        button.transform.SetSiblingIndex(index);
-    }
-    
-    // Reset the empty index to its initial value
+
     emptyIndex = 3;
+
 }
+
 
 }
