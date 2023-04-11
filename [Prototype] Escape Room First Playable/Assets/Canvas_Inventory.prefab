@@ -1068,9 +1068,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSlotPrefab: {fileID: 4053148916989001877, guid: 3e7b754259d806f4abb3e157fff76c27, type: 3}
   inventoryInspector: {fileID: 1880494203821335788}
-  mouseFollower: {fileID: 6067597932300028786}
   inventoryPanel: {fileID: 8683123353201322102}
   contentPanel: {fileID: 8683123354070536473}
+  inventoryButton: {fileID: 8683123352859749823}
+  useItemButton: {fileID: 2309716298818552382}
   distance: 500
   angle: 20
   duration: 0.2

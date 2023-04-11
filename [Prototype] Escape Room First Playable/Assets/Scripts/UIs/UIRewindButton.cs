@@ -6,29 +6,30 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
 
-public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class UIRewindButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private bool pointerDown;
     private float pointerDownTimer;
 
+    [Header("Private Serialized Field -Do not touch-")]
     public bool onCD = false;
     private float cDTimer;
 
+    [Header("Hold Settings")]
     public float requiredHoldTime;
     public float cDTime;
 
+    [Header("Button Events")]
     public UnityEvent OnHoldClick;
-    public bool isRewinded = false;
 
+    [Header("Gauge Animation")]
+    public bool isRewinded = false;
     public bool flip = true;
     public float fillSize;
     private float startGauge;
     private float endGauge = 1.0f;
     private int dir = -1;
     [SerializeField] private Image filledImage;
-
-    public AudioSource audioSourceLoad;
-    public AudioSource audioSourceExecute;
 
     public void Awake()
     {
@@ -42,7 +43,8 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         if(!onCD)
         {
             pointerDown = true;
-            audioSourceLoad.Play();
+            //audioSourceLoad.Play();
+            AudioManager.instance.PlayAudio("Clock Ticking");
         }
     }
 
@@ -80,13 +82,15 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
         {
-            audioSourceLoad.Play();
+            //audioSourceLoad.Play();
+            AudioManager.instance.PlayAudio("Clock Ticking");
         }
 
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             Reset();
-            audioSourceLoad.Stop();
+            //audioSourceLoad.Stop();
+            AudioManager.instance.StopAudio("Clock Ticking");
         }
     }
 
@@ -95,20 +99,20 @@ public class UIHoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         pointerDown = false;
         pointerDownTimer = 0;
         filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
-        audioSourceLoad.Stop();
+        //audioSourceLoad.Stop();
+        AudioManager.instance.StopAudio("Clock Ticking");
     }
 
     IEnumerator StartCoolDown()
     {
         if (!isRewinded)
         {
-            audioSourceExecute.pitch = 1.2f;
+            AudioManager.instance.PlayAudio("Whoosh(1.2)");
         }
         else
         {
-            audioSourceExecute.pitch = 0.8f;
+            AudioManager.instance.PlayAudio("Whoosh(0.8)");
         }
-        audioSourceExecute.Play();
         yield return new WaitForSeconds(cDTime);
         onCD = false;
     }

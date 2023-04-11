@@ -788,17 +788,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1332317750799729527, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
   m_PrefabInstance: {fileID: 1332317750897375196}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &108197038 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1332317750799729522, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
-  m_PrefabInstance: {fileID: 1332317750897375196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b510cd580a49c3e40a1070726bee0f13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &161911708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4488,7 +4477,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1563213913}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
         m_MethodName: ResetOnHandItem
         m_Mode: 1
@@ -5219,7 +5208,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1563213913}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
         m_MethodName: ResetOnHandItem
         m_Mode: 1
@@ -5707,6 +5696,10 @@ MonoBehaviour:
   endIntensity: 1
   duration: 0.75
   easeType: 31
+  flickIntensity: 0
+  intensityRange: 0
+  intensityTimeMin: 0
+  intensityTimeMax: 0
 --- !u!1 &704234793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6068,6 +6061,10 @@ MonoBehaviour:
   endIntensity: 1.2
   duration: 1
   easeType: 31
+  flickIntensity: 0
+  intensityRange: 0
+  intensityTimeMin: 0
+  intensityTimeMax: 0
 --- !u!1 &746292663
 GameObject:
   m_ObjectHideFlags: 0
@@ -7340,90 +7337,6 @@ RectTransform:
   m_AnchoredPosition: {x: 77, y: -168}
   m_SizeDelta: {x: 117.992, y: 161.298}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &957665883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 957665885}
-  - component: {fileID: 957665884}
-  m_Layer: 5
-  m_Name: UI_PrevButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &957665884
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957665883}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 40fb698b6d91cef4baf039029f841943, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.4, y: 3.5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &957665885
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957665883}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 889.1265, y: 501.1915, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998871553
 GameObject:
   m_ObjectHideFlags: 0
@@ -20903,7 +20816,6 @@ GameObject:
   - component: {fileID: 1563213910}
   - component: {fileID: 1563213911}
   - component: {fileID: 1563213912}
-  - component: {fileID: 1563213913}
   - component: {fileID: 1563213914}
   m_Layer: 0
   m_Name: GM
@@ -20975,21 +20887,6 @@ MonoBehaviour:
   pastViews:
   - {fileID: 1585552044}
   screenEffect: {fileID: 704843534}
---- !u!114 &1563213913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563213909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e830d47f7ab64624b809620a17d2346d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 108197038}
-  inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
-  inventoryKey: 105
 --- !u!82 &1563213914
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28802,7 +28699,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1563213913}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
         m_MethodName: ResetOnHandItem
         m_Mode: 1
@@ -29916,6 +29813,10 @@ MonoBehaviour:
   endIntensity: 1.2
   duration: 1
   easeType: 31
+  flickIntensity: 0
+  intensityRange: 0
+  intensityTimeMin: 0
+  intensityTimeMax: 0
 --- !u!1 &1899322190
 GameObject:
   m_ObjectHideFlags: 0
@@ -32326,7 +32227,7 @@ PrefabInstance:
     - target: {fileID: 1332317750799729522, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: inventoryController
       value: 
-      objectReference: {fileID: 1563213913}
+      objectReference: {fileID: 0}
     - target: {fileID: 1332317750799729526, guid: e0785e8172a66de4fa02666865e5a5ac, type: 3}
       propertyPath: m_Name
       value: Inventory

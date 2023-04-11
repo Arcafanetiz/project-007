@@ -2,22 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIInventoryMenu : MonoBehaviour
 {
     [Header("Private Serialized Field -Do not touch-")]
     [SerializeField] private UIInventoryItem itemSlotPrefab;
     [SerializeField] private UIInventoryInspector inventoryInspector;
-    [SerializeField] private UIMouseFollower mouseFollower;
+    //[SerializeField] private UIMouseFollower mouseFollower;
     [SerializeField] private RectTransform inventoryPanel;
     [SerializeField] private RectTransform contentPanel;
-    
+    [SerializeField] private Button inventoryButton;
+    [SerializeField] private Button useItemButton;
+
     List<UIInventoryItem> listsOfUIItems = new List<UIInventoryItem>();
     private int currentSelectIndex = -1;
-    private int currentDragIndex = -1;
+    //private int currentDragIndex = -1;
 
-    public event Action<int> OnDescriptionRequest, OnItemActionRequested, OnStartDragging;
-    public event Action<int, int> OnCombineRequest;
+    public event Action<int> OnDescriptionRequest;
+
+    //public event Action<int> OnDescriptionRequest, OnItemActionRequested, OnStartDragging;
+    //public event Action<int, int> OnCombineRequest;
 
     private float originPosY;
     [Header("Animation")]
@@ -32,7 +37,7 @@ public class UIInventoryMenu : MonoBehaviour
         originPosY = inventoryPanel.anchoredPosition.y;
         inventoryInspector.ResetInspector();
         ResetUI(0);
-        mouseFollower.Toggle(false);
+        //mouseFollower.Toggle(false);
     }
 
     public void InitializeInventoryUI (int inventory_size)
@@ -46,10 +51,10 @@ public class UIInventoryMenu : MonoBehaviour
             listsOfUIItems.Add(ui_item);
             // Add event to item slot
             ui_item.OnItemClicked += HandleItemSelection;
-            ui_item.OnRightClicked += HandleShowItemAction;
-            ui_item.OnItemBeginDrag += HandleItemBeginDrag;
-            ui_item.OnItemDroppedOn += HandleItemCombine;
-            ui_item.OnItemEndDrag += HandleItemEndDrag;
+            //ui_item.OnRightClicked += HandleShowItemAction;
+            //ui_item.OnItemBeginDrag += HandleItemBeginDrag;
+            //ui_item.OnItemDroppedOn += HandleItemCombine;
+            //ui_item.OnItemEndDrag += HandleItemEndDrag;
         }
     }
 
@@ -79,40 +84,40 @@ public class UIInventoryMenu : MonoBehaviour
     {
         Debug.Log(item_ui.name + "Clicked.");
         int index = listsOfUIItems.IndexOf(item_ui);
-        if (index == -1)
+        if (index == -1 || item_ui.empty)
             return;
         currentSelectIndex = index;
         OnDescriptionRequest?.Invoke(index);
     }
 
-    private void HandleShowItemAction(UIInventoryItem item_ui)
-    {
-        Debug.Log(item_ui.name + "Right clicked.");
-    }
+    //private void HandleShowItemAction(UIInventoryItem item_ui)
+    //{
+    //    Debug.Log(item_ui.name + "Right clicked.");
+    //}
 
-    private void HandleItemBeginDrag(UIInventoryItem item_ui)
-    {
-        int index = listsOfUIItems.IndexOf(item_ui);
-        if (index == -1)
-            return;
-        currentDragIndex = index;
-        HandleItemSelection(item_ui);
-        OnStartDragging?.Invoke(index);
-    }
+    //private void HandleItemBeginDrag(UIInventoryItem item_ui)
+    //{
+    //    int index = listsOfUIItems.IndexOf(item_ui);
+    //    if (index == -1)
+    //        return;
+    //    currentDragIndex = index;
+    //    HandleItemSelection(item_ui);
+    //    OnStartDragging?.Invoke(index);
+    //}
 
-    private void HandleItemCombine(UIInventoryItem item_ui)
-    {
-        int index = listsOfUIItems.IndexOf(item_ui);
-        if (index == -1)    
-            return;
+    //private void HandleItemCombine(UIInventoryItem item_ui)
+    //{
+    //    int index = listsOfUIItems.IndexOf(item_ui);
+    //    if (index == -1)    
+    //        return;
 
-        OnCombineRequest?.Invoke(currentDragIndex, index);
-    }
+    //    OnCombineRequest?.Invoke(currentDragIndex, index);
+    //}
 
-    private void HandleItemEndDrag(UIInventoryItem item_ui)
-    {
-        ResetDraggedItem();
-    }
+    //private void HandleItemEndDrag(UIInventoryItem item_ui)
+    //{
+    //    ResetDraggedItem();
+    //}
 
     public void Toggle()
     {
@@ -146,7 +151,7 @@ public class UIInventoryMenu : MonoBehaviour
         LeanTween.rotate(inventoryPanel, -angle, duration).setEase(easeType);
         LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType).setOnComplete(() => { ResetUI(0); });
 
-        ResetDraggedItem();
+        //ResetDraggedItem();
     }
 
     private void ResetUI(int state)
@@ -168,15 +173,15 @@ public class UIInventoryMenu : MonoBehaviour
         }
     }
 
-    private void CreateDraggedItem(Sprite item_sprite)
-    {
-        mouseFollower.Toggle(true);
-        mouseFollower.SetData(item_sprite);
-    }
+    //private void CreateDraggedItem(Sprite item_sprite)
+    //{
+    //    mouseFollower.Toggle(true);
+    //    mouseFollower.SetData(item_sprite);
+    //}
 
-    private void ResetDraggedItem()
-    {
-        mouseFollower.Toggle(false);
-        currentDragIndex = -1;
-    }
+    //private void ResetDraggedItem()
+    //{
+    //    mouseFollower.Toggle(false);
+    //    currentDragIndex = -1;
+    //}
 }

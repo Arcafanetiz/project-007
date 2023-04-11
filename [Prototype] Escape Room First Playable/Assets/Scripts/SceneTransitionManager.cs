@@ -32,9 +32,10 @@ public class SceneTransitionManager : MonoBehaviour
         SceneManager.LoadScene(scene_index);
 
         //AsyncOperation operation = SceneManager.LoadSceneAsync(scene_index);
-        //while(!operation.isDone)
+        //while (!operation.isDone)
         //{
-        //    Debug.Log(operation.progress);
+        //    float progress = Mathf.Clamp01(operation.progress / 0.9f);
+        //    Debug.Log(progress);
         //    yield return null;
         //}
     }

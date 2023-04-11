@@ -15,9 +15,9 @@ public class ItemSO : ScriptableObject
     [field: SerializeField]
     [field: TextArea]
     public string Desciption { get; set; }
-    public ItemType itemType;
-    public bool combinable;
-    public ItemSO combineTarget;
-    public ItemSO combineResult;
+    //public ItemType itemType;
+    //public bool combinable;
+    //public ItemSO combineTarget;
+    //public ItemSO combineResult;
 }
 
