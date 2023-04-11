@@ -3,23 +3,26 @@ using UnityEngine.UI;
 
 public class GDTFadeEffect : MonoBehaviour
 {
+    [Header("Animation Settings")]
     public bool playOnAwake = true;
     public Color firstColor;
     public Color lastColor;
     public float timeEffect;
     public float initialDelay;
-    public bool firstToLast=true;
+    public bool firstToLast = true;
     public bool pingPong;
     public float pingPongDelay;
-    public bool disableWhenFinish=true;
+    public bool disableWhenFinish = true;
     public float disableDelay;
+
     private float speed;
     private Image blackImage;
     private float currentValue;
-    private bool performEffect=true;
+    private bool performEffect = true;
     private bool finished = false;
     private bool halfCycle;
     private bool goingToLast;
+
     void OnEnable()
     {
         halfCycle = false;
@@ -46,7 +49,6 @@ public class GDTFadeEffect : MonoBehaviour
                 Invoke("StartEffect", initialDelay);
             }
         }
-        
     }
 
     void FixedUpdate()
@@ -99,7 +101,6 @@ public class GDTFadeEffect : MonoBehaviour
                     {
                         finished = true;
                     }
-
                 }
                 else
                 {
@@ -120,7 +121,6 @@ public class GDTFadeEffect : MonoBehaviour
                 }
             }
         }
-
     }
 
     private bool PerformFadeIn()
@@ -154,7 +154,6 @@ public class GDTFadeEffect : MonoBehaviour
     private void Disable()
     {
         gameObject.SetActive(false);
-
     }
 
     private void HalfCycleDelay()
@@ -178,6 +177,4 @@ public class GDTFadeEffect : MonoBehaviour
         performEffect = true;
         finished = false;
     }
-
-
 }

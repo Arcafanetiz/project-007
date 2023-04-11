@@ -515,12 +515,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 803414469}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 100
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 851135936}
+        m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &95580284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5808265945664852983, guid: 981f168efffb2674880cd706cc905053, type: 3}
@@ -746,7 +758,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1811975256}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &258038487
 GameObject:
@@ -892,7 +904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259223448}
   m_Layer: 0
-  m_Name: SFX Sources
+  m_Name: SFX Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1564,8 +1576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9767b1853c62b4989158cc3202614b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMSources: {fileID: 1671392353}
-  SFXSources: {fileID: 259223447}
+  BGMHolder: {fileID: 1671392353}
+  SFXHolder: {fileID: 259223447}
   _BGMName: Title BGM
   playBGM: 1
   BGMSounds:
@@ -1574,23 +1586,20 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
-    currentVolume: 0
     source: {fileID: 0}
-  - name: First
+  - name: FirstRoom(Present)
     audioClip: {fileID: 8300000, guid: fc34e86f3483cdc4482fee8dfb6fce0a, type: 3}
     volume: 1
     pitch: 1
     loop: 1
-    currentVolume: 0
     source: {fileID: 0}
-  SFXSounds:
-  - name: Pop
-    audioClip: {fileID: 8300000, guid: 0f3589b1ce22e3f42b075b304c78b343, type: 3}
+  - name: FirstRoom(Past)
+    audioClip: {fileID: 8300000, guid: c87056be8b7184749a63047581a3f346, type: 3}
     volume: 1
     pitch: 1
-    loop: 0
-    currentVolume: 0
+    loop: 1
     source: {fileID: 0}
+  SFXSounds: []
   BGMSource: {fileID: 0}
 --- !u!1 &610469349
 GameObject:
@@ -1893,7 +1902,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1811975256}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &667959986
 MonoBehaviour:
@@ -2061,30 +2070,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 578009363}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: SwitchBGM
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: First
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 578009363}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayAudio
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Pop
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &674937816
@@ -2519,6 +2504,7 @@ GameObject:
   - component: {fileID: 851135934}
   - component: {fileID: 851135933}
   - component: {fileID: 851135935}
+  - component: {fileID: 851135936}
   m_Layer: 5
   m_Name: Settings Menu Panel
   m_TagString: Untagged
@@ -2597,6 +2583,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &851135936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851135931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc1c204ae9de5040b2d4df7aad8e3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 74098859}
+  bGMSlider: {fileID: 969438770}
+  sFXSlider: {fileID: 1311986900}
 --- !u!1 &965842606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,12 +2819,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1560091944}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 100
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 851135936}
+        m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &992780522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +2958,7 @@ Transform:
   - {fileID: 1857833492}
   - {fileID: 1282388044}
   m_Father: {fileID: 1811975256}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1055819559 stripped
 Camera:
@@ -3143,7 +3156,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2409100842277637534, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_Name
-      value: SceneLoader(Put in canvas)
+      value: Scene Loader
       objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637535, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_RootOrder
@@ -3498,12 +3511,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 44331089}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 100
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 851135936}
+        m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1377539403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,7 +4230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671392354}
   m_Layer: 0
-  m_Name: BGM Sources
+  m_Name: BGM Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4446,7 +4471,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1811975256}
-  - component: {fileID: 1811975257}
   m_Layer: 0
   m_Name: GameMenu
   m_TagString: Untagged
@@ -4469,109 +4493,13 @@ Transform:
   - {fileID: 349046145}
   - {fileID: 51119105}
   - {fileID: 1209619009}
+  - {fileID: 95580284}
   - {fileID: 1049937250}
   - {fileID: 246331574}
   - {fileID: 667959985}
-  - {fileID: 95580284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1811975257
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811975255}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0debb8a430d690d4fba3b33fe3093c65, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1857833491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,7 +4947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5808265945664852983, guid: 981f168efffb2674880cd706cc905053, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5808265945664852983, guid: 981f168efffb2674880cd706cc905053, type: 3}
       propertyPath: m_LocalPosition.x

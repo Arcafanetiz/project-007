@@ -11,7 +11,6 @@ public class Sound
     [Range(0.1f, 3.0f)] public float pitch = 1.0f;
     public bool loop;
 
-    public float currentVolume;
     [HideInInspector] public AudioSource source;
 
     // Start is called before the first frame update

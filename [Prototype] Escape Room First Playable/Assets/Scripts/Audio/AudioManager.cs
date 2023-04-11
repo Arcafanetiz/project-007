@@ -7,8 +7,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [Header("Private Serialized Field -Do not touch-")]
-    [SerializeField] private GameObject BGMSources;
-    [SerializeField] private GameObject SFXSources;
+    [SerializeField] private GameObject BGMHolder;
+    [SerializeField] private GameObject SFXHolder;
 
     [Header("Sound Manager Settings")]
     public string _BGMName;
@@ -17,6 +17,9 @@ public class AudioManager : MonoBehaviour
     public Sound[] SFXSounds;
 
     [HideInInspector] public AudioSource BGMSource;
+
+    private string currentBGMName;
+
     private void Awake()
     {
         if(instance == null)
@@ -31,35 +34,31 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        BGMSource = BGMSources.AddComponent<AudioSource>();
+        BGMSource = BGMHolder.AddComponent<AudioSource>();
 
         foreach (Sound s in BGMSounds)
         {
             s.source = BGMSource;
-
-            s.currentVolume = s.volume;
         }
 
         foreach (Sound s in SFXSounds)
         {
-            s.source = SFXSources.AddComponent<AudioSource>();
+            s.source = SFXHolder.AddComponent<AudioSource>();
             s.source.clip = s.audioClip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
-
-            s.currentVolume = s.volume;
         }
     }
 
     public void SwitchBGM(string name)
     {
         // ---------------- Calling Method ----------------
-        // FindObjectOfType<AudioManager>().SwitchBGM("name");
         // AudioManager.instance.SwitchBGM("name");
         // AudioManager.instance.BGMSource.Stop();
         // ------------------------------------------------
 
+        currentBGMName = name;
         BGMSource.Stop();
         Sound s = Array.Find(BGMSounds, sound => sound.name == name);
         if (s == null)
@@ -77,7 +76,7 @@ public class AudioManager : MonoBehaviour
     public void PlayAudio(string name)
     {
         // ---------------- Calling Method ----------------
-        // FindObjectOfType<AudioManager>().PlayAudio("name");
+        // AudioManager.instance.PlayAudio("name");
         // ------------------------------------------------
 
         Sound s = Array.Find(SFXSounds, sound => sound.name == name);
@@ -92,7 +91,7 @@ public class AudioManager : MonoBehaviour
     public void StopAudio(string name)
     {
         // ---------------- Calling Method ----------------
-        // FindObjectOfType<AudioManager>().StopAudio("name");
+        // AudioManager.instance.StopAudio("name");
         // ------------------------------------------------
 
         Sound s = Array.Find(SFXSounds, sound => sound.name == name);
@@ -111,7 +110,13 @@ public class AudioManager : MonoBehaviour
 
     public void SetBGMVolume(float volume)
     {
-        BGMSource.volume = volume;
+        Sound s = Array.Find(BGMSounds, sound => sound.name == currentBGMName);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        BGMSource.volume = s.volume * volume;
     }
 
     public void ToggleSFX()
@@ -126,7 +131,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sound s in SFXSounds)
         {
-            s.source.volume = s.volume;
+            s.source.volume = s.volume * volume;
         }
     }
 

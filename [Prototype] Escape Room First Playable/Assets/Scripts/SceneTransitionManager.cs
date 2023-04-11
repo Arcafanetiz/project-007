@@ -6,31 +6,37 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
-    public GameObject FadeIn;
-    public GameObject FadeOut;
-    private string SceneName;
+    [Header("Private Serialized Field -Do not touch-")]
+    [SerializeField] private GameObject FadeIn;
+    [SerializeField] private GameObject FadeOut;
 
     void Start()
     {
-        FadeOut.SetActive(false);
         FadeIn.SetActive(true);
+        FadeOut.SetActive(false);
     }
 
-    public void LoadScene(string scenename)
+    public void LoadScene(int scene_index)
     {
-        SceneName = scenename;
         FadeOut.SetActive(true);
-        StartCoroutine(WaitForTransition(0)); 
+        StartCoroutine(WaitForTransition(scene_index)); 
     }
 
-    private IEnumerator WaitForTransition(int index)
+    private IEnumerator WaitForTransition(int scene_index)
     {
-        while (FadeOut.GetComponent<GDTFadeEffect>().HasFinished())
+        while(FadeOut.GetComponent<GDTFadeEffect>().HasFinished())
         {
             yield return null;
         }
-        Debug.Log("Load scene: " + SceneName);
-        SceneManager.LoadScene(SceneName);
+
+        SceneManager.LoadScene(scene_index);
+
+        //AsyncOperation operation = SceneManager.LoadSceneAsync(scene_index);
+        //while(!operation.isDone)
+        //{
+        //    Debug.Log(operation.progress);
+        //    yield return null;
+        //}
     }
 
     public void ExitGame()
