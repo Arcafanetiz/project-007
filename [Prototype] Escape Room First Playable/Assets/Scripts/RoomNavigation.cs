@@ -6,6 +6,7 @@ public class RoomNavigation : MonoBehaviour
 {
     public enum ViewState { PAST, PRESENT };
 
+    [Header("Private Serialized Field -Do not touch-")]
     [SerializeField] private int currentView;
     [SerializeField] private int previousView;
     [SerializeField] private int maxView;
@@ -17,6 +18,10 @@ public class RoomNavigation : MonoBehaviour
 
     public GameObject[] presentViews;
     public GameObject[] pastViews;
+
+    [Header("Audio")]
+    public string presentBGM;
+    public string pastBGM;
 
     public GameObject screenEffect;
     public int p_currentView
@@ -53,6 +58,7 @@ public class RoomNavigation : MonoBehaviour
             presentViews[i].SetActive(false);
             pastViews[i].SetActive(false);
         }
+        //AudioManager.instance.SwitchBGM(presentBGM);
     }
 
     // Update is called once per frame
@@ -104,11 +110,13 @@ public class RoomNavigation : MonoBehaviour
                 presentViews[currentView].SetActive(false);
                 pastViews[currentView].SetActive(true);
                 currentState = ViewState.PAST;
+                AudioManager.instance.SwitchBGM(pastBGM);
                 break;
             case ViewState.PAST:
                 pastViews[currentView].SetActive(false);
                 presentViews[currentView].SetActive(true);
                 currentState = ViewState.PRESENT;
+                AudioManager.instance.SwitchBGM(presentBGM);
                 break;
         }
     }

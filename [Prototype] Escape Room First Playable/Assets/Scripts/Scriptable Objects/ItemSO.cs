@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemSO : ScriptableObject
 {
     public int ID => GetInstanceID();
-    public enum ItemType { KEY_ITEM, CLUE_ITEM };
+    //public enum ItemType { KEY_ITEM, CLUE_ITEM };
 
     [field: SerializeField]
     public string ItemName { get; set; }
@@ -15,9 +15,17 @@ public class ItemSO : ScriptableObject
     [field: SerializeField]
     [field: TextArea]
     public string Desciption { get; set; }
+
+    [field: SerializeField]
+    public bool IsStackable { get; set; } = false;
+
+    [field: SerializeField]
+    public int MaxStackSize { get; set; } = 1;
+
     //public ItemType itemType;
     //public bool combinable;
     //public ItemSO combineTarget;
     //public ItemSO combineResult;
 }
+
 

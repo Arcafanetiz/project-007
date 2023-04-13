@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eda530bf439d3848b97ef67bbd45549, type: 3}
-  m_Name: Duct Tape
+  m_Name: Wooden Ship Model
   m_EditorClassIdentifier: 
-  <ItemName>k__BackingField: Duct Tape
-  <Sprite>k__BackingField: {fileID: -1131606921, guid: 944719a7c0a40c8438cb277de03abbb4, type: 3}
-  <Desciption>k__BackingField: Extra sticky, very convenient for fixing broken pipe
+  <ItemName>k__BackingField: Wooden Ship Model
+  <Sprite>k__BackingField: {fileID: -594457831, guid: a82b6efc2bc4b1d4aa81088576ad7df1, type: 3}
+  <Desciption>k__BackingField: A figurine model of a ship with Sir William standing
+    valiantly on it. Sir William raises his sword skyward as he is embarking journey
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1

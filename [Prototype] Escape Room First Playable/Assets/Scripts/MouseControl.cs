@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
+    [Header("Private Serialized Field -Do not touch-")]
     [SerializeField] private InventorySO inventoryData;
 
     [Header("Interactable")]

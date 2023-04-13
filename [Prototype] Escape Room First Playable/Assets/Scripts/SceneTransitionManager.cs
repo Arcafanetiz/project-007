@@ -10,6 +10,10 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField] private GameObject FadeIn;
     [SerializeField] private GameObject FadeOut;
 
+    [Header("Audio Settings")]
+    public bool changeBGM;
+    public string bGMName;
+
     void Start()
     {
         FadeIn.SetActive(true);
@@ -30,6 +34,11 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         SceneManager.LoadScene(scene_index);
+
+        if(changeBGM)
+        {
+            AudioManager.instance.SwitchBGM(bGMName);
+        }
 
         //AsyncOperation operation = SceneManager.LoadSceneAsync(scene_index);
         //while (!operation.isDone)

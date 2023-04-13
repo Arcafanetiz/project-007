@@ -88,6 +88,36 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     source: {fileID: 0}
+  - name: Item Collect
+    audioClip: {fileID: 8300000, guid: 8bb2066c6aa9c0143900b01a36690485, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Page Flip
+    audioClip: {fileID: 8300000, guid: 0f3589b1ce22e3f42b075b304c78b343, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Sword Down
+    audioClip: {fileID: 8300000, guid: e38063964b1e33544ae6934564d871c1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Glass Case Down
+    audioClip: {fileID: 8300000, guid: 802ab82879458e540a1a73fa7f0d9634, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Splash
+    audioClip: {fileID: 8300000, guid: 6ae0c57e75cc56b4a82305e331fe371c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   BGMSource: {fileID: 0}
 --- !u!1 &1739902883167453487
 GameObject:

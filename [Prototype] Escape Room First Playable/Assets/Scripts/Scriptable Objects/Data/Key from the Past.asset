@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b226abeab2788f14eb532bc4e6ef09b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eda530bf439d3848b97ef67bbd45549, type: 3}
   m_Name: Key from the Past
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Key from the Past
   <Sprite>k__BackingField: {fileID: -1463708901, guid: dfe64de263a5d454c9867b3423092558, type: 3}
   <Desciption>k__BackingField: A key acquired from the past. Perhaps the reason this
     key was missing is that you took it in the first place?
-  itemType: 0
-  combinable: 0
-  combineTarget: {fileID: 0}
-  combineResult: {fileID: 0}
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1

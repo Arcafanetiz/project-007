@@ -10,6 +10,7 @@ public class UILoadingScreen : MonoBehaviour
 
     public void Hide()
     {
+        gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
         LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType).setOnComplete(() => { gameObject.SetActive(false); });
     }
 

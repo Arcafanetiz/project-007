@@ -495,7 +495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thanks For Playing
+  m_text: To be continued...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6ed7058eb34c624386b325b509edb1d, type: 2}
   m_sharedMaterial: {fileID: -6639993079777425521, guid: a6ed7058eb34c624386b325b509edb1d, type: 2}
@@ -585,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637534, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_Name
-      value: SceneLoader(Put in canvas)
+      value: Scene Loader
       objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637534, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_IsActive
@@ -877,9 +877,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 726363165}
-        m_TargetAssemblyTypeName: scene_manager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1011,13 +1011,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 726363165}
-        m_TargetAssemblyTypeName: scene_manager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Test_Simple_Game_Loop
           m_BoolArgument: 0

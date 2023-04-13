@@ -12,10 +12,13 @@ public class UIItemRequester : MonoBehaviour
     public UnityEvent OnClickEvent;
     public UnityEvent OnItemUseEvent;
 
+    public string onItemUseAudio;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnItemUseEvent.AddListener(RemoveOnHandItem);
+        OnItemUseEvent.AddListener(PlayOnItemUseAudio);
     }
 
     // Update is called once per frame
@@ -42,5 +45,16 @@ public class UIItemRequester : MonoBehaviour
         {
             OnClickEvent?.Invoke();
         }
+    }
+
+    public void RemoveOnHandItem()
+    {
+        inventoryData.RemoveItem(inventoryData.onHandItemIndex);
+        inventoryData.onHandItemIndex = -1;
+    }
+
+    public void PlayOnItemUseAudio()
+    {
+        AudioManager.instance.PlayAudio(onItemUseAudio);
     }
 }

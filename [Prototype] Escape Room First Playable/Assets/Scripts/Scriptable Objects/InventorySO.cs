@@ -13,8 +13,6 @@ public class InventorySO : ScriptableObject
     public int Size { get; private set; } = 10;
 
     public int onHandItemIndex;
-    public int combineItemAIndex;
-    public int combineItemBIndex;
 
     public bool resetOnStart;
 
@@ -22,30 +20,34 @@ public class InventorySO : ScriptableObject
 
     public void Initialize()
     {
-        if(resetOnStart)
+        if (resetOnStart)
         {
             inventoryItems = new List<InventoryItem>();
             for (int i = 0; i < Size; i++)
             {
                 inventoryItems.Add(InventoryItem.GetEmptyItem());
-            }
+            }  
         }
+        onHandItemIndex = -1;
     }
 
-    public void AddItem(ItemSO item)
+    public void AddItem(ItemSO item, int quantity)
     {
         for (int i = 0; i < inventoryItems.Count; i++)
         {
             if (inventoryItems[i].isEmpty)
             {
                 //+Add Item
-                inventoryItems[i] = new InventoryItem
-                {
-                    item = item
-                };
+                inventoryItems[i] = new InventoryItem { item = item, quantity = quantity };
                 return;
             }
         }
+        InformAboutChange();
+    }
+
+    public void AddItem(InventoryItem item)
+    {
+        AddItem(item.item, item.quantity);
     }
 
     public void RemoveItem(int index)
@@ -57,9 +59,9 @@ public class InventorySO : ScriptableObject
         InformAboutChange();
     }
 
-    public InventoryItem GetItemAt(int itemIndex)
+    public InventoryItem GetItemAt(int item_index)
     {
-        return inventoryItems[itemIndex];
+        return inventoryItems[item_index];
     }
 
     public Dictionary<int, InventoryItem> GetCurrentInventoryState()
@@ -82,11 +84,14 @@ public class InventorySO : ScriptableObject
 [Serializable]
 public struct InventoryItem
 {
+    public int quantity;
     public ItemSO item;
     public bool isEmpty => item == null;
 
-    public static InventoryItem GetEmptyItem() => new InventoryItem
+    public InventoryItem ChangeQuantity(int new_quantity)
     {
-        item = null
-    };
+        return new InventoryItem { item = this.item, quantity = new_quantity };
+    }
+
+    public static InventoryItem GetEmptyItem() => new InventoryItem { item = null, quantity = 0 };
 }

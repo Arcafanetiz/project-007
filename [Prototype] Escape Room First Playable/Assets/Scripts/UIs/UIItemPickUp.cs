@@ -20,6 +20,6 @@ public class UIItemPickUp : MonoBehaviour
     public void ItemPickUp(ItemSO item)
     {
         Debug.Log(item.ItemName + " picked up.");
-        inventoryData.AddItem(item);
+        inventoryData.AddItem(item, 1);
     }
 }
