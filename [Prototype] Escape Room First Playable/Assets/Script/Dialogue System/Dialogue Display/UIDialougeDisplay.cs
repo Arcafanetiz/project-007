@@ -33,10 +33,19 @@ public class UIDialougeDisplay : MonoBehaviour
 
     public void DisplayDialogue(DialogueTextSO dialogue_data)
     {
-        LeanTween.cancel(gameObject);
-        timer = dialogue_data.DisplayTime;
-        canvasGroup.alpha = 0.0f;
-        dialogueText.text = dialogue_data.DialogueText;
-        LeanTween.alphaCanvas(canvasGroup, 1.0f, 0.5f).setOnComplete(() => { canvasGroup.alpha = 1.0f; });
+        StartCoroutine(DisplayDialogueCR(dialogue_data));
+    }
+
+    private IEnumerator DisplayDialogueCR(DialogueTextSO dialogue_data)
+    {
+        foreach (DialogueText data in dialogue_data.dialogueTexts)
+        {
+            LeanTween.cancel(gameObject);
+            timer = data.displayTime;
+            canvasGroup.alpha = 0.0f;
+            dialogueText.text = data.dialogueText;
+            LeanTween.alphaCanvas(canvasGroup, 1.0f, 0.5f).setOnComplete(() => { canvasGroup.alpha = 1.0f; });
+            yield return new WaitForSeconds(data.displayTime);
+        }
     }
 }

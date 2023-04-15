@@ -1133,7 +1133,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &90642043
 RectTransform:
@@ -1267,6 +1267,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: 64c964f1bc3a6214ca7109b6d93beda1, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
@@ -6228,11 +6229,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: d718041ba308bb54380f75e41e75c2e6, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
   animationDuration: 1
-  onClickAudio: 
+  onClickAudio: Page Flip
   onItemUseAudio: 
 --- !u!61 &164060411
 BoxCollider2D:
@@ -8218,11 +8220,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
   animationDuration: 1
-  onClickAudio: 
+  onClickAudio: Page Flip
   onItemUseAudio: 
 --- !u!61 &332225075
 BoxCollider2D:
@@ -9248,6 +9251,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  dialogueData: {fileID: 11400000, guid: 6fc52d421e884184a8c277eeacb2fb45, type: 2}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 11400000, guid: 8c40d3459a93fab47b519f0f934ac31c, type: 2}
   animationName: 1
@@ -9590,6 +9594,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: 5e52322997637804f97708c0c65e16bb, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -9868,6 +9873,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -10032,11 +10038,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: d8d1efede0ff16947bf9cd610d5e615d, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
   animationDuration: 1
-  onClickAudio: 
+  onClickAudio: Page Flip
   onItemUseAudio: 
 --- !u!61 &514352508
 BoxCollider2D:
@@ -10128,7 +10135,6 @@ GameObject:
   - component: {fileID: 514381066}
   - component: {fileID: 514381065}
   - component: {fileID: 514381064}
-  - component: {fileID: 514381063}
   m_Layer: 6
   m_Name: Welcome Note
   m_TagString: Untagged
@@ -10154,102 +10160,6 @@ Transform:
   m_Father: {fileID: 578323570}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &514381063
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514381061}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0f3589b1ce22e3f42b075b304c78b343, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &514381064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10292,6 +10202,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -11227,6 +11138,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -12309,7 +12221,6 @@ GameObject:
   - component: {fileID: 786139699}
   - component: {fileID: 786139702}
   - component: {fileID: 786139701}
-  - component: {fileID: 786139700}
   m_Layer: 6
   m_Name: Framed Artwork
   m_TagString: Untagged
@@ -12332,30 +12243,6 @@ Transform:
   m_Father: {fileID: 653590234}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &786139700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786139698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe90976d7fda58446ae762ea577b0e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnItemUseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  inventoryData: {fileID: 0}
-  requiredItem: {fileID: 0}
-  animationName: 0
-  animationDuration: 1
-  onClickAudio: 
-  onItemUseAudio: 
 --- !u!61 &786139701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12543,7 +12430,7 @@ MonoBehaviour:
   m_text: 'When one door closes, another opens.
 
     There is a timeless treasure
-    hidden here in the right place, but at the wrong time.
+    hidden here in the right place, <b>but at the wrong time.</b>
 
 '
   m_isRightToLeft: 0
@@ -12657,7 +12544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 0}
+  m_AnchoredPosition: {x: 400, y: -40}
   m_SizeDelta: {x: 845, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835485923
@@ -12680,12 +12567,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In this quiet night, you finally found the perfect chance to sneak into
-    this museum. \nRumor has it that there are many precious artifacts on display
-    here. \nNormally there are guards patrolling round the clock, but for whatever
-    reasons there are none today. \n\nSuddenly, the lights go out, plunging you into
-    darkness. \nAnd the window behind you slams shut with a loud bang. \nYou try
-    to pry the window open, but it's sealed shut with no chance of escape.\n"
+  m_text: 'In this quiet night, you almost finished your shift.
+
+    As you walked
+    through the hall of many precious artifacts, you arrived at your last room on
+    the patrolling list.
+
+
+    Suddenly, the lights go out, plunging you into darkness.
+    And the door behind you slams shut with a loud bang.
+
+
+    You try to unlock
+    it, but it''s sealed shut with no chance of escape.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -13211,8 +13105,8 @@ GameObject:
   m_Component:
   - component: {fileID: 876031239}
   - component: {fileID: 876031242}
-  - component: {fileID: 876031241}
   - component: {fileID: 876031240}
+  - component: {fileID: 876031241}
   m_Layer: 6
   m_Name: Brass Statue Lt.
   m_TagString: Untagged
@@ -13279,11 +13173,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: 
+  onClickAudio: Locked
   onItemUseAudio: 
 --- !u!212 &876031242
 SpriteRenderer:
@@ -13377,7 +13272,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907411995}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -13524,22 +13419,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClickEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 913413886}
-        m_TargetAssemblyTypeName: SceneInteractables, Assembly-CSharp
-        m_MethodName: DisplayDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c05b7387371db414fbd58248f5c1141c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DialogueTextSO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: c05b7387371db414fbd58248f5c1141c, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
@@ -13710,6 +13594,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 0}
   animationName: 2
@@ -14033,7 +13918,6 @@ GameObject:
   - component: {fileID: 970613556}
   - component: {fileID: 970613559}
   - component: {fileID: 970613558}
-  - component: {fileID: 970613557}
   m_Layer: 6
   m_Name: Map Table (Active)
   m_TagString: Untagged
@@ -14052,47 +13936,10 @@ Transform:
   m_LocalPosition: {x: 0, y: -2.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1195835865}
+  m_Children: []
   m_Father: {fileID: 516401477}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &970613557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970613555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe90976d7fda58446ae762ea577b0e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnClickEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1195835866}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnItemUseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  inventoryData: {fileID: 0}
-  requiredItem: {fileID: 0}
-  animationName: 0
-  animationDuration: 1
-  onClickAudio: 
-  onItemUseAudio: 
 --- !u!60 &970613558
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14100,7 +13947,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970613555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -19494,7 +19341,7 @@ PrefabInstance:
       value: 'Welcome to the Chrono Museum of bygone days, intruder.
 
         You
-        have come to the wrong place, but fortunately, at the right time.
+        have come to the wrong place, but fortunately, <b>at the right time.</b>
 
 '
       objectReference: {fileID: 0}
@@ -19513,6 +19360,10 @@ PrefabInstance:
     - target: {fileID: 6153907497075037806, guid: a3b93b9a6e62aab45955ff41791578d2, type: 3}
       propertyPath: m_SizeDelta.y
       value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859430501504442986, guid: a3b93b9a6e62aab45955ff41791578d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7906405654888070777, guid: a3b93b9a6e62aab45955ff41791578d2, type: 3}
       propertyPath: m_IsActive
@@ -20052,6 +19903,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
@@ -20236,6 +20088,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -20704,8 +20557,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1126910209}
   - component: {fileID: 1126910212}
-  - component: {fileID: 1126910211}
-  - component: {fileID: 1126910210}
   m_Layer: 6
   m_Name: Brass Statue Rt. (Up)
   m_TagString: Untagged
@@ -20728,104 +20579,6 @@ Transform:
   m_Father: {fileID: 1001516100}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1126910210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1126910208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe90976d7fda58446ae762ea577b0e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnClickEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 737543383}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1126910208}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1672629912}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 844844484}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnItemUseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  inventoryData: {fileID: 0}
-  requiredItem: {fileID: 0}
-  animationName: 0
-  animationDuration: 1
-  onClickAudio: 
-  onItemUseAudio: 
---- !u!61 &1126910211
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1126910208}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.0449998}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.140915, y: 6.0899997}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.140915, y: 6.0899997}
-  m_EdgeRadius: 0
 --- !u!212 &1126910212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21239,8 +20992,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1170982394}
   - component: {fileID: 1170982397}
-  - component: {fileID: 1170982396}
   - component: {fileID: 1170982395}
+  - component: {fileID: 1170982396}
   m_Layer: 6
   m_Name: Ship Figurine (Locked)
   m_TagString: Untagged
@@ -21307,11 +21060,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: 
+  onClickAudio: Locked
   onItemUseAudio: 
 --- !u!212 &1170982397
 SpriteRenderer:
@@ -21534,137 +21288,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1195835864
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 970613556}
-    m_Modifications:
-    - target: {fileID: 3722605101378361355, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101378361357, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -799428722, guid: 6a60e4ecb58324e4187b7059c743aea7, type: 3}
-    - target: {fileID: 3722605101378361357, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101378361357, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101378361357, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876752, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Name
-      value: Canvas_Closeup View
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876752, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
---- !u!224 &1195835865 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3722605101740876753, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-  m_PrefabInstance: {fileID: 1195835864}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1195835866 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3722605101740876752, guid: 0f338cd054a171b48bfd6a0e4616a4ea, type: 3}
-  m_PrefabInstance: {fileID: 1195835864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1206378556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23208,19 +22831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClickEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1435103223}
-        m_TargetAssemblyTypeName: SceneInteractables, Assembly-CSharp
-        m_MethodName: DisplayDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 3575db9151e11aa4dad6afa4361506fd, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DialogueTextSO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls:
@@ -23236,12 +22847,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  dialogueData: {fileID: 11400000, guid: 3575db9151e11aa4dad6afa4361506fd, type: 2}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 11400000, guid: 537d5b4f14683354d9b8cfe6807b5df5, type: 2}
   animationName: 0
   animationDuration: 1
-  onClickAudio: 
-  onItemUseAudio: 
+  onClickAudio: Locked
+  onItemUseAudio: Locked
 --- !u!60 &1435103224
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -23387,6 +22999,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 0}
   animationName: 2
@@ -23615,11 +23228,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: 
+  onClickAudio: Locked
   onItemUseAudio: 
 --- !u!61 &1537652825
 BoxCollider2D:
@@ -24094,8 +23708,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find it and perhaps, the ticking of a certain timepiece shall aid you through
-    this journey out of the museum.
+  m_text: Find it and perhaps, <b>the ticking of a certain timepiece shall aid you
+    through this journey</b> out of the museum.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -24182,7 +23796,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1672629913}
   - component: {fileID: 1672629915}
-  - component: {fileID: 1672629914}
   m_Layer: 6
   m_Name: Ship Figurine (Unlocked)
   m_TagString: Untagged
@@ -24205,32 +23818,6 @@ Transform:
   m_Father: {fileID: 341673962}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1672629914
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672629912}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7807611, y: 1.79}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7907653, y: 1.79}
-  m_EdgeRadius: 0
 --- !u!212 &1672629915
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24348,6 +23935,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: 1b3f9773ba0d15b4ca1f725d0caf0479, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -24690,7 +24278,6 @@ GameObject:
   - component: {fileID: 1772997753}
   - component: {fileID: 1772997756}
   - component: {fileID: 1772997755}
-  - component: {fileID: 1772997754}
   m_Layer: 6
   m_Name: Framed Book
   m_TagString: Untagged
@@ -24713,42 +24300,6 @@ Transform:
   m_Father: {fileID: 653590234}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1772997754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772997752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe90976d7fda58446ae762ea577b0e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnClickEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1565193978}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnItemUseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  inventoryData: {fileID: 0}
-  requiredItem: {fileID: 0}
-  animationName: 0
-  animationDuration: 1
-  onClickAudio: 
-  onItemUseAudio: 
 --- !u!61 &1772997755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24756,7 +24307,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772997752}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -25275,6 +24826,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -25359,6 +24911,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1843090848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8683123352351071325, guid: e22e9def020f23b4caf5f2b3d5e8f451, type: 3}
+  m_PrefabInstance: {fileID: 8683123353177505707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1843090853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843090848}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75bfadf5972aa9468ec1518aaffd669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1868985519
 GameObject:
   m_ObjectHideFlags: 0
@@ -25417,8 +24986,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1874701691}
   - component: {fileID: 1874701694}
-  - component: {fileID: 1874701693}
   - component: {fileID: 1874701692}
+  - component: {fileID: 1874701693}
   m_Layer: 6
   m_Name: Main Door (Unlocked)
   m_TagString: Untagged
@@ -25500,6 +25069,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 0}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -26145,6 +25715,7 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: 7baf2a4bd12688b45ba43806452b3a5f, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 0
@@ -26342,7 +25913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 300}
+  m_AnchoredPosition: {x: 400, y: 250}
   m_SizeDelta: {x: 1200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033867116
@@ -26365,7 +25936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FIRST ROOM
+  m_text: "SIR WILLIAM\n  EXHIBIT HALL"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -26392,19 +25963,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 140
-  m_fontSizeBase: 140
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -35
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -26495,11 +26066,12 @@ MonoBehaviour:
   OnItemUseEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueData: {fileID: 11400000, guid: 6659bce21e353c244bfa951f32c4208f, type: 2}
   inventoryData: {fileID: 0}
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: 
+  onClickAudio: Locked
   onItemUseAudio: 
 --- !u!61 &2051810872
 BoxCollider2D:
@@ -26665,8 +26237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2100319871}
   - component: {fileID: 2100319874}
-  - component: {fileID: 2100319873}
-  - component: {fileID: 2100319872}
   m_Layer: 0
   m_Name: Welcome Note
   m_TagString: Untagged
@@ -26689,56 +26259,6 @@ Transform:
   m_Father: {fileID: 1522616218}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2100319872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100319870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe90976d7fda58446ae762ea577b0e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnItemUseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  inventoryData: {fileID: 0}
-  requiredItem: {fileID: 0}
-  animationName: 0
-  animationDuration: 1
-  onClickAudio: 
-  onItemUseAudio: 
---- !u!61 &2100319873
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100319870}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8403591, y: 0.71}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &2100319874
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdfc76cd294ce8b47adec999e4d5dbe4, type: 3}
-  m_Name: Room 1 Main Door (Locked)
+  m_Name: Room 1 Framed Book (Fixed)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: The door is locked. Looks like I need to find a key.
-    displayTime: 3
+  - dialogueText: Woah, it worked! What a genius I am.
+    displayTime: 4

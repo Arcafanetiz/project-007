@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdfc76cd294ce8b47adec999e4d5dbe4, type: 3}
-  m_Name: Room 1 Main Door (Locked)
+  m_Name: Room 1 Rt. Pipe (Past-Damaged)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: The door is locked. Looks like I need to find a key.
+  - dialogueText: Theoretically, if I could fix it, the present one would get fixed
+      too.
     displayTime: 3

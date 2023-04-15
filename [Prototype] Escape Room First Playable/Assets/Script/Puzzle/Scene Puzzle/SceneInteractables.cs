@@ -14,6 +14,9 @@ public class SceneInteractables : MonoBehaviour
     public UnityEvent OnClickEvent;
     public UnityEvent OnItemUseEvent;
 
+    [Header("Dialogue")]
+    public DialogueTextSO dialogueData;
+
     [Header("Item")]
     [SerializeField] private InventorySO inventoryData;
     [SerializeField] private ItemSO requiredItem;
@@ -26,16 +29,29 @@ public class SceneInteractables : MonoBehaviour
 
     private void Awake()
     {
+        originalPos = this.transform.position;
+
         if (OnClickEvent == null)
             OnClickEvent = new UnityEvent();
         if (OnItemUseEvent == null)
             OnItemUseEvent = new UnityEvent();
-        originalPos = this.transform.position;
 
         OnClickEvent.AddListener(PlayAnimation);
         OnClickEvent.AddListener(PlayOnClickAudio);
+        OnClickEvent.AddListener(DisplayDialogue);
+
         OnItemUseEvent.AddListener(PlayOnItemUseAudio);
         OnItemUseEvent.AddListener(RemoveOnHandItem);
+    }
+
+    /// -----------------------------------------
+    /// - ITEM HANDLER --------------------------
+    /// -----------------------------------------
+
+    public void ItemPickUp(ItemSO item)
+    {
+        inventoryData.AddItem(item, 1);
+        GetComponent<Collider2D>().enabled = false;
     }
 
     public void ItemRequestHandler(ItemSO item)
@@ -46,16 +62,29 @@ public class SceneInteractables : MonoBehaviour
             OnClickEvent?.Invoke();
     }
 
-    public void ItemPickUp(ItemSO item)
-    {
-        inventoryData.AddItem(item, 1);
-        GetComponent<Collider2D>().enabled = false;
-    }
-
     public void RemoveOnHandItem()
     {
         inventoryData.RemoveItem(inventoryData.onHandItemIndex);
         inventoryData.onHandItemIndex = -1;
+    }
+
+    /// -----------------------------------------
+    /// - ANIMATION -----------------------------
+    /// -----------------------------------------
+
+    public void PlayAnimation()
+    {
+        switch (animationName)
+        {
+            case AnimationType.NONE:
+                break;
+            case AnimationType.SHAKE:
+                Shake();
+                break;
+            case AnimationType.DISSAPEAR:
+                Dissapear();
+                break;
+        }
     }
 
     public void Shake()
@@ -69,6 +98,10 @@ public class SceneInteractables : MonoBehaviour
         Vector3 endScale = Vector3.zero;
         LeanTween.scale(this.gameObject, endScale, animationDuration).setEase(LeanTweenType.easeInElastic).setOnComplete(() => { this.gameObject.SetActive(false); });
     }
+
+    /// -----------------------------------------
+    /// - AUDIO ---------------------------------
+    /// -----------------------------------------
 
     public void PlayOnClickAudio()
     {
@@ -85,19 +118,15 @@ public class SceneInteractables : MonoBehaviour
         AudioManager.instance.PlayAudio(audio_name);
     }
 
-    public void PlayAnimation()
+    /// -----------------------------------------
+    /// - DIALOGUE ------------------------------
+    /// -----------------------------------------
+
+    public void DisplayDialogue()
     {
-        switch(animationName)
-        {
-            case AnimationType.NONE:
-                break;
-            case AnimationType.SHAKE:
-                Shake();
-                break;
-            case AnimationType.DISSAPEAR:
-                Dissapear();
-                break;
-        }
+        if (dialogueData == null)
+            return;
+        DisplayDialogue(dialogueData);
     }
 
     public void DisplayDialogue(DialogueTextSO dialogue_data)

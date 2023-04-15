@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMHolder: {fileID: 1739902883491726041}
   SFXHolder: {fileID: 1739902883167453487}
+  BGMAudioMixer: {fileID: 8992412871406896527, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
+  SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   _BGMName: Title BGM
   playBGM: 1
   BGMSounds:
@@ -114,11 +116,16 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Water Splash
     audioClip: {fileID: 8300000, guid: 6ae0c57e75cc56b4a82305e331fe371c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Locked
+    audioClip: {fileID: 8300000, guid: 15b7a5c4379d68b40b2b901a2fb4b7b7, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  BGMSource: {fileID: 0}
 --- !u!1 &1739902883167453487
 GameObject:
   m_ObjectHideFlags: 0

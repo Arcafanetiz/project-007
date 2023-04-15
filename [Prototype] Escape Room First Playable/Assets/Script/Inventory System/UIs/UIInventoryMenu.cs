@@ -18,7 +18,7 @@ namespace Inventory.UI
         [SerializeField] private Button inventoryButton;
         [SerializeField] private Button useItemButton;
         private Sprite defaultBagIcon;
-        List<UIInventoryItem> listsOfUIItems = new List<UIInventoryItem>();
+        readonly List<UIInventoryItem> listsOfUIItems = new List<UIInventoryItem>();
         public int currentSelectIndex = -1;
         //private int currentDragIndex = -1;
 

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfc76cd294ce8b47adec999e4d5dbe4, type: 3}
   m_Name: Room 1 Map Table (Locked)
   m_EditorClassIdentifier: 
-  <DialogueText>k__BackingField: It's locked. Everything is locked ;-;
-  <DisplayTime>k__BackingField: 3
+  dialogueTexts:
+  - dialogueText: Can't get the glass open. It's locked tight.
+    displayTime: 3
