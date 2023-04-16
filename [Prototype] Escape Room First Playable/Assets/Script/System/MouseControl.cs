@@ -46,7 +46,9 @@ public class MouseControl : MonoBehaviour
                 if (interactable != null && Helditem != null)
                     interactable.ItemRequestHandler(Helditem);
                 else if (interactable != null)
+                {
                     interactable.OnClickEvent?.Invoke();
+                }  
             }
         }
 

@@ -105,15 +105,19 @@ public class SceneInteractables : MonoBehaviour
 
     public void PlayOnClickAudio()
     {
-        AudioManager.instance.PlayAudio(onClickAudio);
+        if (onClickAudio == "")
+            return;
+        PlayAudio(onClickAudio);
     }
 
     public void PlayOnItemUseAudio()
     {
-        AudioManager.instance.PlayAudio(onItemUseAudio);
+        if (onItemUseAudio == "")
+            return;
+        PlayAudio(onItemUseAudio);
     }
 
-    public void PlayCustomAudio(string audio_name)
+    public void PlayAudio(string audio_name)
     {
         AudioManager.instance.PlayAudio(audio_name);
     }

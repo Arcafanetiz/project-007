@@ -53,6 +53,11 @@ namespace Inventory
             }
         }
 
+        private void OnDisable()
+        {
+            inventoryData.OnInventoryUpdated -= UpdateInventoryUI;
+        }
+
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventory_state)
         {
             inventoryMenu.ResetAllData();
@@ -91,11 +96,11 @@ namespace Inventory
             }
         }
 
-        public void ResetOnHandItem()
-        {
-            inventoryData.RemoveItem(inventoryData.onHandItemIndex);
-            inventoryData.onHandItemIndex = -1;
-            inventoryMenu.ResetBagIcon();
-        }
+        //public void ResetOnHandItem()
+        //{
+        //    inventoryData.RemoveItem(inventoryData.onHandItemIndex);
+        //    inventoryData.onHandItemIndex = -1;
+        //    inventoryMenu.ResetBagIcon();
+        //}
     }
 }
