@@ -65,6 +65,7 @@ namespace Inventory
             {
                 inventoryMenu.UpdateData(item.Key, item.Value.item.Sprite);
             }
+            inventoryMenu.BagAnimation();
         }
 
         private void HandleDescriptionRequest(int item_index)

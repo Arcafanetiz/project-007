@@ -13598,7 +13598,7 @@ MonoBehaviour:
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 0}
   animationName: 2
-  animationDuration: 0.5
+  animationDuration: 0.25
   onClickAudio: Item Collect
   onItemUseAudio: 
 --- !u!61 &945307640
@@ -23003,7 +23003,7 @@ MonoBehaviour:
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
   requiredItem: {fileID: 0}
   animationName: 2
-  animationDuration: 0.5
+  animationDuration: 0.25
   onClickAudio: Item Collect
   onItemUseAudio: 
 --- !u!61 &1488507817
@@ -24911,23 +24911,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1843090848 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8683123352351071325, guid: e22e9def020f23b4caf5f2b3d5e8f451, type: 3}
-  m_PrefabInstance: {fileID: 8683123353177505707}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1843090853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843090848}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75bfadf5972aa9468ec1518aaffd669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1868985519
 GameObject:
   m_ObjectHideFlags: 0
@@ -31705,7 +31688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683123354070536473, guid: e22e9def020f23b4caf5f2b3d5e8f451, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 8683123354084325652, guid: e22e9def020f23b4caf5f2b3d5e8f451, type: 3}
       propertyPath: m_IsActive

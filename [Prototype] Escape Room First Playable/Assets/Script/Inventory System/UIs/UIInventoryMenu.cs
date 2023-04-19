@@ -29,11 +29,16 @@ namespace Inventory.UI
         //public event Action<int, int> OnCombineRequest;
 
         private float originPosY;
-        [Header("Animation")]
+        [Header("Inventory Animation")]
         public float distance = 150.0f;
         public float angle = 20.0f;
         public float duration = 1.0f;
         public LeanTweenType easeType;
+
+        [Header("Icon Animation")]
+        public float iconAngle = 20.0f;
+        public float iconDuration = 1.0f;
+        public LeanTweenType iconEaseType;
 
         private void Awake()
         {
@@ -218,6 +223,12 @@ namespace Inventory.UI
         public void ResetBagIcon()
         {
             inventoryButton.GetComponent<Image>().sprite = defaultBagIcon;
+        }
+
+        public void BagAnimation()
+        {
+            LeanTween.cancel(inventoryButton.GetComponent<RectTransform>());
+            LeanTween.rotate(inventoryButton.GetComponent<RectTransform>(), iconAngle, iconDuration).setEase(iconEaseType);
         }
 
         //public void RemoveUIItem(int index)

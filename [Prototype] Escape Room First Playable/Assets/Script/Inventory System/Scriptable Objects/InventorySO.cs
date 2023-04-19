@@ -33,6 +33,7 @@ public class InventorySO : ScriptableObject
 
     public void AddItem(ItemSO item, int quantity)
     {
+        InformAboutChange();
         for (int i = 0; i < inventoryItems.Count; i++)
         {
             if (inventoryItems[i].isEmpty)
@@ -42,7 +43,6 @@ public class InventorySO : ScriptableObject
                 return;
             }
         }
-        InformAboutChange();
     }
 
     public void AddItem(InventoryItem item)

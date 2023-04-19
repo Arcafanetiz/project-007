@@ -96,7 +96,7 @@ public class SceneInteractables : MonoBehaviour
     public void Dissapear()
     {
         Vector3 endScale = Vector3.zero;
-        LeanTween.scale(this.gameObject, endScale, animationDuration).setEase(LeanTweenType.easeInElastic).setOnComplete(() => { this.gameObject.SetActive(false); });
+        LeanTween.scale(this.gameObject, endScale, animationDuration).setEase(LeanTweenType.easeInBack).setOnComplete(() => { this.gameObject.SetActive(false); });
     }
 
     /// -----------------------------------------
