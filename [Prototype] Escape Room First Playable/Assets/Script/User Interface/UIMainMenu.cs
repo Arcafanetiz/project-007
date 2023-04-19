@@ -10,6 +10,7 @@ public class UIMainMenu : MonoBehaviour
 
     [Header("Animation")]
     public float duration = 0.5f;
+    public LeanTweenType easeType = LeanTweenType.easeOutExpo;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +30,16 @@ public class UIMainMenu : MonoBehaviour
         // Stop Tween
         LeanTween.cancel(mainMenuPanel);
         LeanTween.cancel(settingsMenuPanel);
-        // Main Menu
         SetPanelActive(mainMenuPanel);
-        LeanTween.alphaCanvas(mainMenuPanel.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(mainMenuPanel.GetComponent<RectTransform>(), new Vector3(0.5f, 0.5f, 0.5f), duration).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => SetPanelInactive(mainMenuPanel, 0));
-        // Settings Menu
         SetPanelInactive(settingsMenuPanel, 1);
-        settingsMenuPanel.GetComponent<CanvasGroup>().blocksRaycasts = true;
-        LeanTween.alphaCanvas(settingsMenuPanel.GetComponent<CanvasGroup>(), 1.0f, duration).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(settingsMenuPanel.GetComponent<RectTransform>(), new Vector3(1.0f, 1.0f, 1.0f), duration).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => SetPanelActive(settingsMenuPanel));
+        mainMenuPanel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        settingsMenuPanel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        // Main Menu
+        LeanTween.alphaCanvas(mainMenuPanel.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType);
+        LeanTween.scale(mainMenuPanel.GetComponent<RectTransform>(), new Vector3(0.5f, 0.5f, 0.5f), duration).setEase(easeType).setOnComplete(() => SetPanelInactive(mainMenuPanel, 0));
+        // Settings Menu
+        LeanTween.alphaCanvas(settingsMenuPanel.GetComponent<CanvasGroup>(), 1.0f, duration).setEase(easeType);
+        LeanTween.scale(settingsMenuPanel.GetComponent<RectTransform>(), new Vector3(1.0f, 1.0f, 1.0f), duration).setEase(easeType).setOnComplete(() => SetPanelActive(settingsMenuPanel));
     }
 
     public void ReturnToMainMenu()
@@ -45,15 +47,16 @@ public class UIMainMenu : MonoBehaviour
         // Stop Tween
         LeanTween.cancel(mainMenuPanel);
         LeanTween.cancel(settingsMenuPanel);
-        // Main Menu
         SetPanelInactive(mainMenuPanel, 0);
-        mainMenuPanel.GetComponent<CanvasGroup>().blocksRaycasts = true;
-        LeanTween.alphaCanvas(mainMenuPanel.GetComponent<CanvasGroup>(), 1.0f, duration).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(mainMenuPanel.GetComponent<RectTransform>(), new Vector3(1.0f, 1.0f, 1.0f), duration).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => SetPanelActive(mainMenuPanel));
-        // Settings Menu
         SetPanelActive(settingsMenuPanel);
-        LeanTween.alphaCanvas(settingsMenuPanel.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(settingsMenuPanel.GetComponent<RectTransform>(), new Vector3(1.5f, 1.5f, 1.5f), duration).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => SetPanelInactive(settingsMenuPanel, 1)); 
+        mainMenuPanel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        settingsMenuPanel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        // Main Menu
+        LeanTween.alphaCanvas(mainMenuPanel.GetComponent<CanvasGroup>(), 1.0f, duration).setEase(easeType);
+        LeanTween.scale(mainMenuPanel.GetComponent<RectTransform>(), new Vector3(1.0f, 1.0f, 1.0f), duration).setEase(easeType).setOnComplete(() => SetPanelActive(mainMenuPanel));
+        // Settings Menu
+        LeanTween.alphaCanvas(settingsMenuPanel.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType);
+        LeanTween.scale(settingsMenuPanel.GetComponent<RectTransform>(), new Vector3(1.5f, 1.5f, 1.5f), duration).setEase(easeType).setOnComplete(() => SetPanelInactive(settingsMenuPanel, 1)); 
     }
 
     private void SetPanelActive(GameObject panelGO)

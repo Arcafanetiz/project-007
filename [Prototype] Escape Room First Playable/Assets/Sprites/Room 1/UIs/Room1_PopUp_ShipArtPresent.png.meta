@@ -108,12 +108,12 @@ TextureImporter:
       name: Room1_PopUp_ShipArtPresent_0
       rect:
         serializedVersion: 2
-        x: 631
-        y: 117
-        width: 1738
-        height: 1541
+        x: 630
+        y: 115
+        width: 1740
+        height: 1545
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

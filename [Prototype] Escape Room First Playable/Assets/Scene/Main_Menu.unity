@@ -241,7 +241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 1964844939}
   settingsMenuPanel: {fileID: 851135931}
-  duration: 1
+  duration: 0.75
+  easeType: 18
 --- !u!1 &44331088
 GameObject:
   m_ObjectHideFlags: 0
