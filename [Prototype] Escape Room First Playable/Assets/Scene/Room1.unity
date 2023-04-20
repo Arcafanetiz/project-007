@@ -7718,7 +7718,7 @@ GameObject:
   - component: {fileID: 308457123}
   - component: {fileID: 308457124}
   m_Layer: 0
-  m_Name: Brass Statue Rt.
+  m_Name: Brass Statue Lt.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7732,7 +7732,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308457122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.54, y: 0.29, z: 16.5}
+  m_LocalPosition: {x: -5.56, y: 0.29, z: 16.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13108,7 +13108,7 @@ GameObject:
   - component: {fileID: 876031240}
   - component: {fileID: 876031241}
   m_Layer: 6
-  m_Name: Brass Statue Lt.
+  m_Name: Brass Statue Rt.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13146,7 +13146,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.140915, y: 5.21}
+    oldSize: {x: 2.140915, y: 6.0899997}
     newSize: {x: 2.140915, y: 5.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -13221,7 +13221,7 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1323486914, guid: 2537f3ecd10296e4d93b8c8d5a2bc2da, type: 3}
+  m_Sprite: {fileID: -821062972, guid: 2537f3ecd10296e4d93b8c8d5a2bc2da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13688,10 +13688,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3403512184103552918, guid: a3b93b9a6e62aab45955ff41791578d2, type: 3}
       propertyPath: m_text
-      value: "Based on Sir William\u2019s Journal\r\n\nSir William always raises
-        his sword before setting sail on a new journey, as he believes it imbues
-        his blade with the courage needed to brave the seas. It's even said that
-        the ship won't move until he completes this ritual."
+      value: "Based on Sir William\u2019s Journal\r\n\r\nSir William raises his sword
+        before each journey, believing it grants him courage. His latest adventure
+        led him to seek the Magic Watch, a powerful timepiece hidden in a sea-bound
+        lighthouse tower.\r\n\r\nFollowing the tower's guiding light, Sir William
+        braved treacherous waters and dark corridors. At the summit, he discovered
+        the legendary watch, its magical aura confirming its ability to manipulate
+        time."
       objectReference: {fileID: 0}
     - target: {fileID: 3596074781535334254, guid: a3b93b9a6e62aab45955ff41791578d2, type: 3}
       propertyPath: m_text
@@ -20001,7 +20004,7 @@ GameObject:
   - component: {fileID: 1079597784}
   - component: {fileID: 1079597783}
   m_Layer: 6
-  m_Name: Brass Statue Rt. (Locked)
+  m_Name: Brass Statue Lt. (Locked)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20112,7 +20115,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.140915, y: 5.21}
+    oldSize: {x: 2.1309106, y: 5.21}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -20162,7 +20165,7 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1323486914, guid: 2537f3ecd10296e4d93b8c8d5a2bc2da, type: 3}
+  m_Sprite: {fileID: -917065158, guid: 2537f3ecd10296e4d93b8c8d5a2bc2da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23189,7 +23192,7 @@ GameObject:
   - component: {fileID: 1537652825}
   - component: {fileID: 1537652824}
   m_Layer: 6
-  m_Name: Brass Statue Rt. (Unlocked)
+  m_Name: Brass Statue Lt. (Unlocked)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23413,7 +23416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565193979}
   m_Layer: 0
-  m_Name: Brass Statue Lt.
+  m_Name: Brass Statue Rt.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23427,7 +23430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565193978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.56, y: 0.29, z: 16.5}
+  m_LocalPosition: {x: 5.53, y: 0.29, z: 16.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
