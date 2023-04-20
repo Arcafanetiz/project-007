@@ -9,35 +9,21 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(ScrollRect))]
 public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [Tooltip("Set starting page index - starting from 0")]
+    [Header("Private Serialized Field -Do not touch-")]
+    [SerializeField] private TMPro.TMP_Text pageNo;
+    [SerializeField] private GameObject prevButton;
+    [SerializeField] private GameObject nextButton;
+
+    [Header("Swipe Settings")]
     public int startingPage = 0;
-    [Tooltip("Threshold time for fast swipe in seconds")]
     public float fastSwipeThresholdTime = 0.3f;
-    [Tooltip("Threshold time for fast swipe in (unscaled) pixels")]
     public int fastSwipeThresholdDistance = 100;
-    [Tooltip("How fast will page lerp to target position")]
     public float decelerationRate = 10f;
-    [Tooltip("Button to go to the previous page (optional)")]
-    public GameObject prevButton;
-    [Tooltip("Button to go to the next page (optional)")]
-    public GameObject nextButton;
 
-    public TMPro.TMP_Text pageNo;
-
-    //[Tooltip("Sprite for unselected page")]
-    //public Sprite unselectedPage;
-    //[Tooltip("Sprite for selected page")]
-    //public Sprite selectedPage;
-    //[Tooltip("Container with page images (gameobject)")]
-    //public Transform pageSelectionIcons;
-
-    // Fast swipes should be fast and short. If too long, then it is not fast swipe
     private int _fastSwipeThresholdMaxLimit;
-
     private ScrollRect _scrollRectComponent;
     private RectTransform _scrollRectRect;
     private RectTransform _container;
-
     private bool _horizontal;
     
     // number of pages in container
@@ -56,47 +42,44 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     private float _timeStamp;
     private Vector2 _startPosition;
 
-    // for showing small page icons
-    private bool _showPageSelection;
-    private int _previousPageSelectionIndex;
-    // container with Image components - one Image for each page
-    private List<Image> _pageSelectionImages;
-
-    //------------------------------------------------------------------------
-    void Start() {
+    void Start() 
+    {
         _scrollRectComponent = GetComponent<ScrollRect>();
         _scrollRectRect = GetComponent<RectTransform>();
         _container = _scrollRectComponent.content;
         pageCount = _container.childCount;
 
         // is it horizontal or vertical scrollrect
-        if (_scrollRectComponent.horizontal && !_scrollRectComponent.vertical) {
+        if (_scrollRectComponent.horizontal && !_scrollRectComponent.vertical)
+        {
             _horizontal = true;
-        } else if (!_scrollRectComponent.horizontal && _scrollRectComponent.vertical) {
+        }
+        else if (!_scrollRectComponent.horizontal && _scrollRectComponent.vertical) 
+        {
             _horizontal = false;
-        } else {
+        } 
+        else 
+        {
             Debug.LogWarning("Confusing setting of horizontal/vertical direction. Default set to horizontal.");
             _horizontal = true;
         }
 
         _lerp = false;
 
-        // init
+        // initialization
         SetPagePositions();
         SetPage(startingPage);
-        //InitPageSelection();
-        //SetPageSelection(startingPage);
         pageNo.text = (currentPage + 1) + "/" + pageCount;
+
         // prev and next buttons
         if (nextButton)
             nextButton.GetComponent<Button>().onClick.AddListener(() => { NextScreen(); });
-
         if (prevButton)
             prevButton.GetComponent<Button>().onClick.AddListener(() => { PreviousScreen(); });
 	}
 
-    //------------------------------------------------------------------------
-    void Update() {
+    void Update()
+    {
 
         if (currentPage == 0)
         {
@@ -106,7 +89,6 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         {
             prevButton.SetActive(true);
         }
-
 
         if (currentPage == pageCount - 1)
         {
@@ -118,27 +100,23 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         }
 
         // if moving to target position
-        if (_lerp) {
+        if (_lerp) 
+        {
             // prevent overshooting with values greater than 1
             float decelerate = Mathf.Min(decelerationRate * Time.deltaTime, 1f);
             _container.anchoredPosition = Vector2.Lerp(_container.anchoredPosition, _lerpTo, decelerate);
             // time to stop lerping?
-            if (Vector2.SqrMagnitude(_container.anchoredPosition - _lerpTo) < 0.25f) {
+            if (Vector2.SqrMagnitude(_container.anchoredPosition - _lerpTo) < 0.25f)
+            {
                 // snap to target and stop lerping
                 _container.anchoredPosition = _lerpTo;
                 _lerp = false;
                 // clear also any scrollrect move that may interfere with our lerping
                 _scrollRectComponent.velocity = Vector2.zero;
             }
-
-            // switches selection icon exactly to correct page
-            /*if (_showPageSelection) {
-                SetPageSelection(GetNearestPage());
-            }*/
         }
     }
 
-    //------------------------------------------------------------------------
     private void SetPagePositions() {
         int width = 0;
         int height = 0;
@@ -147,7 +125,8 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         int containerWidth = 0;
         int containerHeight = 0;
 
-        if (_horizontal) {
+        if (_horizontal) 
+        {
             // screen width in pixels of scrollrect window
             width = (int)_scrollRectRect.rect.width;
             // center position of all pages
@@ -156,7 +135,9 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
             containerWidth = width * pageCount;
             // limit fast swipe length - beyond this length it is fast swipe no more
             _fastSwipeThresholdMaxLimit = width;
-        } else {
+        }
+        else
+        {
             height = (int)_scrollRectRect.rect.height;
             offsetY = height / 2;
             containerHeight = height * pageCount;
@@ -186,88 +167,34 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         }
     }
 
-    //------------------------------------------------------------------------
-    private void SetPage(int aPageIndex) {
+    private void SetPage(int aPageIndex)
+    {
         aPageIndex = Mathf.Clamp(aPageIndex, 0, pageCount - 1);
         _container.anchoredPosition = _pagePositions[aPageIndex];
-        currentPage = aPageIndex;
-        
+        currentPage = aPageIndex; 
     }
 
-    //------------------------------------------------------------------------
-    private void LerpToPage(int aPageIndex) {
+    private void LerpToPage(int aPageIndex)
+    {
         aPageIndex = Mathf.Clamp(aPageIndex, 0, pageCount - 1);
         _lerpTo = _pagePositions[aPageIndex];
         _lerp = true;
         currentPage = aPageIndex;
     }
-
-    //------------------------------------------------------------------------
-    /*private void initpageselection()
+    private void NextScreen()
     {
-        // page selection - only if defined sprites for selection icons
-        _showpageselection = unselectedpage != null && selectedpage != null;
-        if (_showpageselection)
-        {
-            // also container with selection images must be defined and must have exatly the same amount of items as pages container
-            if (pageselectionicons == null || pageselectionicons.childcount != _pagecount)
-            {
-                debug.logwarning("different count of pages and selection icons - will not show page selection");
-                _showpageselection = false;
-            }
-            else
-            {
-                _previouspageselectionindex = -1;
-                _pageselectionimages = new list<image>();
-
-                // cache all image components into list
-                for (int i = 0; i < pageselectionicons.childcount; i++)
-                {
-                    image image = pageselectionicons.getchild(i).getcomponent<image>();
-                    if (image == null)
-                    {
-                        debug.logwarning("page selection icon at position " + i + " is missing image component");
-                    }
-                    _pageselectionimages.add(image);
-                }
-            }
-        }
-    } */
-
-    //------------------------------------------------------------------------
-    /*private void SetPageSelection(int aPageIndex) {
-        // nothing to change
-        if (_previousPageSelectionIndex == aPageIndex) {
-            return;
-        }
-        
-        // unselect old
-        if (_previousPageSelectionIndex >= 0) {
-            _pageSelectionImages[_previousPageSelectionIndex].sprite = unselectedPage;
-            _pageSelectionImages[_previousPageSelectionIndex].SetNativeSize();
-        }
-
-        // select new
-        _pageSelectionImages[aPageIndex].sprite = selectedPage;
-        _pageSelectionImages[aPageIndex].SetNativeSize();
-
-        _previousPageSelectionIndex = aPageIndex;
-    } */
-
-    //------------------------------------------------------------------------
-    private void NextScreen() {
         LerpToPage(currentPage + 1);
         pageNo.text = (currentPage + 1) + "/" + pageCount;
     }
 
-    //------------------------------------------------------------------------
-    private void PreviousScreen() {
+    private void PreviousScreen()
+    {
         LerpToPage(currentPage - 1);
         pageNo.text = (currentPage + 1) + "/" + pageCount;
     }
 
-    //------------------------------------------------------------------------
-    private int GetNearestPage() {
+    private int GetNearestPage()
+    {
         // based on distance from current position, find nearest page
         Vector2 currentPosition = _container.anchoredPosition;
 
@@ -285,34 +212,41 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         return nearestPage;
     }
 
-    //------------------------------------------------------------------------
-    public void OnBeginDrag(PointerEventData aEventData) {
+    public void OnBeginDrag(PointerEventData aEventData)
+    {
         // if currently lerping, then stop it as user is draging
         _lerp = false;
         // not dragging yet
         _dragging = false;
     }
 
-    //------------------------------------------------------------------------
-    public void OnEndDrag(PointerEventData aEventData) {
+    public void OnEndDrag(PointerEventData aEventData)
+    {
         // how much was container's content dragged
         float difference;
-        if (_horizontal) {
+        if (_horizontal)
+        {
             difference = _startPosition.x - _container.anchoredPosition.x;
-        } else {
+        }
+        else
+        {
             difference = - (_startPosition.y - _container.anchoredPosition.y);
         }
 
         // test for fast swipe - swipe that moves only +/-1 item
-        if (Time.unscaledTime - _timeStamp < fastSwipeThresholdTime &&
-            Mathf.Abs(difference) > fastSwipeThresholdDistance &&
-            Mathf.Abs(difference) < _fastSwipeThresholdMaxLimit) {
-            if (difference > 0) {
+        if (Time.unscaledTime - _timeStamp < fastSwipeThresholdTime && Mathf.Abs(difference) > fastSwipeThresholdDistance && Mathf.Abs(difference) < _fastSwipeThresholdMaxLimit)
+        {
+            if (difference > 0)
+            {
                 NextScreen();
-            } else {
+            }
+            else
+            {
                 PreviousScreen();
             }
-        } else {
+        }
+        else
+        {
             // if not fast time, look to which page we got to
             LerpToPage(GetNearestPage());
         }
@@ -320,19 +254,16 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         _dragging = false;
     }
 
-    //------------------------------------------------------------------------
-    public void OnDrag(PointerEventData aEventData) {
-        if (!_dragging) {
+    public void OnDrag(PointerEventData aEventData)
+    {
+        if (!_dragging)
+        {
             // dragging started
             _dragging = true;
             // save time - unscaled so pausing with Time.scale should not affect it
             _timeStamp = Time.unscaledTime;
             // save current position of cointainer
             _startPosition = _container.anchoredPosition;
-        } //else {
-            //if (_showPageSelection) {
-                //SetPageSelection(GetNearestPage());
-           // }
-        //}
+        }
     }
 }

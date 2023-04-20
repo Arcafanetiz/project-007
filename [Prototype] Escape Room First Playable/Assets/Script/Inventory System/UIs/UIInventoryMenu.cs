@@ -12,7 +12,6 @@ namespace Inventory.UI
         [Header("Private Serialized Field -Do not touch-")]
         [SerializeField] private UIInventoryItem itemSlotPrefab;
         [SerializeField] private UIInventoryInspector inventoryInspector;
-        //[SerializeField] private UIMouseFollower mouseFollower;
         [SerializeField] private RectTransform inventoryPanel;
         [SerializeField] private RectTransform contentPanel;
         [SerializeField] private Button inventoryButton;
@@ -20,13 +19,9 @@ namespace Inventory.UI
         private Sprite defaultBagIcon;
         readonly List<UIInventoryItem> listsOfUIItems = new List<UIInventoryItem>();
         public int currentSelectIndex = -1;
-        //private int currentDragIndex = -1;
 
         public event Action<int> OnDescriptionRequest;
         [HideInInspector] public UnityEvent OnUseItemRequest = new UnityEvent();
-
-        //public event Action<int> OnDescriptionRequest, OnItemActionRequested, OnStartDragging;
-        //public event Action<int, int> OnCombineRequest;
 
         private float originPosY;
         [Header("Inventory Animation")]
@@ -46,7 +41,6 @@ namespace Inventory.UI
             originPosY = inventoryPanel.anchoredPosition.y;
             inventoryInspector.ResetInspector();
             ResetUI(0);
-            //mouseFollower.Toggle(false);
             useItemButton.onClick.AddListener(OnUseItemRequest.Invoke);
             defaultBagIcon = inventoryButton.GetComponent<Image>().sprite;
         }
@@ -62,10 +56,6 @@ namespace Inventory.UI
                 listsOfUIItems.Add(ui_item);
                 // Add event to item slot
                 ui_item.OnItemClicked += HandleItemSelection;
-                //ui_item.OnRightClicked += HandleShowItemAction;
-                //ui_item.OnItemBeginDrag += HandleItemBeginDrag;
-                //ui_item.OnItemDroppedOn += HandleItemCombine;
-                //ui_item.OnItemEndDrag += HandleItemEndDrag;
             }
         }
 
@@ -97,7 +87,7 @@ namespace Inventory.UI
 
         public void ResetSelection()
         {
-            Debug.Log("reset");
+            //Debug.Log("Selection reset.");
             inventoryInspector.ResetInspector();
             DeselectAllItems();
         }
@@ -114,41 +104,11 @@ namespace Inventory.UI
         private void HandleItemSelection(UIInventoryItem item_ui)
         {
             int index = listsOfUIItems.IndexOf(item_ui);
-            Debug.Log(item_ui.name + "Clicked.");
+            //Debug.Log("Item slot clicked.");
             if (index == -1)
                 return;
             OnDescriptionRequest?.Invoke(index);
         }
-
-        //private void HandleShowItemAction(UIInventoryItem item_ui)
-        //{
-        //    Debug.Log(item_ui.name + "Right clicked.");
-        //}
-
-        //private void HandleItemBeginDrag(UIInventoryItem item_ui)
-        //{
-        //    int index = listsOfUIItems.IndexOf(item_ui);
-        //    if (index == -1)
-        //        return;
-        //    currentDragIndex = index;
-        //    HandleItemSelection(item_ui);
-        //    OnStartDragging?.Invoke(index);
-        //}
-
-        //private void HandleItemCombine(UIInventoryItem item_ui)
-        //{
-        //    int index = listsOfUIItems.IndexOf(item_ui);
-        //    if (index == -1)    
-        //        return;
-
-        //    OnCombineRequest?.Invoke(currentDragIndex, index);
-        //}
-
-        //private void HandleItemEndDrag(UIInventoryItem item_ui)
-        //{
-        //    ResetDraggedItem();
-        //}
-
         public void Toggle()
         {
             // Toggle panel on and off
@@ -180,8 +140,6 @@ namespace Inventory.UI
             LeanTween.move(inventoryPanel, new Vector3(0.0f, -originPosY - distance, 0.0f), duration).setEase(easeType);
             LeanTween.rotate(inventoryPanel, -angle, duration).setEase(easeType);
             LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType).setOnComplete(() => { ResetUI(0); });
-
-            //ResetDraggedItem();
         }
 
         private void ResetUI(int state)
@@ -203,18 +161,6 @@ namespace Inventory.UI
             }
         }
 
-        //private void CreateDraggedItem(Sprite item_sprite)
-        //{
-        //    mouseFollower.Toggle(true);
-        //    mouseFollower.SetData(item_sprite);
-        //}
-
-        //private void ResetDraggedItem()
-        //{
-        //    mouseFollower.Toggle(false);
-        //    currentDragIndex = -1;
-        //}
-
         public void SetBagIcon(Sprite sprite)
         {
             inventoryButton.GetComponent<Image>().sprite = sprite;
@@ -230,10 +176,5 @@ namespace Inventory.UI
             LeanTween.cancel(inventoryButton.GetComponent<RectTransform>());
             LeanTween.rotate(inventoryButton.GetComponent<RectTransform>(), iconAngle, iconDuration).setEase(iconEaseType);
         }
-
-        //public void RemoveUIItem(int index)
-        //{
-        //    listOfUIItems[index].ResetData();
-        //}
     }
 }

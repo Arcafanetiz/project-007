@@ -1,10 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class SceneInteractables : MonoBehaviour
+public class UIInteractable : MonoBehaviour
 {
     private Vector3 originalPos;
 
@@ -22,7 +22,7 @@ public class SceneInteractables : MonoBehaviour
     [SerializeField] private ItemSO requiredItem;
 
     [Header("Animation")]
-    public AnimationType animationName = AnimationType.NONE; 
+    public AnimationType animationName = AnimationType.NONE;
     [SerializeField] private float animationDuration = 0.5f;
 
     [Header("Audio")]
@@ -39,11 +39,31 @@ public class SceneInteractables : MonoBehaviour
             OnItemUseEvent = new UnityEvent();
 
         OnClickEvent.AddListener(PlayAnimation);
-        OnClickEvent.AddListener(PlayOnClickAudio);
-        OnClickEvent.AddListener(DisplayDialogue);
 
-        OnItemUseEvent.AddListener(PlayOnItemUseAudio);
+        //OnItemUseEvent.AddListener(PlayOnItemUseAudio);
         OnItemUseEvent.AddListener(RemoveOnHandItem);
+        //OnItemUseEvent.AddListener(PlayAnimation);
+
+        GetComponent<Button>().onClick.AddListener(InteractionHandler);
+    }
+
+    private void InteractionHandler()
+    {
+        if (inventoryData.onHandItemIndex != -1)
+        {
+            if (inventoryData.GetItemAt(inventoryData.onHandItemIndex).item == requiredItem)
+            {
+                OnItemUseEvent?.Invoke();
+            }
+            else
+            {
+                OnClickEvent?.Invoke();
+            }
+        }
+        else
+        {
+            OnClickEvent?.Invoke();
+        }
     }
 
     /// -----------------------------------------
@@ -53,15 +73,7 @@ public class SceneInteractables : MonoBehaviour
     public void ItemPickUp(ItemSO item)
     {
         inventoryData.AddItem(item, 1);
-        GetComponent<Collider2D>().enabled = false;
-    }
-
-    public void ItemRequestHandler(ItemSO item)
-    {
-        if(item == requiredItem)
-            OnItemUseEvent?.Invoke();
-        else
-            OnClickEvent?.Invoke();
+        GetComponent<Button>().enabled = false;
     }
 
     public void RemoveOnHandItem()
@@ -91,52 +103,14 @@ public class SceneInteractables : MonoBehaviour
 
     public void Shake()
     {
-        LeanTween.cancel(this.gameObject);
-        LeanTween.move(this.gameObject, this.transform.position + new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), UnityEngine.Random.Range(-0.1f, 0.1f), 0.0f), animationDuration).setEase(LeanTweenType.easeShake).setOnComplete(() => { this.transform.position = originalPos; });
+        //LeanTween.cancel(this.gameObject);
+        //LeanTween.move(this.gameObject, this.transform.position + new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), UnityEngine.Random.Range(-0.1f, 0.1f), 0.0f), animationDuration).setEase(LeanTweenType.easeShake).setOnComplete(() => { this.transform.position = originalPos; });
     }
 
     public void Dissapear()
     {
+        //gameObject.SetActive(false);
         Vector3 endScale = Vector3.zero;
         LeanTween.scale(this.gameObject, endScale, animationDuration).setEase(LeanTweenType.easeInBack).setOnComplete(() => { this.gameObject.SetActive(false); });
-    }
-
-    /// -----------------------------------------
-    /// - AUDIO ---------------------------------
-    /// -----------------------------------------
-
-    public void PlayOnClickAudio()
-    {
-        if (onClickAudio == "")
-            return;
-        PlayAudio(onClickAudio);
-    }
-
-    public void PlayOnItemUseAudio()
-    {
-        if (onItemUseAudio == "")
-            return;
-        PlayAudio(onItemUseAudio);
-    }
-
-    public void PlayAudio(string audio_name)
-    {
-        AudioManager.instance.PlayAudio(audio_name);
-    }
-
-    /// -----------------------------------------
-    /// - DIALOGUE ------------------------------
-    /// -----------------------------------------
-
-    public void DisplayDialogue()
-    {
-        if (dialogueData == null)
-            return;
-        DisplayDialogue(dialogueData);
-    }
-
-    public void DisplayDialogue(DialogueTextSO dialogue_data)
-    {
-        FindObjectOfType<UIDialougeDisplay>().DisplayDialogue(dialogue_data);
     }
 }

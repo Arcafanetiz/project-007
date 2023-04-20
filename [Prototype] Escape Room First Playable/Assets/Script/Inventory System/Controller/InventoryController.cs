@@ -96,12 +96,5 @@ namespace Inventory
                 inventoryMenu.ResetBagIcon();
             }
         }
-
-        //public void ResetOnHandItem()
-        //{
-        //    inventoryData.RemoveItem(inventoryData.onHandItemIndex);
-        //    inventoryData.onHandItemIndex = -1;
-        //    inventoryMenu.ResetBagIcon();
-        //}
     }
 }
