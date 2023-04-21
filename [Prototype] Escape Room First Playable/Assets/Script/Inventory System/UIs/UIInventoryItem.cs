@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 namespace Inventory.UI
 {
-    public class UIInventoryItem : MonoBehaviour, IPointerClickHandler //, IBeginDragHandler, IDragHandler, IDropHandler, IEndDragHandler
+    public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     {
         [HideInInspector] public bool empty = true;
 
@@ -16,7 +16,6 @@ namespace Inventory.UI
         [SerializeField] private Image highlightImage;
 
         public event Action<UIInventoryItem> OnItemClicked;
-        //public event Action<UIInventoryItem> OnItemClicked, OnRightClicked, OnItemBeginDrag, OnItemDroppedOn, OnItemEndDrag;
 
         public void Awake()
         {
@@ -59,35 +58,6 @@ namespace Inventory.UI
             {
                 OnItemClicked?.Invoke(this);
             }
-            //else
-            //{
-            //    OnRightClicked?.Invoke(this);
-            //}
         }
-
-        //public void OnBeginDrag(PointerEventData eventData)
-        //{
-        //    // Call begin drag event if item slot is not empty
-        //    if (empty)
-        //        return;
-        //    OnItemBeginDrag?.Invoke(this);
-        //}
-
-        //public void OnDrag(PointerEventData eventData)
-        //{
-
-        //}
-
-        //public void OnDrop(PointerEventData eventData)
-        //{
-        //    // Call event if another item was dropped on the slot, deselect dragged item and select the new slot
-        //    OnItemDroppedOn?.Invoke(this);
-        //}
-
-        //public void OnEndDrag(PointerEventData eventData)
-        //{
-        //    // Call reset event if item was dropped outside of sny slot 
-        //    OnItemEndDrag?.Invoke(this);
-        //}
     }
 }

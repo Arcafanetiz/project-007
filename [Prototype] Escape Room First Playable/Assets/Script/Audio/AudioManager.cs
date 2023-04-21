@@ -13,9 +13,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup BGMAudioMixer;
     [SerializeField] private AudioMixerGroup SFXAudioMixer;
 
-    [Header("Sound Manager Settings")]
+    [Header("BGM Settings")]
     public string _BGMName;
     public bool playBGM;
+
+    [Header("Sound Banks")]
     public Sound[] BGMSounds;
     public Sound[] SFXSounds;
 

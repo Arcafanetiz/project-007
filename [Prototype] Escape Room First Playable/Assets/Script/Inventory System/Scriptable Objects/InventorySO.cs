@@ -38,7 +38,6 @@ public class InventorySO : ScriptableObject
         {
             if (inventoryItems[i].isEmpty)
             {
-                //+Add Item
                 inventoryItems[i] = new InventoryItem { item = item, quantity = quantity };
                 return;
             }
@@ -52,10 +51,7 @@ public class InventorySO : ScriptableObject
 
     public void RemoveItem(int index)
     {
-        //+Remove Item
         inventoryItems[index] = InventoryItem.GetEmptyItem();
-        //inventoryItems.Remove(inventoryItems[index]);
-        //inventoryItems.Add(InventoryItem.GetEmptyItem());
         InformAboutChange();
     }
 

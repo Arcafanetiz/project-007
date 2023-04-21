@@ -19,6 +19,11 @@ public class Light2DAnimation : MonoBehaviour
     public float intensityRange;
     public float intensityTimeMin;
     public float intensityTimeMax;
+    [Header("Animation - Sway")]
+    public bool lightSway;
+    public float swayIntensity;
+    public float swayDuration;
+    private float originRot;
 
 
     private void Awake()
@@ -31,13 +36,23 @@ public class Light2DAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        originRot = gameObject.transform.rotation.eulerAngles.z;
         LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
         StartCoroutine(FlickIntensity());
+        LightSway();
     }
 
     void UpdateIntensity(float val)
     {
         lightSource.intensity = val;
+    }
+
+    void LightSway()
+    {
+        if(lightSway)
+        {
+            LeanTween.rotate(gameObject, new Vector3(0.0f, 0.0f, originRot + swayIntensity) , swayDuration).setEase(LeanTweenType.easeShake).setLoopPingPong();
+        }
     }
 
     private IEnumerator FlickIntensity()

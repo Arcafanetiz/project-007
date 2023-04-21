@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseCameraMovement : MonoBehaviour
 {
+    [Header("Private Serialized Field -Do not touch-")]
     [SerializeField] private Camera mainCam;
     [SerializeField] private Vector3 mousePos;
     [SerializeField] private Vector3 originPos;

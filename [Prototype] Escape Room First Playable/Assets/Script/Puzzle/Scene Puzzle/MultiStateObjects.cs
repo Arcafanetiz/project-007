@@ -13,12 +13,17 @@ public class MultiStateObjects : MonoBehaviour
         unlocked.SetActive(true);
     }
 
+    public void StateChangeLock()
+    {
+        locked.SetActive(true);
+        unlocked.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         // Initialize
-        locked.SetActive(true);
-        unlocked.SetActive(false);
+        StateChangeLock();
     }
 
     // Update is called once per frame

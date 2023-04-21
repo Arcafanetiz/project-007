@@ -15,7 +15,8 @@ public class SceneInteractables : MonoBehaviour
     public UnityEvent OnItemUseEvent;
 
     [Header("Dialogue")]
-    public DialogueTextSO dialogueData;
+    public DialogueTextSO onClickDialogueData;
+    public DialogueTextSO onItemUseDialogueData;
 
     [Header("Item")]
     [SerializeField] private InventorySO inventoryData;
@@ -24,6 +25,8 @@ public class SceneInteractables : MonoBehaviour
     [Header("Animation")]
     public AnimationType animationName = AnimationType.NONE; 
     [SerializeField] private float animationDuration = 0.5f;
+
+    [Header("Audio")]
     public string onClickAudio;
     public string onItemUseAudio;
 
@@ -38,10 +41,11 @@ public class SceneInteractables : MonoBehaviour
 
         OnClickEvent.AddListener(PlayAnimation);
         OnClickEvent.AddListener(PlayOnClickAudio);
-        OnClickEvent.AddListener(DisplayDialogue);
+        OnClickEvent.AddListener(DisplayOnClickDialogue);
 
         OnItemUseEvent.AddListener(PlayOnItemUseAudio);
         OnItemUseEvent.AddListener(RemoveOnHandItem);
+        OnItemUseEvent.AddListener(DisplayOnItemUseDialogue);
     }
 
     /// -----------------------------------------
@@ -126,11 +130,18 @@ public class SceneInteractables : MonoBehaviour
     /// - DIALOGUE ------------------------------
     /// -----------------------------------------
 
-    public void DisplayDialogue()
+    public void DisplayOnClickDialogue()
     {
-        if (dialogueData == null)
+        if (onClickDialogueData == null)
             return;
-        DisplayDialogue(dialogueData);
+        DisplayDialogue(onClickDialogueData);
+    }
+
+    public void DisplayOnItemUseDialogue()
+    {
+        if (onItemUseDialogueData == null)
+            return;
+        DisplayDialogue(onItemUseDialogueData);
     }
 
     public void DisplayDialogue(DialogueTextSO dialogue_data)
