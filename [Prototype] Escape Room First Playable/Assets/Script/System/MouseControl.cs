@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,18 +12,13 @@ public class MouseControl : MonoBehaviour
     public LayerMask interactableLM;
 
     [Header("Cursor")]
-    [SerializeField] private bool cursorLock = true;
     [SerializeField] private Texture2D defaultCursor;
     [SerializeField] private Vector2 defaultCursorHotspot = new Vector2 (3.0f, 3.0f);
     [SerializeField] private Texture2D activeCursor;
     [SerializeField] private Vector2 activeCursorHotspot = new Vector2(12.0f, 3.0f);
 
     // Start is called before the first frame update
-    void Start()
-    {
-        if (cursorLock)
-            Cursor.lockState = CursorLockMode.Confined;
-    }
+    void Start() { }
 
     // Update is called once per frame
     void Update()
@@ -46,9 +42,7 @@ public class MouseControl : MonoBehaviour
                 if (interactable != null && Helditem != null)
                     interactable.ItemRequestHandler(Helditem);
                 else if (interactable != null)
-                {
-                    interactable.OnClickEvent?.Invoke();
-                }  
+                    interactable.OnClickEvent?.Invoke(); 
             }
         }
 

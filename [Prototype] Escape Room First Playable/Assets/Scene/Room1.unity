@@ -10991,7 +10991,6 @@ MonoBehaviour:
   interactableLM:
     serializedVersion: 2
     m_Bits: 64
-  cursorLock: 0
   defaultCursor: {fileID: 2800000, guid: bb255eac20af0a248b50779005d3f92f, type: 3}
   defaultCursorHotspot: {x: 3, y: 3}
   activeCursor: {fileID: 2800000, guid: f3435180221f26a41b81afa36df5da6f, type: 3}

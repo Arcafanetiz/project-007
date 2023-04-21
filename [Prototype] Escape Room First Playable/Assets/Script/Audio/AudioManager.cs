@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class AudioManager : MonoBehaviour
     [Header("BGM Settings")]
     public string _BGMName;
     public bool playBGM;
+    [HideInInspector] public int[] bGMIndex;
 
     [Header("Sound Banks")]
     public Sound[] BGMSounds;
@@ -68,12 +70,38 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-
-        foreach (Sound bgm in BGMSounds)
+        if(s.source.isPlaying)
         {
-            bgm.source.Stop();
+            return;
         }
 
+        StopBGM();
+        s.source.Play();
+    }
+
+    public void SwitchBGM(int index)
+    {
+        // ---------------- Calling Method ----------------
+        // AudioManager.instance.SwitchBGM(index);
+        // ------------------------------------------------
+        index--;
+        if(index == -1)
+        {
+            StopBGM();
+        }
+
+        Sound s = BGMSounds[index - 1];
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + (index - 1) + " not found!");
+            return;
+        }
+        if (s.source.isPlaying)
+        {
+            return;
+        }
+
+        StopBGM();
         s.source.Play();
     }
 

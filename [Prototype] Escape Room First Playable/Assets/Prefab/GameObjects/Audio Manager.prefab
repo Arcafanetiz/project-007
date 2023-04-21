@@ -52,6 +52,7 @@ MonoBehaviour:
   SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   _BGMName: Title BGM
   playBGM: 1
+  bGMIndex: 00000000000000000000000000000000
   BGMSounds:
   - name: Title BGM
     audioClip: {fileID: 8300000, guid: 0debb8a430d690d4fba3b33fe3093c65, type: 3}

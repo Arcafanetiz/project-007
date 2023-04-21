@@ -14,7 +14,7 @@ public class RoomNavigation : MonoBehaviour
     [Header("Views")]
     public KeyCode nextKey = KeyCode.E;
     public KeyCode prevKey = KeyCode.Q;
-    public ViewState currentState = ViewState.PRESENT;
+    [SerializeField] private ViewState currentState = ViewState.PRESENT;
 
     public GameObject[] presentViews;
     public GameObject[] pastViews;
@@ -58,7 +58,6 @@ public class RoomNavigation : MonoBehaviour
             presentViews[i].SetActive(false);
             pastViews[i].SetActive(false);
         }
-        //AudioManager.instance.SwitchBGM(presentBGM);
     }
 
     // Update is called once per frame
