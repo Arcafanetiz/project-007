@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMHolder: {fileID: 1739902883491726041}
   SFXHolder: {fileID: 1739902883167453487}
+  audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   BGMAudioMixer: {fileID: 8992412871406896527, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   bGMIndex: 01000000020000000000000003000000

@@ -5519,7 +5519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: bGMIndex.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: bGMIndex.Array.data[0]
@@ -5531,6 +5531,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: bGMIndex.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
+      propertyPath: bGMIndex.Array.data[3]
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []

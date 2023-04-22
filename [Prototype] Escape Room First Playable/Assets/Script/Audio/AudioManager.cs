@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [Header("Private Serialized Field -Do not touch-")]
     [SerializeField] private GameObject BGMHolder;
     [SerializeField] private GameObject SFXHolder;
+    [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private AudioMixerGroup BGMAudioMixer;
     [SerializeField] private AudioMixerGroup SFXAudioMixer;
 
@@ -73,8 +74,10 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        StopBGM();
-        s.source.Play();
+        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 1.0f, s.source, BGMSounds));
+
+        //StopBGM();
+        //s.source.Play();
     }
 
     public void SwitchBGM(int index)
@@ -99,8 +102,10 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        StopBGM();
-        s.source.Play();
+        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 1.0f, s.source, BGMSounds));
+
+        //StopBGM();
+        //s.source.Play();
     }
 
     public void StopBGM()
@@ -109,10 +114,12 @@ public class AudioManager : MonoBehaviour
         // AudioManager.instance.StopBGM();
         // ------------------------------------------------
 
-        foreach (Sound s in BGMSounds)
-        {
-            s.source.Stop();
-        }
+        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 1.0f, null, BGMSounds));
+
+        //foreach (Sound s in BGMSounds)
+        //{
+        //    s.source.Stop();
+        //}
     }
 
     public void StopBGM(string name)
