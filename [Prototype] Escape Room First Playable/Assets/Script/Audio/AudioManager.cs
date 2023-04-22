@@ -15,9 +15,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup SFXAudioMixer;
 
     [Header("BGM Settings")]
-    public string _BGMName;
-    public bool playBGM;
-    [HideInInspector] public int[] bGMIndex;
+    /*[HideInInspector] */public int[] bGMIndex;
 
     [Header("Sound Banks")]
     public Sound[] BGMSounds;
@@ -84,10 +82,10 @@ public class AudioManager : MonoBehaviour
         // ---------------- Calling Method ----------------
         // AudioManager.instance.SwitchBGM(index);
         // ------------------------------------------------
-        index--;
-        if(index == -1)
+        if(index == 0)
         {
             StopBGM();
+            return;
         }
 
         Sound s = BGMSounds[index - 1];
@@ -194,13 +192,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void HandleSceneBGM(int scene_Index)
+    {
+        SwitchBGM(bGMIndex[scene_Index]);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        if(playBGM)
-        {
-            SwitchBGM(_BGMName);
-        } 
+        HandleSceneBGM(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

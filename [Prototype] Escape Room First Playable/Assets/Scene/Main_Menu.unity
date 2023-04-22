@@ -2665,11 +2665,11 @@ RectTransform:
   m_Father: {fileID: 1964844940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 150, y: 80}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 500, y: 50}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &882155043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,7 +3329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637520, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: changeBGM
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2409100842277637534, guid: 1d1a975eb2ac24243811877a4d0b7702, type: 3}
       propertyPath: m_Name
@@ -5531,7 +5531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: bGMIndex.Array.data[2]
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}

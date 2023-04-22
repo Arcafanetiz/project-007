@@ -10962,6 +10962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8895f1818ab17a741aa8a0af4bd3ed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   currentView: 0
   previousView: 0
   maxView: 0
@@ -10972,8 +10973,6 @@ MonoBehaviour:
   - {fileID: 26677393}
   pastViews:
   - {fileID: 616302889}
-  presentBGM: FirstRoom(Present)
-  pastBGM: FirstRoom(Past)
   screenEffect: {fileID: 428200364}
 --- !u!114 &602670817
 MonoBehaviour:
@@ -14966,6 +14965,34 @@ PrefabInstance:
     - target: {fileID: 4783427151359592267, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2110649989}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783427151374248732, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4783427151374248735, guid: 7789f6aceb1204d4f8580f07483914be, type: 3}
       propertyPath: m_AnchorMax.y
@@ -23015,6 +23042,18 @@ PrefabInstance:
     - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: _BGMName
       value: FirstRoom(Present)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
+      propertyPath: bGMIndex.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
+      propertyPath: bGMIndex.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
+      propertyPath: bGMIndex.Array.data[1]
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}

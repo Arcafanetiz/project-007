@@ -329,7 +329,6 @@ GameObject:
   - component: {fileID: 4783427151359592265}
   - component: {fileID: 4783427151359592264}
   - component: {fileID: 4783427151359592267}
-  - component: {fileID: 4783427151359592266}
   m_Layer: 5
   m_Name: Pause Menu Panel
   m_TagString: Untagged
@@ -410,22 +409,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &4783427151359592266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4783427151359591604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc1c204ae9de5040b2d4df7aad8e3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  masterSlider: {fileID: 4783427151561857940}
-  bGMSlider: {fileID: 4783427152246606015}
-  sFXSlider: {fileID: 4783427151776680523}
-  audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
 --- !u!1 &4783427151374248734
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +542,7 @@ GameObject:
   - component: {fileID: 4783427151442089187}
   - component: {fileID: 4783427151442089185}
   - component: {fileID: 4783427151442089184}
+  - component: {fileID: 1410571789408749800}
   m_Layer: 5
   m_Name: Settings Panel
   m_TagString: Untagged
@@ -626,6 +610,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1410571789408749800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783427151442089186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc1c204ae9de5040b2d4df7aad8e3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 4783427151561857940}
+  bGMSlider: {fileID: 4783427152246606015}
+  sFXSlider: {fileID: 4783427151776680523}
+  audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
 --- !u!1 &4783427151482709334
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4783427151359592266}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
         m_MethodName: SetMasterVolume
         m_Mode: 1
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4783427151359592266}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
         m_MethodName: SetSFXVolume
         m_Mode: 1
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4783427151359592266}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
         m_MethodName: PlaySampleSFX
         m_Mode: 1
@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4783427151359592266}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIAudioSettings, Assembly-CSharp
         m_MethodName: SetBGMVolume
         m_Mode: 1

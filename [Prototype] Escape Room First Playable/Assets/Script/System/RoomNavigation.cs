@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class RoomNavigation : MonoBehaviour
 {
     public enum ViewState { PAST, PRESENT };
 
     [Header("Private Serialized Field -Do not touch-")]
+    [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private int currentView;
     [SerializeField] private int previousView;
     [SerializeField] private int maxView;
@@ -19,10 +21,7 @@ public class RoomNavigation : MonoBehaviour
     public GameObject[] presentViews;
     public GameObject[] pastViews;
 
-    [Header("Audio")]
-    public string presentBGM;
-    public string pastBGM;
-
+    [Header("Screen Effect")]
     public GameObject screenEffect;
     public int p_currentView
     {
@@ -47,6 +46,7 @@ public class RoomNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         maxView = presentViews.Length;
         currentView = 0;
         previousView = maxView;
@@ -109,14 +109,21 @@ public class RoomNavigation : MonoBehaviour
                 presentViews[currentView].SetActive(false);
                 pastViews[currentView].SetActive(true);
                 currentState = ViewState.PAST;
-                AudioManager.instance.SwitchBGM(pastBGM);
+                //AudioManager.instance.SwitchBGM(pastBGM);
+                LeanTween.value(gameObject, UpdateCutoffFreg, 22000.0f, 220.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
                 break;
             case ViewState.PAST:
                 pastViews[currentView].SetActive(false);
                 presentViews[currentView].SetActive(true);
                 currentState = ViewState.PRESENT;
-                AudioManager.instance.SwitchBGM(presentBGM);
+                //AudioManager.instance.SwitchBGM(presentBGM);
+                LeanTween.value(gameObject, UpdateCutoffFreg, 220.0f, 22000.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
                 break;
         }
+    }
+
+    void UpdateCutoffFreg(float val)
+    {
+        audioMixer.SetFloat("bGMCutoffFreg", val);
     }
 }
