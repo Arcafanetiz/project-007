@@ -50,7 +50,7 @@ MonoBehaviour:
   SFXHolder: {fileID: 1739902883167453487}
   BGMAudioMixer: {fileID: 8992412871406896527, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
-  bGMIndex: 01000000040000000000000000000000
+  bGMIndex: 01000000020000000000000003000000
   BGMSounds:
   - name: Clock Hands
     audioClip: {fileID: 8300000, guid: 0debb8a430d690d4fba3b33fe3093c65, type: 3}
@@ -61,7 +61,13 @@ MonoBehaviour:
   - name: Dance of the Sugar Plum Fairy
     audioClip: {fileID: 8300000, guid: 1472fd8fa03fac54589cf6c20de920c7, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.9
+    loop: 1
+    source: {fileID: 0}
+  - name: Nocturne in E Flat Major Op.9 No.2
+    audioClip: {fileID: 8300000, guid: 765d5ce5deaf60e43b632085561a40fa, type: 3}
+    volume: 1
+    pitch: 0.9
     loop: 1
     source: {fileID: 0}
   - name: FirstRoom(Present)
