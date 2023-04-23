@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.Universal;
 
 public class RoomNavigation : MonoBehaviour
 {
@@ -10,13 +11,14 @@ public class RoomNavigation : MonoBehaviour
 
     [Header("Private Serialized Field -Do not touch-")]
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private Light2D globalLightSource;
     [SerializeField] private int currentView;
     [SerializeField] private int previousView;
     [SerializeField] private int maxView;
     [SerializeField] private int currentAuxView;
     [SerializeField] private int previousAuxView;
     [SerializeField] private int maxAuxView;
-
+    
     [Header("Views")]
     public KeyCode nextKey = KeyCode.E;
     public KeyCode prevKey = KeyCode.Q;
@@ -28,6 +30,9 @@ public class RoomNavigation : MonoBehaviour
 
     public GameObject[] presentAuxViews;
     public GameObject[] pastAuxViews;
+
+    public float[] viewGlobalLightIntensity;
+    public float[] auxViewGlobalLightIntensity;
 
     [Header("Screen Effect")]
     public GameObject screenEffect;
@@ -125,10 +130,12 @@ public class RoomNavigation : MonoBehaviour
                 case ViewState.PRESENT:
                     presentViews[previousView].SetActive(false);
                     presentViews[currentView].SetActive(true);
+                    globalLightSource.intensity = viewGlobalLightIntensity[currentView];
                     break;
                 case ViewState.PAST:
                     pastViews[previousView].SetActive(false);
                     pastViews[currentView].SetActive(true);
+                    globalLightSource.intensity = viewGlobalLightIntensity[currentView];
                     break;
             }
         }
@@ -145,10 +152,12 @@ public class RoomNavigation : MonoBehaviour
                 case ViewState.PRESENT:
                     presentAuxViews[previousAuxView].SetActive(false);
                     presentAuxViews[currentAuxView].SetActive(true);
+                    globalLightSource.intensity = auxViewGlobalLightIntensity[currentAuxView];
                     break;
                 case ViewState.PAST:
                     pastAuxViews[previousAuxView].SetActive(false);
                     pastAuxViews[currentAuxView].SetActive(true);
+                    globalLightSource.intensity = auxViewGlobalLightIntensity[currentAuxView];
                     break;
             }
         }
@@ -163,10 +172,12 @@ public class RoomNavigation : MonoBehaviour
                 case ViewState.PRESENT:
                     presentViews[currentView].SetActive(false);
                     presentAuxViews[0].SetActive(true);
+                    globalLightSource.intensity = auxViewGlobalLightIntensity[currentAuxView];
                     break;
                 case ViewState.PAST:
                     pastViews[currentView].SetActive(false);
                     pastAuxViews[0].SetActive(true);
+                    globalLightSource.intensity = auxViewGlobalLightIntensity[currentAuxView];
                     break;
             }
             currentType = ViewType.AUXILLARY;
@@ -178,10 +189,12 @@ public class RoomNavigation : MonoBehaviour
                 case ViewState.PRESENT:
                     presentAuxViews[currentAuxView].SetActive(false);
                     presentViews[currentView].SetActive(true);
+                    globalLightSource.intensity = viewGlobalLightIntensity[currentView];
                     break;
                 case ViewState.PAST:
                     pastAuxViews[currentAuxView].SetActive(false);
                     pastViews[currentView].SetActive(true);
+                    globalLightSource.intensity = viewGlobalLightIntensity[currentView];
                     break;
             }
             currentType = ViewType.STANDARD;

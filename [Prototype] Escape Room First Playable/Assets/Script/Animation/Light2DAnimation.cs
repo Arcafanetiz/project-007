@@ -37,9 +37,14 @@ public class Light2DAnimation : MonoBehaviour
     void Start()
     {
         originRot = gameObject.transform.rotation.eulerAngles.z;
-        LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
+        //LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
         StartCoroutine(FlickIntensity());
         LightSway();
+    }
+
+    private void OnEnable()
+    {
+        LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
     }
 
     void UpdateIntensity(float val)
