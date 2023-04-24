@@ -51,7 +51,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   BGMAudioMixer: {fileID: 8992412871406896527, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
-  bGMIndex: 01000000020000000000000003000000
+  bGMIndex: 010000000200000002000000030000000300000000000000
   BGMSounds:
   - name: Clock Hands
     audioClip: {fileID: 8300000, guid: 0debb8a430d690d4fba3b33fe3093c65, type: 3}
@@ -102,6 +102,12 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     source: {fileID: 0}
+  - name: Lights On
+    audioClip: {fileID: 8300000, guid: 724a2446afb912f4cab0332c8c9fd715, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: Item Collect
     audioClip: {fileID: 8300000, guid: 8bb2066c6aa9c0143900b01a36690485, type: 3}
     volume: 1
@@ -116,6 +122,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Sword Down
     audioClip: {fileID: 8300000, guid: e38063964b1e33544ae6934564d871c1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Glass Case Tap
+    audioClip: {fileID: 8300000, guid: 6692f47d9622d8342bd58f0fd9d28ca5, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -137,6 +149,48 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Locked Door
+    audioClip: {fileID: 8300000, guid: 05a4b69e830c04a49bffc26a94910152, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Locked Item
+    audioClip: {fileID: 8300000, guid: de3374f3019d36e4b93ed065b17fac6e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Clock Tower Bell
+    audioClip: {fileID: 8300000, guid: d2e34b2f407f5394e881ea1a807a8a43, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pipe Leak (Loop)
+    audioClip: {fileID: 8300000, guid: 561ce2e248118d644a07ddc50ea8b04c, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Pipe Leak (Loop)
+    audioClip: {fileID: 8300000, guid: 561ce2e248118d644a07ddc50ea8b04c, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: UI Click
+    audioClip: {fileID: 8300000, guid: 307f8157cb64569499c6ee463984aa8a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI Inventory
+    audioClip: {fileID: 8300000, guid: d90f68a86631c1b4d8fb0c0380300db8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!1 &1739902883167453487
 GameObject:

@@ -44,6 +44,7 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     void Start() 
     {
+        prevButton.SetActive(false);
         _scrollRectComponent = GetComponent<ScrollRect>();
         _scrollRectRect = GetComponent<RectTransform>();
         _container = _scrollRectComponent.content;
@@ -80,7 +81,6 @@ public class UITextPages : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     void Update()
     {
-
         if (currentPage == 0)
         {
             prevButton.SetActive(false);

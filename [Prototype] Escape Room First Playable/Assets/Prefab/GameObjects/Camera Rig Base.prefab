@@ -51,7 +51,7 @@ MonoBehaviour:
   anchorPos: {x: 0, y: 0, z: 0}
   isZoomIn: 0
   swayMultiplier: {x: 0.6, y: 0.3}
-  swayDistanceClamp: {x: 0.4, y: 0.2}
+  swayDistanceClamp: {x: 0.3, y: 0.2}
   zoomKey: 304
   zoomMultiplier: 20
   zoomDuration: 0.2

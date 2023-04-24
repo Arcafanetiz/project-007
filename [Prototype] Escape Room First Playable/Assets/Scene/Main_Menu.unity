@@ -3510,6 +3510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightSource: {fileID: 0}
+  turnOnEnable: 0
   startIntensity: 0
   endIntensity: 2.5
   duration: 0
@@ -5516,26 +5517,6 @@ PrefabInstance:
     - target: {fileID: 1739902882445989802, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
-      propertyPath: bGMIndex.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
-      propertyPath: bGMIndex.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
-      propertyPath: bGMIndex.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
-      propertyPath: bGMIndex.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
-      propertyPath: bGMIndex.Array.data[3]
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}

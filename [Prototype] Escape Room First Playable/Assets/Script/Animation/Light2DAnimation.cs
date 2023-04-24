@@ -9,6 +9,7 @@ public class Light2DAnimation : MonoBehaviour
     [SerializeField] private Light2D lightSource;
 
     [Header("Animation - Turn On")]
+    public bool turnOnEnable;
     [Range(0.0f, 5.0f)] public float startIntensity;
     [Range(0.0f, 5.0f)] public float endIntensity;
     public float duration;
@@ -37,14 +38,15 @@ public class Light2DAnimation : MonoBehaviour
     void Start()
     {
         originRot = gameObject.transform.rotation.eulerAngles.z;
-        //LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
+        LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
         StartCoroutine(FlickIntensity());
         LightSway();
     }
 
     private void OnEnable()
     {
-        LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
+        if(turnOnEnable)
+            LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
     }
 
     void UpdateIntensity(float val)

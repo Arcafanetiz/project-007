@@ -44,7 +44,8 @@ public class UIInteractable : MonoBehaviour
         OnItemUseEvent.AddListener(RemoveOnHandItem);
         //OnItemUseEvent.AddListener(PlayAnimation);
 
-        GetComponent<Button>().onClick.AddListener(InteractionHandler);
+        if(GetComponent<Button>() != null)
+            GetComponent<Button>().onClick.AddListener(InteractionHandler);
     }
 
     private void InteractionHandler()
@@ -112,5 +113,33 @@ public class UIInteractable : MonoBehaviour
         //gameObject.SetActive(false);
         Vector3 endScale = Vector3.zero;
         LeanTween.scale(this.gameObject, endScale, animationDuration).setEase(LeanTweenType.easeInBack).setOnComplete(() => { this.gameObject.SetActive(false); });
+    }
+
+    /// -----------------------------------------
+    /// - AUDIO ---------------------------------
+    /// -----------------------------------------
+
+    public void PlayOnClickAudio()
+    {
+        if (onClickAudio == "")
+            return;
+        PlayAudio(onClickAudio);
+    }
+
+    public void PlayOnItemUseAudio()
+    {
+        if (onItemUseAudio == "")
+            return;
+        PlayAudio(onItemUseAudio);
+    }
+
+    public void PlayAudio(string audio_name)
+    {
+        AudioManager.instance.PlayAudio(audio_name);
+    }
+
+    public void StopAudio(string audio_name)
+    {
+        AudioManager.instance.StopAudio(audio_name);
     }
 }
