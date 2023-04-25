@@ -223,6 +223,7 @@ public class RoomNavigation : MonoBehaviour
                     currentState = ViewState.PAST;
                     //AudioManager.instance.SwitchBGM(pastBGM);
                     LeanTween.value(gameObject, UpdateCutoffFreg, 22000.0f, 500.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
+                    LeanTween.value(gameObject, UpdateReverbRoom, -10000.0f, 0.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
                     break;
                 case ViewState.PAST:
                     pastViews[currentView].SetActive(false);
@@ -230,6 +231,7 @@ public class RoomNavigation : MonoBehaviour
                     currentState = ViewState.PRESENT;
                     //AudioManager.instance.SwitchBGM(presentBGM);
                     LeanTween.value(gameObject, UpdateCutoffFreg, 500.0f, 22000.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
+                    LeanTween.value(gameObject, UpdateReverbRoom, 0.0f, -10000.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
                     break;
             }
         }
@@ -243,6 +245,7 @@ public class RoomNavigation : MonoBehaviour
                     currentState = ViewState.PAST;
                     //AudioManager.instance.SwitchBGM(pastBGM);
                     LeanTween.value(gameObject, UpdateCutoffFreg, 22000.0f, 500.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
+                    LeanTween.value(gameObject, UpdateReverbRoom, -10000.0f, 0.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
                     break;
                 case ViewState.PAST:
                     pastAuxViews[currentAuxView].SetActive(false);
@@ -250,6 +253,7 @@ public class RoomNavigation : MonoBehaviour
                     currentState = ViewState.PRESENT;
                     //AudioManager.instance.SwitchBGM(presentBGM);
                     LeanTween.value(gameObject, UpdateCutoffFreg, 500.0f, 22000.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
+                    LeanTween.value(gameObject, UpdateReverbRoom, 0.0f, -10000.0f, 0.7f).setEase(LeanTweenType.easeOutExpo);
                     break;
             }
         }
@@ -258,5 +262,10 @@ public class RoomNavigation : MonoBehaviour
     void UpdateCutoffFreg(float val)
     {
         audioMixer.SetFloat("bGMCutoffFreg", val);
+    }
+
+    void UpdateReverbRoom(float val)
+    {
+        audioMixer.SetFloat("bGMReverb", val);
     }
 }

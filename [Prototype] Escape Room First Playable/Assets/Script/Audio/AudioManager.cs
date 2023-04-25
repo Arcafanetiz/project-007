@@ -74,7 +74,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 1.0f, s.source, BGMSounds));
+        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 2.0f, s.source, BGMSounds));
 
         //StopBGM();
         //s.source.Play();
@@ -102,7 +102,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 1.0f, s.source, BGMSounds));
+        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 2.0f, s.source, BGMSounds));
 
         //StopBGM();
         //s.source.Play();
@@ -114,7 +114,7 @@ public class AudioManager : MonoBehaviour
         // AudioManager.instance.StopBGM();
         // ------------------------------------------------
 
-        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 1.0f, null, BGMSounds));
+        StartCoroutine(BGMAudioFade.CrossFade(audioMixer, 2.0f, null, BGMSounds));
 
         //foreach (Sound s in BGMSounds)
         //{
@@ -165,6 +165,18 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Stop();
+    }
+
+    public void StopAllAudio()
+    {
+        // ---------------- Calling Method ----------------
+        // AudioManager.instance.StopAllAudio();
+        // ------------------------------------------------
+
+        foreach (Sound s in SFXSounds)
+        {
+            s.source.Stop();
+        }
     }
 
     public void ToggleBGM()

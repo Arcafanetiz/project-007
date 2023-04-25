@@ -131,6 +131,11 @@ public class SceneInteractables : MonoBehaviour
         AudioManager.instance.StopAudio(audio_name);
     }
 
+    public void StopAllAudio()
+    {
+        AudioManager.instance.StopAllAudio();
+    }
+
     /// -----------------------------------------
     /// - DIALOGUE ------------------------------
     /// -----------------------------------------
