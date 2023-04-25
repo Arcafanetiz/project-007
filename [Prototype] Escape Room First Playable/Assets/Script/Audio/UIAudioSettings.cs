@@ -48,6 +48,12 @@ public class UIAudioSettings : MonoBehaviour
             sFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");
     }
 
+    public void ResetEffects()
+    {
+        audioMixer.SetFloat("bGMCutoffFreg", 22000.0f);
+        audioMixer.SetFloat("bGMReverb", -10000.0f);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
