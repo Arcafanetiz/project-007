@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Room 1 Framed Book (Fixed)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: Woah, it worked! What a genius I am.
+  - dialogueText: It worked! Changes in the past impact the present!
     displayTime: 4

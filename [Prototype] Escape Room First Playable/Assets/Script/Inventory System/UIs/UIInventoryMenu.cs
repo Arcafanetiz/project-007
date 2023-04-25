@@ -132,6 +132,8 @@ namespace Inventory.UI
             LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 1.0f, duration).setEase(easeType).setOnComplete(() => { ResetUI(1); });
 
             ResetSelection();
+
+            AudioManager.instance.PlayAudio("UI Inventory");
         }
 
         public void Hide()
@@ -140,6 +142,8 @@ namespace Inventory.UI
             LeanTween.move(inventoryPanel, new Vector3(0.0f, -originPosY - distance, 0.0f), duration).setEase(easeType);
             LeanTween.rotate(inventoryPanel, -angle, duration).setEase(easeType);
             LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType).setOnComplete(() => { ResetUI(0); });
+
+            AudioManager.instance.PlayAudio("UI Inventory");
         }
 
         private void ResetUI(int state)
@@ -175,6 +179,15 @@ namespace Inventory.UI
         {
             LeanTween.cancel(inventoryButton.GetComponent<RectTransform>());
             LeanTween.rotate(inventoryButton.GetComponent<RectTransform>(), iconAngle, iconDuration).setEase(iconEaseType);
+        }
+
+        /// -----------------------------------------
+        /// - AUDIO ---------------------------------
+        /// -----------------------------------------
+
+        public void PlayAudio(string audio_name)
+        {
+            AudioManager.instance.PlayAudio(audio_name);
         }
     }
 }

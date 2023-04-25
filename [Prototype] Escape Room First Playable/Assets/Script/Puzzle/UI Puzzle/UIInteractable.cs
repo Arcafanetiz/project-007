@@ -40,7 +40,7 @@ public class UIInteractable : MonoBehaviour
 
         OnClickEvent.AddListener(PlayAnimation);
 
-        //OnItemUseEvent.AddListener(PlayOnItemUseAudio);
+        OnItemUseEvent.AddListener(PlayOnItemUseAudio);
         OnItemUseEvent.AddListener(RemoveOnHandItem);
         //OnItemUseEvent.AddListener(PlayAnimation);
 

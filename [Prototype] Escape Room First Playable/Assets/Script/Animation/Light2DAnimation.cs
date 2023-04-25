@@ -14,6 +14,8 @@ public class Light2DAnimation : MonoBehaviour
     [Range(0.0f, 5.0f)] public float endIntensity;
     public float duration;
     public LeanTweenType easeType;
+    public bool turnOnSound;
+    public string turnOnAudio = "Lights On";
     [Header("Animation - Flicker")]
     public bool flickIntensity;
     float _baseIntensity;
@@ -41,6 +43,8 @@ public class Light2DAnimation : MonoBehaviour
         LeanTween.value(gameObject, UpdateIntensity, startIntensity, endIntensity, duration).setEase(easeType);
         StartCoroutine(FlickIntensity());
         LightSway();
+        if (turnOnSound)
+            AudioManager.instance.PlayAudio(turnOnAudio);
     }
 
     private void OnEnable()

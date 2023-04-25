@@ -15,6 +15,4 @@ MonoBehaviour:
   dialogueTexts:
   - dialogueText: "There\u2019s a hole, It looks like something can be inserted here.
       \n"
-    displayTime: 2
-  - dialogueText: "Maybe the ship, like in that painting?\r"
     displayTime: 3

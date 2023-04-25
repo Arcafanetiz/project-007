@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Room 1 Compass (Past-Locked)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: "Need a passcode. Wait, it said \u201CBirthday greeting\u201D\r\nThat
-      molded book is his biography\u2026 so\r"
+  - dialogueText: Needed a passcode.
     displayTime: 4

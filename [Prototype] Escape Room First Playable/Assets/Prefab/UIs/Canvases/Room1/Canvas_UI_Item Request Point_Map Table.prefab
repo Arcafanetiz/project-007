@@ -317,7 +317,7 @@ MonoBehaviour:
   animationName: 0
   animationDuration: 0.5
   onClickAudio: 
-  onItemUseAudio: Locked
+  onItemUseAudio: Water Splash
 --- !u!1 &7176439303901470270
 GameObject:
   m_ObjectHideFlags: 0

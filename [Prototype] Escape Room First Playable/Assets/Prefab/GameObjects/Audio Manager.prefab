@@ -164,7 +164,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Clock Tower Bell
     audioClip: {fileID: 8300000, guid: d2e34b2f407f5394e881ea1a807a8a43, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -188,9 +188,9 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: UI Inventory
     audioClip: {fileID: 8300000, guid: d90f68a86631c1b4d8fb0c0380300db8, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
+    volume: 0.2
+    pitch: 1.3
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &1739902883167453487
 GameObject:

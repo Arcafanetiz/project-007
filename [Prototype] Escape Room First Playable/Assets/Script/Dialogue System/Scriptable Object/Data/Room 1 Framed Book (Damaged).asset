@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Room 1 Framed Book (Damaged)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: "What kind of museum let their book get molded???\r\nThat damn
-      pipe leak...\r"
-    displayTime: 4
+  - dialogueText: "What kind of museum let their book get molded???\r"
+    displayTime: 3
+  - dialogueText: "That damn pipe leak...\r"
+    displayTime: 3
