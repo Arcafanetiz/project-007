@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Room 1 Rt. Pipe (Present-Damaged)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: "Only if the pipe isn't leaking above here\u2026"
+  - dialogueText: "Ugh, if only the pipe didn\u2019t leak right above the book."
     displayTime: 3

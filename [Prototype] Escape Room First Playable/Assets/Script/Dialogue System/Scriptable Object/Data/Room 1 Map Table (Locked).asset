@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Room 1 Map Table (Locked)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: Can't get the glass open. It's locked tight.
+  - dialogueText: "Can\u2019t get this glass frame to come off.  There has to be
+      another way to get this to open."
     displayTime: 3

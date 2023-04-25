@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Duct Tape
   <Sprite>k__BackingField: {fileID: -1131606921, guid: 944719a7c0a40c8438cb277de03abbb4, type: 3}
-  <Desciption>k__BackingField: Extra sticky, very convenient for fixing broken pipe
+  <Desciption>k__BackingField: Extra sticky, wonder what I could repair this with.
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1

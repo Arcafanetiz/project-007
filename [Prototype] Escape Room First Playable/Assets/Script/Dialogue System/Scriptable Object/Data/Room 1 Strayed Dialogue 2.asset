@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdfc76cd294ce8b47adec999e4d5dbe4, type: 3}
-  m_Name: Room 1 Rt. Pipe (Past-Damaged)
+  m_Name: Room 1 Strayed Dialogue 2
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: Oh, that is why the book is molded.
-    displayTime: 3
+  - dialogueText: 
+    displayTime: 4
+  - dialogueText: <<<     Click and hold on the watch
+    displayTime: 10

@@ -583,6 +583,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3009330529173700815, guid: 68770265cbf10a847b7119b72e2b3bc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3251843340594313251, guid: 68770265cbf10a847b7119b72e2b3bc9, type: 3}
       propertyPath: m_Name
       value: Canvas_Text Clue_Framed Book (Damaged)
@@ -674,6 +678,14 @@ PrefabInstance:
     - target: {fileID: 3251843340594313438, guid: 68770265cbf10a847b7119b72e2b3bc9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251843340745316397, guid: 68770265cbf10a847b7119b72e2b3bc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251843342347418618, guid: 68770265cbf10a847b7119b72e2b3bc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68770265cbf10a847b7119b72e2b3bc9, type: 3}

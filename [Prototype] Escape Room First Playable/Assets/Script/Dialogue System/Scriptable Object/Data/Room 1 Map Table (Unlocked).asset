@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Room 1 Map Table (Unlocked)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: "There\u2019s a hole, It looks like something can be inserted here.
-      \n"
+  - dialogueText: "There\u2019s a hole, It looks like something can be placed here."
     displayTime: 3
