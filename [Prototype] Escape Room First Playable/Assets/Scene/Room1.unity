@@ -6208,7 +6208,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Light Switch
   onItemUseAudio: 
 --- !u!1 &160606232
 GameObject:
@@ -8818,7 +8818,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Light Switch
   onItemUseAudio: 
 --- !u!1 &428200364
 GameObject:
