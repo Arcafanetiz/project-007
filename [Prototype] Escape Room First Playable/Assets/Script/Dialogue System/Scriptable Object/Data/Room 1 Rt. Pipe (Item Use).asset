@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Room 1 Rt. Pipe (Item Use)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: Even if I fixed it, the damage has already been done.
+  - dialogueText: Even though I fixed it, the damage has already been done...
     displayTime: 3
   - dialogueText: I wish someone could have done this sooner.
-    displayTime: 3
+    displayTime: 4
