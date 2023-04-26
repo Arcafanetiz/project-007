@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdfc76cd294ce8b47adec999e4d5dbe4, type: 3}
-  m_Name: Room 1 Compass (Past-Locked)
+  m_Name: Room 2 Puzzle Box (Unsolved)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: This needs a passcode
-    displayTime: 4
+  - dialogueText: Looks like there's a piece missing.
+    displayTime: 3

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eda530bf439d3848b97ef67bbd45549, type: 3}
+  m_Name: Small Puzzle Piece
+  m_EditorClassIdentifier: 
+  <ItemName>k__BackingField: Small Puzzle Piece
+  <Sprite>k__BackingField: {fileID: 0}
+  <Desciption>k__BackingField: A small metal piece. It is adorned with a painted
+    snake head. Where is its body?
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
