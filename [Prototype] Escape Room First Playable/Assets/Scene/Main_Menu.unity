@@ -3515,6 +3515,8 @@ MonoBehaviour:
   endIntensity: 2.5
   duration: 0
   easeType: 0
+  turnOnSound: 0
+  turnOnAudio: Lights On
   flickIntensity: 1
   intensityRange: 0.14
   intensityTimeMin: 0.05
@@ -4997,7 +4999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version Beta 1.0.0
+  m_text: Version Beta 1.0.0b
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5517,6 +5519,14 @@ PrefabInstance:
     - target: {fileID: 1739902882445989802, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
+      propertyPath: bGMIndex.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739902882445989803, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
+      propertyPath: bGMIndex.Array.data[2]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eb16c6cf204d1944b2d4b9abdbea96c, type: 3}
