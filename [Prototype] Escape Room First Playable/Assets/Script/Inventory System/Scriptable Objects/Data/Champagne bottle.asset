@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Champagne bottle
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Champagne bottle
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: b942a3457905c054e8807875dbdc4607, type: 3}
   <Desciption>k__BackingField: 'A bottle of champagne. The bottle is designed to
     be a stylish and is a striking display piece.
 

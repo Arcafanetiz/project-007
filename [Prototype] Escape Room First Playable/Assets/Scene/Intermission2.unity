@@ -477,12 +477,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique
-    tellus ut lectus tincidunt, a cursus elit accumsan. \n\nNullam pharetra dolor
-    mauris, eget varius eros egestas in. Donec aliquet lobortis neque, non sollicitudin
-    lectus hendrerit eu.\n\n Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia curae; Duis cursus semper tortor non luctus. Cras
-    viverra."
+  m_text: "You push through the door, expecting it to lead to the exit. But something
+    feels off, why is it so dark in here?\n\r\nSuddenly, the light bulb flickers
+    to life, casting a dim glow on the shelves of dusty books that surround you.
+    The scent of old paper fills your nose, as you realize that you've stumbled upon
+    a hidden library. \n\nIt looks like this night has one more surprise in store
+    for you.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE LIBRARY
+  m_text: "THE HIDDEN\n    LIBRARY HALL"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Small Puzzle Piece
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Small Puzzle Piece
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 00c1351012d81eb448ceffe7444e91f2, type: 3}
   <Desciption>k__BackingField: A small metal piece. It is adorned with a painted
     snake head. Where is its body?
   <IsStackable>k__BackingField: 0

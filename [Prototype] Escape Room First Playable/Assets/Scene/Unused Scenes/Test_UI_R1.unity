@@ -1038,6 +1038,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3360385970127434827, guid: 70d4fe6f92717ce4588db5014d7eec17, type: 3}
+      propertyPath: m_Name
+      value: Visual Clue Image Raycast Blocker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360385970127434827, guid: 70d4fe6f92717ce4588db5014d7eec17, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7176439304383898017, guid: 70d4fe6f92717ce4588db5014d7eec17, type: 3}
       propertyPath: m_Name
       value: Canvas_UI_Item Request Point_Map Table

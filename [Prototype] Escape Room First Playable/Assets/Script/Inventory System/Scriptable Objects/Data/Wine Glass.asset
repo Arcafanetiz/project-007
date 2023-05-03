@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wine Glass
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Wine Glass
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 221bc1c517e425442aee9c12eea6689d, type: 3}
   <Desciption>k__BackingField: ' A gilded glass with intricate design. Might not
     be good for serving wine but it looks great on display.'
   <IsStackable>k__BackingField: 0

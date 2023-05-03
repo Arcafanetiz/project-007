@@ -5272,7 +5272,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryMenu: {fileID: 1989720589}
   inventoryData: {fileID: 11400000, guid: 0c7c297bc0326804e86d7d55134d1839, type: 2}
-  initialItems: []
+  initialItems:
+  - quantity: 1
+    item: {fileID: 11400000, guid: fd21d54e91a9fc3478d3b7630b982605, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: dcb13e25005fe7949b4fe7b3d143b7f0, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: d62cb83d313ae20479df381d5690a20f, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 3ded28cdfcff5e34491990467ba8c920, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 35b820b7cb076394cb8a5765d01993e8, type: 2}
 --- !u!1 &619837077
 GameObject:
   m_ObjectHideFlags: 0
