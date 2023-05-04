@@ -28,7 +28,6 @@ public class Light2DAnimation : MonoBehaviour
     public float swayDuration;
     private float originRot;
 
-
     private void Awake()
     {
         lightSource = GetComponent<Light2D>();
