@@ -145,6 +145,7 @@ public class UIArrowPuzzle : MonoBehaviour
             if (i != initialIndex)
             {
                 SwapButtons(i, initialIndex);
+                i--;
             }
 
             // Reset the button's position to its initial position
