@@ -2,13 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class UIJigsawPuzzle : MonoBehaviour
 {
+    public enum LockState { LOCKED, UNLOCKED };
+    public LockState currentState = LockState.LOCKED;
+
     public GameObject[] piecesGO;
     public List<JigsawPiece> pieces;
 
+    [Header("Events")]
+    public UnityEvent UnlockEvent;
+
     // Start is called before the first frame update
+    void Awake()
+    {
+        if (UnlockEvent == null)
+            UnlockEvent = new UnityEvent();
+    }
     void Start()
     {
         for (int i = 0; i < piecesGO.Length; i++)
@@ -22,15 +36,35 @@ public class UIJigsawPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckSolved();
+        if(CheckSolved())
+        {
+            Unlock();
+        }
+        
+    }
+
+    public void Unlock()
+    {
+        currentState = LockState.UNLOCKED;
+        UnlockEvent.Invoke();
     }
 
     public bool CheckSolved()
     {
-        // +
-        return false;
+        for (int i = 0; i < piecesGO.Length; i++)
+        {
+            UIJigsawPuzzlePiece puzzlePieceScript = pieces[i].piece.GetComponent<UIJigsawPuzzlePiece>();
+            int currentOrientation = puzzlePieceScript.CheckOrientation();
+            if (currentOrientation != 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
+
+
 
 [Serializable]
 public struct JigsawPiece
