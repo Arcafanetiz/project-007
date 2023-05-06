@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,406 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_0
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1085
+        width: 277
+        height: 429
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58dcf8d9a673a964b828eaf4e656d5b0
+      internalID: -1532030278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1081
+        width: 279
+        height: 429
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61450f51cc54fb94c8bc7a2f5da294ef
+      internalID: -1321173189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_2
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1440
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd4ebd716a4d1f47aa356ba46df9bdb
+      internalID: -1431766737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_3
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 1440
+        width: 52
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5757a6637112da42a2962cc0ccd6ea9
+      internalID: 1642319322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_4
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1018
+        width: 441
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310ae1650de0a5b478b911c0e72f8225
+      internalID: 1188276274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_5
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 1018
+        width: 440
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d176aa3af7702742b2c505ff703aedc
+      internalID: -1926244783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_7
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1265
+        width: 253
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee5e63747102fc41a2dcddfb0766020
+      internalID: 893415402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 594
+        width: 277
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8faf84e171aae4e9b936b68f261a1d
+      internalID: 1244307893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 590
+        width: 279
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8b23a5e3aa70849818aa4b854b5c9d
+      internalID: -1022489856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_10
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 987
+        width: 220
+        height: 155
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ad51ad7b6253f49af214900d9068ff
+      internalID: 18392626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_11
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 987
+        width: 218
+        height: 155
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631695d275089254988f5223f773e58c
+      internalID: -1131166381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_12
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 814
+        width: 220
+        height: 155
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087c7c0179edf014abb43648769a30ff
+      internalID: 1390852666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_13
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 817
+        width: 220
+        height: 155
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d3b7ee810912345b6aa88501185268
+      internalID: 1719453092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_14
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 298
+        width: 147
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2779bd4305058b145851d1f7e168f373
+      internalID: 469125365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_15
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 298
+        width: 148
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f483af3514f65645bb8deb5739c402b
+      internalID: -1197029868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_16
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 45
+        width: 340
+        height: 650
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c3d134fd58a234ba81f3a67beb2d15
+      internalID: -2111959465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_17
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 45
+        width: 410
+        height: 650
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba4134a050b0d1499d06e234c1952f6
+      internalID: 1188892364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_18
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 55
+        width: 340
+        height: 650
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdfbc487f58fcf479807f32e94daa8f
+      internalID: 1871761671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_View1-2_Foreground_19
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 56
+        width: 410
+        height: 650
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccdb453665fd2dc40a3deb66d6db0986
+      internalID: 1257092055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +513,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Room2_View1-2_Foreground_5: -1926244783
+      Room2_View1-2_Foreground_18: 1871761671
+      Room2_View1-2_Foreground_6: -1960643820
+      Room2_View1-2_Foreground_14: 469125365
+      Room2_View1-2_Foreground_3: 1642319322
+      Room2_View1-2_Foreground_16: -2111959465
+      Room2_View1-2_Foreground_7: 893415402
+      Room2_View1-2_Foreground_10: 18392626
+      Room2_View1-2_Foreground_15: -1197029868
+      Room2_View1-2_Foreground_0: -1532030278
+      Room2_View1-2_Foreground_1: -1321173189
+      Room2_View1-2_Foreground_17: 1188892364
+      Room2_View1-2_Foreground_13: 1719453092
+      Room2_View1-2_Foreground_12: 1390852666
+      Room2_View1-2_Foreground_19: 1257092055
+      Room2_View1-2_Foreground_2: -1431766737
+      Room2_View1-2_Foreground_8: 1244307893
+      Room2_View1-2_Foreground_9: -1022489856
+      Room2_View1-2_Foreground_11: -1131166381
+      Room2_View1-2_Foreground_4: 1188276274
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
