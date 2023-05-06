@@ -739,7 +739,7 @@ MonoBehaviour:
   animationName: 0
   animationDuration: 0.5
   onClickAudio: 
-  onItemUseAudio: Water Splash
+  onItemUseAudio: Glass Bottle
 --- !u!1 &431585904491508488
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ MonoBehaviour:
   animationName: 0
   animationDuration: 0.5
   onClickAudio: 
-  onItemUseAudio: Locked
+  onItemUseAudio: Glass Bottle
 --- !u!1 &2769598883761284887
 GameObject:
   m_ObjectHideFlags: 0

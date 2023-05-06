@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07c1b6bba43aca0449b7e20d67b5f2ed
+guid: ce2f252da96aaf64e9e1443b5376a98b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,49 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: UI_Room2_Padlock_Locked_0
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 338
-        width: 861
-        height: 1012
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37a425b2f18948f4f9b3da5d609b1204
-      internalID: 1973673037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Room2_Padlock_Locked_1
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 338
-        width: 860
-        height: 1012
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 076a5811f60e81e4cb663989a4fe5b9a
-      internalID: -1929544343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -156,9 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      UI_Room2_Padlock_Locked_0: 1973673037
-      UI_Room2_Padlock_Locked_1: -1929544343
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
