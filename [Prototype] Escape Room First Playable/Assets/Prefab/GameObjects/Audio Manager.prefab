@@ -51,7 +51,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   BGMAudioMixer: {fileID: 8992412871406896527, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
-  bGMIndex: 0100000002000000020000000300000003000000
+  bGMIndex: 010000000200000002000000030000000300000004000000
   BGMSounds:
   - name: Clock Hands
     audioClip: {fileID: 8300000, guid: 0debb8a430d690d4fba3b33fe3093c65, type: 3}
@@ -69,6 +69,12 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 765d5ce5deaf60e43b632085561a40fa, type: 3}
     volume: 1
     pitch: 0.9
+    loop: 1
+    source: {fileID: 0}
+  - name: End Credit
+    audioClip: {fileID: 8300000, guid: c87056be8b7184749a63047581a3f346, type: 3}
+    volume: 1
+    pitch: 1
     loop: 1
     source: {fileID: 0}
   SFXSounds:
