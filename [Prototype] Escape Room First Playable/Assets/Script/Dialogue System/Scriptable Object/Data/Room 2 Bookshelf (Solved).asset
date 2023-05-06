@@ -17,5 +17,5 @@ MonoBehaviour:
 
 '
     displayTime: 3
-  - dialogueText: "There\u2019s something behind it.\r\n\n"
+  - dialogueText: "There\u2019s something behind it.\r"
     displayTime: 3
