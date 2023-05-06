@@ -1089,7 +1089,7 @@ MonoBehaviour:
   requiredItem: {fileID: 11400000, guid: 8c40d3459a93fab47b519f0f934ac31c, type: 2}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: Item Collect
 --- !u!61 &105351484
 BoxCollider2D:
@@ -6107,8 +6107,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 7.202133, y: 5.09}
-    newSize: {x: 7.19, y: 5.5}
+    oldSize: {x: 7.202133, y: 5.0400004}
+    newSize: {x: 7.202133, y: 5.0400004}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -6164,15 +6164,15 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 132237236, guid: 3296d08e4803f7f44b9d8dac021c6ef5, type: 3}
+  m_Sprite: {fileID: -540788017, guid: 0f2bc28aae58c2c4783536fe945ecfa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.19, y: 5.5}
+  m_Size: {x: 7.202133, y: 5.0400004}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &154183638
@@ -6499,7 +6499,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Page Flip
+  onClickAudio: UI Page Flip 1
   onItemUseAudio: 
 --- !u!61 &164060411
 BoxCollider2D:
@@ -7079,7 +7079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3618927186222737854, guid: 26813dd392f5a7948b85a34de806f638, type: 3}
       propertyPath: OnClickEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
-      value: UI Click
+      value: UI Click 1
       objectReference: {fileID: 0}
     - target: {fileID: 3618927186222737854, guid: 26813dd392f5a7948b85a34de806f638, type: 3}
       propertyPath: OnClickEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgument
@@ -8134,7 +8134,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pipe Leak (Loop)
+          m_StringArgument: Gas Leak (Loop)
           m_BoolArgument: 0
         m_CallState: 2
   onStateChangeUnlock:
@@ -8149,7 +8149,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pipe Leak (Loop)
+          m_StringArgument: Gas Leak (Loop)
           m_BoolArgument: 0
         m_CallState: 2
   onDisable:
@@ -8226,7 +8226,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!61 &332225075
 BoxCollider2D:
@@ -8246,7 +8246,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.8316374, y: 3.6699998}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 3.8316374, y: 3.6699998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -8295,15 +8295,15 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -55367659, guid: e75f597de3ea2ec488d6f2ddab6c98d2, type: 3}
+  m_Sprite: {fileID: 779135122, guid: 48ab5dfd0a0c6ed42ac0beb6ec3feb4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.8316374, y: 3.6699998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &341464047
@@ -8849,15 +8849,15 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 132237236, guid: 3296d08e4803f7f44b9d8dac021c6ef5, type: 3}
+  m_Sprite: {fileID: -540788017, guid: 0f2bc28aae58c2c4783536fe945ecfa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.19, y: 5.5}
+  m_Size: {x: 7.202133, y: 5.0400004}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &390716774
@@ -8895,8 +8895,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 7.202133, y: 5.09}
-    newSize: {x: 7.19, y: 5.5}
+    oldSize: {x: 7.202133, y: 5.0400004}
+    newSize: {x: 7.202133, y: 5.0400004}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -8983,7 +8983,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lights On
+          m_StringArgument: Light Turn On
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 836068388}
@@ -9265,7 +9265,7 @@ MonoBehaviour:
   requiredItem: {fileID: 11400000, guid: 8c40d3459a93fab47b519f0f934ac31c, type: 2}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: Item Collect
 --- !u!61 &433635593
 BoxCollider2D:
@@ -9397,7 +9397,7 @@ MonoBehaviour:
   duration: 1
   easeType: 31
   turnOnSound: 1
-  turnOnAudio: Lights On
+  turnOnAudio: Light Turn On
   flickIntensity: 0
   intensityRange: 0
   intensityTimeMin: 0
@@ -9491,42 +9491,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 141671330}
     m_Modifications:
-    - target: {fileID: 317321319228800361, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: UnlockEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321319228800361, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: UnlockEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 894596713}
-    - target: {fileID: 317321319228800361, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: UnlockEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayAudio
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321319228800361, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: UnlockEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: UI Click
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321319228800361, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: UnlockEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321320075553696, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1110083188}
-    - target: {fileID: 317321320075553696, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321320075553696, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321320075553696, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 317321320535568852, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9619,38 +9583,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 317321320763124735, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1110083188}
-    - target: {fileID: 317321320763124735, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321320763124735, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321320763124735, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321321034783505, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1110083188}
-    - target: {fileID: 317321321034783505, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321321034783505, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321321034783505, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 317321321151142580, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
       propertyPath: OnClickEvent.m_PersistentCalls.m_Calls.Array.size
       value: 4
@@ -9729,22 +9661,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 317321321151142580, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
       propertyPath: OnClickEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321321332808487, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1110083188}
-    - target: {fileID: 317321321332808487, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321321332808487, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 317321321332808487, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9915,7 +9831,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!60 &482778496
 PolygonCollider2D:
@@ -10069,7 +9985,7 @@ MonoBehaviour:
   duration: 1
   easeType: 31
   turnOnSound: 1
-  turnOnAudio: Lights On
+  turnOnAudio: Light Turn On
   flickIntensity: 0
   intensityRange: 0
   intensityTimeMin: 0
@@ -10227,7 +10143,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Page Flip
+  onClickAudio: UI Page Flip 1
   onItemUseAudio: 
 --- !u!61 &514352508
 BoxCollider2D:
@@ -10380,7 +10296,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Page Flip
+  onClickAudio: UI Page Flip 1
   onItemUseAudio: 
 --- !u!61 &514381065
 BoxCollider2D:
@@ -11145,7 +11061,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!61 &642635161
 BoxCollider2D:
@@ -11745,7 +11661,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.8316374, y: 3.6699998}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 3.8316374, y: 3.6699998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -11794,15 +11710,15 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2049469625, guid: e75f597de3ea2ec488d6f2ddab6c98d2, type: 3}
+  m_Sprite: {fileID: 450517495, guid: 48ab5dfd0a0c6ed42ac0beb6ec3feb4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.8316374, y: 3.6699998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &786613518
@@ -11959,7 +11875,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pipe Leak (Loop)
+          m_StringArgument: Gas Leak (Loop)
           m_BoolArgument: 0
         m_CallState: 2
   onStateChangeUnlock:
@@ -11974,7 +11890,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pipe Leak (Loop)
+          m_StringArgument: Gas Leak (Loop)
           m_BoolArgument: 0
         m_CallState: 2
   onDisable:
@@ -11989,7 +11905,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pipe Leak (Loop)
+          m_StringArgument: Gas Leak (Loop)
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &835485921
@@ -12528,7 +12444,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Page Flip
+  onClickAudio: UI Page Flip 1
   onItemUseAudio: 
 --- !u!61 &871941893
 BoxCollider2D:
@@ -12832,17 +12748,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8303390703758561666, guid: 730eeff33455992479bbfb0263c1ff47, type: 3}
   m_PrefabInstance: {fileID: 300726376}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &894596713 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 317321319231172201, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-  m_PrefabInstance: {fileID: 446600149}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17b83ff2ab7c25346a690883cf594e87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &905197511
 GameObject:
   m_ObjectHideFlags: 0
@@ -13180,7 +13085,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!60 &913413887
 PolygonCollider2D:
@@ -19534,7 +19439,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Glass Case Tap
+          m_StringArgument: Item Tap
           m_BoolArgument: 1
         m_CallState: 2
   OnItemUseEvent:
@@ -19546,7 +19451,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 0
   animationDuration: 0
-  onClickAudio: Sword Down
+  onClickAudio: Sword Unsheathe
   onItemUseAudio: 
 --- !u!61 &1079597784
 BoxCollider2D:
@@ -19742,11 +19647,6 @@ Transform:
   m_Father: {fileID: 1318284940}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1110083188 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7445728420149938191, guid: 85b76c7b18ae99b4a8771e4d4e046a81, type: 3}
-  m_PrefabInstance: {fileID: 446600149}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1126513462
 GameObject:
   m_ObjectHideFlags: 0
@@ -20925,7 +20825,7 @@ MonoBehaviour:
   duration: 0.75
   easeType: 31
   turnOnSound: 0
-  turnOnAudio: Lights On
+  turnOnAudio: Light Turn On
   flickIntensity: 0
   intensityRange: 0
   intensityTimeMin: 0
@@ -21513,8 +21413,8 @@ MonoBehaviour:
   requiredItem: {fileID: 11400000, guid: 537d5b4f14683354d9b8cfe6807b5df5, type: 2}
   animationName: 0
   animationDuration: 0
-  onClickAudio: Locked Door
-  onItemUseAudio: Locked Door
+  onClickAudio: Locked Door 2
+  onItemUseAudio: Door Unlocked
 --- !u!60 &1435103224
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22433,7 +22333,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 0
   animationDuration: 1
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!60 &1668025938
 PolygonCollider2D:
@@ -22452,8 +22352,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 7.202133, y: 5.09}
-    newSize: {x: 7.19, y: 5.5}
+    oldSize: {x: 7.202133, y: 5.0400004}
+    newSize: {x: 7.202133, y: 5.0400004}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -22509,15 +22409,15 @@ SpriteRenderer:
   m_SortingLayerID: 2119231859
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 132237236, guid: 3296d08e4803f7f44b9d8dac021c6ef5, type: 3}
+  m_Sprite: {fileID: -540788017, guid: 0f2bc28aae58c2c4783536fe945ecfa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.19, y: 5.5}
+  m_Size: {x: 7.202133, y: 5.0400004}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1671665307
@@ -22688,7 +22588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687505131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -22731,7 +22631,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 0
   animationDuration: 1
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!61 &1687505134
 BoxCollider2D:
@@ -24391,7 +24291,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!61 &1999064735
 BoxCollider2D:
@@ -25133,7 +25033,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   animationName: 1
   animationDuration: 0.2
-  onClickAudio: Glass Case Tap
+  onClickAudio: Item Tap
   onItemUseAudio: 
 --- !u!61 &2112452543
 BoxCollider2D:

@@ -55,7 +55,7 @@ public class UIRewindButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             if (!onCD)
             {

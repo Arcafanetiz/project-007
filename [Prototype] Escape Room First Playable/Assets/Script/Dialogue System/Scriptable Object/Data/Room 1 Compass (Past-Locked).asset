@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Room 1 Compass (Past-Locked)
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - dialogueText: This needs a passcode
+  - dialogueText: This needs a passcode.
     displayTime: 4

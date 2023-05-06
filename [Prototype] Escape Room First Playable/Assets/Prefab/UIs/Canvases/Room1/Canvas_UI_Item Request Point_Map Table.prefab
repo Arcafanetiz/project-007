@@ -234,7 +234,7 @@ MonoBehaviour:
   animationName: 0
   animationDuration: 0.5
   onClickAudio: 
-  onItemUseAudio: Locked
+  onItemUseAudio: Locked Door 1
 --- !u!1 &7176439302772571271
 GameObject:
   m_ObjectHideFlags: 0
