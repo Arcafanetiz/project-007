@@ -51,7 +51,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   BGMAudioMixer: {fileID: 8992412871406896527, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
   SFXAudioMixer: {fileID: -6009807923455608818, guid: 15231c734ca44c742b4122034d9c933f, type: 2}
-  bGMIndex: 010000000200000002000000030000000300000000000000
+  bGMIndex: 0100000002000000020000000300000003000000
   BGMSounds:
   - name: Clock Hands
     audioClip: {fileID: 8300000, guid: 0debb8a430d690d4fba3b33fe3093c65, type: 3}
@@ -71,39 +71,27 @@ MonoBehaviour:
     pitch: 0.9
     loop: 1
     source: {fileID: 0}
-  - name: FirstRoom(Present)
-    audioClip: {fileID: 8300000, guid: fc34e86f3483cdc4482fee8dfb6fce0a, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: FirstRoom(Past)
-    audioClip: {fileID: 8300000, guid: c87056be8b7184749a63047581a3f346, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
   SFXSounds:
-  - name: Clock Ticking
-    audioClip: {fileID: 8300000, guid: a527709ff262c0d478c1e64e05bdc0c3, type: 3}
+  - name: Clock Tower Bell
+    audioClip: {fileID: 8300000, guid: d8489ffa45a04c447940a957d6d95018, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Door Unlocked
+    audioClip: {fileID: 8300000, guid: 0cc43f0c970c01b428bbc1936c6bf457, type: 3}
     volume: 1
-    pitch: 1.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gas Leak (Loop)
+    audioClip: {fileID: 8300000, guid: 561ce2e248118d644a07ddc50ea8b04c, type: 3}
+    volume: 0.05
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Whoosh(1.2)
-    audioClip: {fileID: 8300000, guid: 2d29997425daa124fb533646ea88d4b9, type: 3}
-    volume: 1
-    pitch: 1.2
-    loop: 0
-    source: {fileID: 0}
-  - name: Whoosh(0.8)
-    audioClip: {fileID: 8300000, guid: 2d29997425daa124fb533646ea88d4b9, type: 3}
-    volume: 1
-    pitch: 0.8
-    loop: 0
-    source: {fileID: 0}
-  - name: Lights On
-    audioClip: {fileID: 8300000, guid: 724a2446afb912f4cab0332c8c9fd715, type: 3}
+  - name: Glass Bottle
+    audioClip: {fileID: 8300000, guid: 1d5c27dd6e9dce94c95dcc25aa27fe0a, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -114,43 +102,31 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Page Flip
-    audioClip: {fileID: 8300000, guid: 0f3589b1ce22e3f42b075b304c78b343, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Sword Down
-    audioClip: {fileID: 8300000, guid: e38063964b1e33544ae6934564d871c1, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Glass Case Tap
+  - name: Item Tap
     audioClip: {fileID: 8300000, guid: 6692f47d9622d8342bd58f0fd9d28ca5, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Glass Case Down
-    audioClip: {fileID: 8300000, guid: 802ab82879458e540a1a73fa7f0d9634, type: 3}
+  - name: Light Switch
+    audioClip: {fileID: 8300000, guid: e87c523439cd3784c8f9871475d20fde, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Water Splash
-    audioClip: {fileID: 8300000, guid: 6ae0c57e75cc56b4a82305e331fe371c, type: 3}
-    volume: 0.5
+  - name: Light Turn On
+    audioClip: {fileID: 8300000, guid: 724a2446afb912f4cab0332c8c9fd715, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Locked
+  - name: Locked Door 1
     audioClip: {fileID: 8300000, guid: 15b7a5c4379d68b40b2b901a2fb4b7b7, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Locked Door
+  - name: Locked Door 2
     audioClip: {fileID: 8300000, guid: 05a4b69e830c04a49bffc26a94910152, type: 3}
     volume: 1
     pitch: 1
@@ -162,38 +138,74 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Clock Tower Bell
-    audioClip: {fileID: 8300000, guid: d2e34b2f407f5394e881ea1a807a8a43, type: 3}
+  - name: Sword Unsheathe
+    audioClip: {fileID: 8300000, guid: e38063964b1e33544ae6934564d871c1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Turning Object
+    audioClip: {fileID: 8300000, guid: d74f4283fd21e7a47ab4e895a121b6e5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Typing Keyboard
+    audioClip: {fileID: 8300000, guid: 493f73e7f62365d4793872e3ad962dff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Splash
+    audioClip: {fileID: 8300000, guid: 6ae0c57e75cc56b4a82305e331fe371c, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Pipe Leak (Loop)
-    audioClip: {fileID: 8300000, guid: 561ce2e248118d644a07ddc50ea8b04c, type: 3}
-    volume: 0.05
-    pitch: 1
+  - name: UI Clock Ticking
+    audioClip: {fileID: 8300000, guid: a527709ff262c0d478c1e64e05bdc0c3, type: 3}
+    volume: 1
+    pitch: 1.5
     loop: 1
     source: {fileID: 0}
-  - name: Pipe Leak (Loop)
-    audioClip: {fileID: 8300000, guid: 561ce2e248118d644a07ddc50ea8b04c, type: 3}
-    volume: 0.05
-    pitch: 1
-    loop: 1
+  - name: UI Whoosh(1.2)
+    audioClip: {fileID: 8300000, guid: 2d29997425daa124fb533646ea88d4b9, type: 3}
+    volume: 1
+    pitch: 1.2
+    loop: 0
     source: {fileID: 0}
-  - name: UI Click
+  - name: UI Whoosh(0.8)
+    audioClip: {fileID: 8300000, guid: 2d29997425daa124fb533646ea88d4b9, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: UI Click 1
     audioClip: {fileID: 8300000, guid: 307f8157cb64569499c6ee463984aa8a, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: UI Inventory
+  - name: UI Click 2
+    audioClip: {fileID: 8300000, guid: 6980ce75e9e944e4d9d3a6b043236a38, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI Open Inventory
     audioClip: {fileID: 8300000, guid: d90f68a86631c1b4d8fb0c0380300db8, type: 3}
     volume: 0.2
     pitch: 1.3
     loop: 0
     source: {fileID: 0}
-  - name: Light Switch
-    audioClip: {fileID: 8300000, guid: e87c523439cd3784c8f9871475d20fde, type: 3}
+  - name: UI Page Flip 1
+    audioClip: {fileID: 8300000, guid: 0f3589b1ce22e3f42b075b304c78b343, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI Page Flip 2
+    audioClip: {fileID: 8300000, guid: 2d186d461d2f352449c5a68c9496af3e, type: 3}
     volume: 1
     pitch: 1
     loop: 0
