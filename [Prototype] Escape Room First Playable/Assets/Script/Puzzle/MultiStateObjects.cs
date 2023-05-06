@@ -42,10 +42,12 @@ public class MultiStateObjects : MonoBehaviour
         switch (currentState)
         {
             case ObjectState.LOCKED:
-                StateChangeLock();
+                locked.SetActive(true);
+                unlocked.SetActive(false);
                 break;
             case ObjectState.UNLOCKED:
-                StateChangeUnlock();
+                locked.SetActive(false);
+                unlocked.SetActive(true);
                 break;
         }
     }
