@@ -133,7 +133,7 @@ namespace Inventory.UI
 
             ResetSelection();
 
-            AudioManager.instance.PlayAudio("UI Inventory");
+            AudioManager.instance.PlayAudio("UI Open Inventory");
         }
 
         public void Hide()
@@ -143,7 +143,7 @@ namespace Inventory.UI
             LeanTween.rotate(inventoryPanel, -angle, duration).setEase(easeType);
             LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 0.0f, duration).setEase(easeType).setOnComplete(() => { ResetUI(0); });
 
-            AudioManager.instance.PlayAudio("UI Inventory");
+            AudioManager.instance.PlayAudio("UI Open Inventory");
         }
 
         private void ResetUI(int state)

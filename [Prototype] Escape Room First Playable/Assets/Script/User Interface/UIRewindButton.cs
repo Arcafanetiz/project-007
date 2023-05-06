@@ -43,8 +43,7 @@ public class UIRewindButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if(!onCD)
         {
             pointerDown = true;
-            //audioSourceLoad.Play();
-            AudioManager.instance.PlayAudio("Clock Ticking");
+            AudioManager.instance.PlayAudio("UI Clock Ticking");
         }
     }
 
@@ -56,7 +55,21 @@ public class UIRewindButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     // Update is called once per frame
     void Update()
     {
-        if (pointerDown || Input.GetKey(KeyCode.LeftControl) && !onCD)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
+        {
+            if (!onCD)
+            {
+                pointerDown = true;
+                AudioManager.instance.PlayAudio("UI Clock Ticking");
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            Reset();
+        }
+
+        if (pointerDown && !onCD)
         {
             pointerDownTimer += Time.deltaTime;
             if (pointerDownTimer >= requiredHoldTime)
@@ -79,19 +92,6 @@ public class UIRewindButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             }
             filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !onCD)
-        {
-            //audioSourceLoad.Play();
-            AudioManager.instance.PlayAudio("Clock Ticking");
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            Reset();
-            //audioSourceLoad.Stop();
-            AudioManager.instance.StopAudio("Clock Ticking");
-        }
     }
 
     private void Reset()
@@ -99,19 +99,18 @@ public class UIRewindButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         pointerDown = false;
         pointerDownTimer = 0;
         filledImage.fillAmount = startGauge + (float)(pointerDownTimer / requiredHoldTime * (endGauge - startGauge));
-        //audioSourceLoad.Stop();
-        AudioManager.instance.StopAudio("Clock Ticking");
+        AudioManager.instance.StopAudio("UI Clock Ticking");
     }
 
     IEnumerator StartCoolDown()
     {
         if (!isRewinded)
         {
-            AudioManager.instance.PlayAudio("Whoosh(1.2)");
+            AudioManager.instance.PlayAudio("UI Whoosh(1.2)");
         }
         else
         {
-            AudioManager.instance.PlayAudio("Whoosh(0.8)");
+            AudioManager.instance.PlayAudio("UI Whoosh(0.8)");
         }
         yield return new WaitForSeconds(cDTime);
         onCD = false;

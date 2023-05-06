@@ -32,6 +32,25 @@ public class UIRewindButtonAnimation : MonoBehaviour, IPointerDownHandler, IPoin
         animator.SetBool("isRewind",false);
         animator.SetBool("isUpwind",false);
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!rewindButton.isRewinded && !rewindButton.onCD)
+        {
+            animator.SetBool("isRewind", true);
+        }
+        if (rewindButton.isRewinded && !rewindButton.onCD)
+        {
+            animator.SetBool("isUpwind", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            animator.SetBool("isRewind", false);
+            animator.SetBool("isUpwind", false);
+        }
+    }
 }
 
 

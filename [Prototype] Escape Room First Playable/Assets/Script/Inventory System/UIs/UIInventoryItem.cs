@@ -49,7 +49,7 @@ namespace Inventory.UI
         {
             // Enable highlight image
             highlightImage.enabled = true;
-            AudioManager.instance.PlayAudio("UI Click");
+            AudioManager.instance.PlayAudio("UI Click 1");
         }
 
         public void OnPointerClick(PointerEventData pointer_data)

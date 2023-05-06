@@ -35,7 +35,7 @@ public class UIAudioSettings : MonoBehaviour
 
     public void PlaySampleSFX()
     {
-        AudioManager.instance.PlayAudio("Water Splash");
+        AudioManager.instance.PlayAudio("UI Click 1");
     }
 
     private void LoadVolume()
