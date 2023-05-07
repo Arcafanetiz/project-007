@@ -178,7 +178,10 @@ namespace Inventory.UI
         public void BagAnimation()
         {
             LeanTween.cancel(inventoryButton.GetComponent<RectTransform>());
-            LeanTween.rotate(inventoryButton.GetComponent<RectTransform>(), iconAngle, iconDuration).setEase(iconEaseType);
+            LeanTween.rotate(inventoryButton.GetComponent<RectTransform>(), iconAngle, iconDuration).setEase(iconEaseType).setOnComplete(()=>
+            {
+                inventoryButton.GetComponent<RectTransform>().rotation = Quaternion.EulerAngles(0f, 0f, 0f);
+            });
         }
 
         /// -----------------------------------------
