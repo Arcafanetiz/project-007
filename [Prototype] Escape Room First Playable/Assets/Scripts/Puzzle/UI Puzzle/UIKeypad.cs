@@ -9,7 +9,8 @@ public class UIKeypad : MonoBehaviour
     public enum LockState { LOCKED, UNLOCKED };
     public LockState currentState = LockState.LOCKED;
 
-    public TMPro.TextMeshProUGUI displayText;
+    //public TMPro.TextMeshProUGUI displayText;
+    public TMPro.TMP_InputField inputField;
     public GameObject incorrectPass;
 
     public string passcode;
@@ -20,17 +21,19 @@ public class UIKeypad : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        displayText.text = "";
+        //displayText.text = "";
+        inputField.text = "";
         incorrectPass.SetActive(false);
         if (UnlockEvent == null)
             UnlockEvent = new UnityEvent();
     }
     public void Number(int num)
     {
-        if(currentState == LockState.LOCKED)
+        if(currentState == LockState.LOCKED && inputField.text.Length < inputField.characterLimit)
         {
             incorrectPass.SetActive(false);
-            displayText.text += num.ToString();
+            //displayText.text += num.ToString();
+            inputField.text += num.ToString();
         }
     }
 
@@ -38,15 +41,17 @@ public class UIKeypad : MonoBehaviour
     {
         if (currentState == LockState.LOCKED)
         {
-            if (displayText.text == passcode)
+            if (inputField.text == passcode)
             {
-                displayText.text = "Correct!!!";
+                //displayText.text = "Correct!!!";
+                inputField.text = "Correct!!!";
                 Unlock();
             }
             else
             {
                 incorrectPass.SetActive(true);
-                displayText.text = "";
+                //displayText.text = "";
+                inputField.text = "";
             }
         }
     }

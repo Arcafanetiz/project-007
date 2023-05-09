@@ -148,11 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1449555896}
+      objectReference: {fileID: 820553180}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Hide
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -180,15 +180,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UILoadingScreen, Assembly-CSharp
+      value: SceneTransitionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SceneTransitionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5243252830803736695, guid: 0b71b67340b159a4892d22549028c913, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1125,8 +1129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: -165, y: -95}
+  m_SizeDelta: {x: 1515, y: 848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867574094
 MonoBehaviour:
@@ -1141,14 +1145,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a708e0b84e1e34458a3ba71cdefbcac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a4c2ed1f2778e04eb37240daeffaae0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

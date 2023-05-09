@@ -5454,7 +5454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  displayText: {fileID: 7940674282967051700}
+  inputField: {fileID: 0}
   incorrectPass: {fileID: 7940674282284992780}
   passcode: 24153
   UnlockEvent:
