@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: aca377f623a615a4f9fc157b91f5a9c9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb43953d4603a0448f250d039c765df
+      internalID: 1243637771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 688.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f45aa647f3f7b48a220812fa12c54d
+      internalID: 2041327164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 688.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdcff88834ba914492b4f397e3837ed
+      internalID: 821727726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_3
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 688.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6eb3176f05ebe479dba0cab06de6f8
+      internalID: 938384932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 459.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa65e29ebbc49b7428b0e9b8e332a654
+      internalID: -249725659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_5
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 459.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dce5cfd97dca04f8f9270ac3f1ec17
+      internalID: -2069631161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_6
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 459.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badec33cd21e4ee4b8a83b00635520a7
+      internalID: 1791632875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 459.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e5f149048b44f4798a0ed40f85a7be
+      internalID: -1489762060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895bc43953240be47a4524eec7241bf6
+      internalID: 828029898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_9
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 230.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2119c474ee2e904894b439277611ce3
+      internalID: -1224930787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_10
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 230.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1818ccc852e470409de526e72651c21
+      internalID: 1400085992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 230.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d449f3b92f0a84db71f5ae800de300
+      internalID: 1333452355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a1ce625966b484d8fc5d83752924d7
+      internalID: -1880901602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_13
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09a8700b5f77964bbe779d415247341
+      internalID: -1876059663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_14
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8f1d2e085b42848970df195c5f7df3
+      internalID: 48716771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room2_PopUp_MapPuzzle_15
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1.5
+        width: 229.5
+        height: 229.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d740343d60381e4faf77669ffe43944
+      internalID: -641737343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Room2_PopUp_MapPuzzle_1: 2041327164
+      Room2_PopUp_MapPuzzle_12: -1880901602
+      Room2_PopUp_MapPuzzle_15: -641737343
+      Room2_PopUp_MapPuzzle_7: -1489762060
+      Room2_PopUp_MapPuzzle_10: 1400085992
+      Room2_PopUp_MapPuzzle_3: 938384932
+      Room2_PopUp_MapPuzzle_14: 48716771
+      Room2_PopUp_MapPuzzle_2: 821727726
+      Room2_PopUp_MapPuzzle_11: 1333452355
+      Room2_PopUp_MapPuzzle_0: 1243637771
+      Room2_PopUp_MapPuzzle_4: -249725659
+      Room2_PopUp_MapPuzzle_5: -2069631161
+      Room2_PopUp_MapPuzzle_6: 1791632875
+      Room2_PopUp_MapPuzzle_9: -1224930787
+      Room2_PopUp_MapPuzzle_8: 828029898
+      Room2_PopUp_MapPuzzle_13: -1876059663
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
