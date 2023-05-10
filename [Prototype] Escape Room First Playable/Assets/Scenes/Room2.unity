@@ -613,7 +613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &26677394
 Transform:
   m_ObjectHideFlags: 0
@@ -2206,6 +2206,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183239771}
   m_CullTransparentMesh: 1
+--- !u!114 &191464778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 733189728286293332, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+  m_PrefabInstance: {fileID: 1822900513}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80305ac8858bb16439a7ddbe3f213bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &212678912
 GameObject:
   m_ObjectHideFlags: 0
@@ -19771,6 +19782,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 191464778}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CheckPassword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIPasswordInputField, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169018089115822652, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6482291081699724599, guid: 829323890b1b5fb44a1ad83616b7a6b8, type: 3}
       propertyPath: OnItemUseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -20282,7 +20321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1934566404
 Transform:
   m_ObjectHideFlags: 0
