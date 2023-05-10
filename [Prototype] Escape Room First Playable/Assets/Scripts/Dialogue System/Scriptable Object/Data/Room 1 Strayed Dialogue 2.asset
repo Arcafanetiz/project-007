@@ -15,5 +15,5 @@ MonoBehaviour:
   dialogueTexts:
   - dialogueText: 
     displayTime: 4
-  - dialogueText: <<<     Click and hold on the watch
+  - dialogueText: <size=40><b>[ Tip ] <<< Click and hold on the watch</b></size>
     displayTime: 10

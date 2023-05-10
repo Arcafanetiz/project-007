@@ -16,3 +16,5 @@ MonoBehaviour:
   - dialogueText: "I need to find a way out of here. The door might be the only way
       out but I\u2019ll need a key\u2026"
     displayTime: 4
+  - dialogueText: <size=40><b>[ Tip ] Hold 'L SHIFT' to zoom in</b></size>
+    displayTime: 10
